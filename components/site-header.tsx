@@ -1,5 +1,7 @@
 'use client';
 
+/* oxlint-disable next/no-img-element */
+
 import { usePathname, useRouter } from 'next/navigation';
 import {
   Sheet,
@@ -11,14 +13,13 @@ import {
 } from '@/components/ui/sheet';
 import {
   type Locale,
-  type RouteKey,
+  type ContentRoute,
   localizedPath,
   routeForPath,
 } from '@/lib/i18n';
 
 type NavigationCopy = {
   about: string;
-  events: string;
   members: string;
   privateEvents: string;
   partnerships: string;
@@ -26,7 +27,7 @@ type NavigationCopy = {
   apply: string;
 };
 
-const navigation: RouteKey[] = [
+const navigation: ContentRoute[] = [
   'about',
   'members',
   'privateEvents',
@@ -35,6 +36,10 @@ const navigation: RouteKey[] = [
 ];
 
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
+
+function persistLocale(locale: Locale) {
+  document.cookie = `edna-locale=${locale}; path=/; max-age=31536000; SameSite=Lax`;
+}
 
 function LanguageSwitcher({
   locale,
@@ -48,7 +53,7 @@ function LanguageSwitcher({
 
   function switchTo(nextLocale: Locale) {
     if (nextLocale === locale) return;
-    document.cookie = `edna-locale=${nextLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    persistLocale(nextLocale);
     router.push(localizedPath(nextLocale, routeForPath(pathname)));
   }
 
@@ -92,9 +97,14 @@ export function SiteHeader({
   mobileNavLabel: string;
   mobileNavDescription: string;
 }) {
+  const pathname = usePathname();
+
   return (
     <header className="site-header">
-      <a className="site-header__logo-link" href={localizedPath(locale, 'home')}>
+      <a
+        className="site-header__logo-link"
+        href={localizedPath(locale, 'home')}
+      >
         <img
           className="site-header__logo"
           src="/edna-signature.png"
@@ -106,7 +116,11 @@ export function SiteHeader({
 
       <nav className="desktop-nav" aria-label={primaryNavLabel}>
         {navigation.map((route) => (
-          <a key={route} href={localizedPath(locale, route)}>
+          <a
+            key={route}
+            href={localizedPath(locale, route)}
+            aria-current={routeForPath(pathname) === route ? 'page' : undefined}
+          >
             {nav[route]}
           </a>
         ))}
@@ -135,15 +149,22 @@ export function SiteHeader({
             </SheetDescription>
             <div className="mobile-menu__topline">
               <LanguageSwitcher locale={locale} label={languageLabel} />
-              <SheetClose className="mobile-menu__close">{closeLabel}</SheetClose>
+              <SheetClose className="mobile-menu__close">
+                {closeLabel}
+              </SheetClose>
             </div>
             <nav className="mobile-nav" aria-label={mobileNavLabel}>
-              {navigation.map((route, index) => (
+              {navigation.map((route) => (
                 <SheetClose
                   key={route}
-                  render={<a href={localizedPath(locale, route)} />}
+                  nativeButton={false}
+                  render={
+                    <a
+                      href={localizedPath(locale, route)}
+                      aria-label={nav[route]}
+                    />
+                  }
                 >
-                  <span aria-hidden="true">0{index + 1}</span>
                   {nav[route]}
                 </SheetClose>
               ))}

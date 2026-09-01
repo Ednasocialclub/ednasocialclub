@@ -24,58 +24,47 @@ export default async function OpenGraphImage({
         width: '100%',
         height: '100%',
         display: 'flex',
+        alignItems: 'center',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         background: '#270006',
         color: '#F4F4F0',
-        padding: '62px 72px',
+        padding: '72px',
         fontFamily: 'Georgia, serif',
+        textAlign: 'center',
       }}
     >
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid rgba(244,244,240,.42)',
-          paddingBottom: '20px',
-          fontSize: '18px',
-          letterSpacing: '.13em',
+          fontSize: '16px',
+          letterSpacing: '.16em',
           textTransform: 'uppercase',
         }}
       >
-        <span>Social & Jazz Club</span>
-        <span>Helsinki</span>
+        Social & Jazz Club · Helsinki
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div
-          style={{
-            display: 'flex',
-            fontSize: '190px',
-            lineHeight: '.82',
-            letterSpacing: '-.075em',
-          }}
-        >
-          EDNA
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            marginTop: '42px',
-          }}
-        >
-          <span style={{ fontSize: '29px' }}>{supporting}</span>
-          <span
-            style={{
-              fontSize: '20px',
-              fontStyle: 'italic',
-              opacity: 0.82,
-            }}
-          >
-            The art of gathering.
-          </span>
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          marginTop: '34px',
+          fontSize: '78px',
+          letterSpacing: '.045em',
+          lineHeight: '1',
+          textTransform: 'uppercase',
+        }}
+      >
+        Edna Social Club
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          marginTop: '34px',
+          fontSize: '25px',
+          opacity: 0.82,
+        }}
+      >
+        {supporting}
       </div>
     </div>,
     size,
