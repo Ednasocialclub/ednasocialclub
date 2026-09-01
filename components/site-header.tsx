@@ -35,6 +35,14 @@ const navigation: ContentRoute[] = [
   'contact',
 ];
 
+const overviewAnchors: Record<ContentRoute, string> = {
+  about: 'about',
+  members: 'members',
+  privateEvents: 'private-corporate',
+  partnerships: 'partnerships',
+  contact: 'contact',
+};
+
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 
 function persistLocale(locale: Locale) {
@@ -53,8 +61,10 @@ function LanguageSwitcher({
 
   function switchTo(nextLocale: Locale) {
     if (nextLocale === locale) return;
+    const route = routeForPath(pathname);
+    const hash = route === 'home' ? window.location.hash : '';
     persistLocale(nextLocale);
-    router.push(localizedPath(nextLocale, routeForPath(pathname)));
+    router.push(`${localizedPath(nextLocale, route)}${hash}`);
   }
 
   return (
@@ -98,6 +108,13 @@ export function SiteHeader({
   mobileNavDescription: string;
 }) {
   const pathname = usePathname();
+  const isHomepage = pathname === `/${locale}` || pathname === `/${locale}/`;
+
+  function navigationHref(route: ContentRoute) {
+    return isHomepage
+      ? `#${overviewAnchors[route]}`
+      : localizedPath(locale, route);
+  }
 
   return (
     <header className="site-header">
@@ -118,7 +135,7 @@ export function SiteHeader({
         {navigation.map((route) => (
           <a
             key={route}
-            href={localizedPath(locale, route)}
+            href={navigationHref(route)}
             aria-current={routeForPath(pathname) === route ? 'page' : undefined}
           >
             {nav[route]}
@@ -159,10 +176,7 @@ export function SiteHeader({
                   key={route}
                   nativeButton={false}
                   render={
-                    <a
-                      href={localizedPath(locale, route)}
-                      aria-label={nav[route]}
-                    />
+                    <a href={navigationHref(route)} aria-label={nav[route]} />
                   }
                 >
                   {nav[route]}

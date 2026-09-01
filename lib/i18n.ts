@@ -107,6 +107,12 @@ const pages = {
     home: {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
+      aboutTitle: 'About Edna',
+      privateTitle: 'Private & Corporate',
+      partnershipsTitle: 'Partnerships',
+      contactTitle: 'Contact',
+      explore: 'Learn more',
+      partnershipsCta: 'Explore partnerships',
     },
     about: {
       eyebrow: 'About',
@@ -183,17 +189,12 @@ const pages = {
       lead: 'Edna collaborates with partners who value culture, hospitality, community and memorable real world experiences.',
       intro:
         'Partnerships are shaped around a shared idea and a genuine role within the experience. Edna offers a considered setting for brands to meet people through culture and hospitality.',
-      partnersTitle: 'Who we collaborate with',
-      partners: [
-        'Relevant brands',
-        'Hotels',
-        'Restaurants',
-        'Venues',
-        'Food and beverage partners',
-        'Fashion and beauty partners',
-        'Wellness and travel partners',
-        'Design and cultural partners',
-      ],
+      audienceTitle: 'The Edna audience',
+      audience:
+        'Edna’s audience appreciates beautiful dressing, aesthetics, old world atmosphere, music, art, architecture, gastronomy and life’s little luxuries. They value quality, thoughtful details and beautifully considered experiences.',
+      partnersTitle: 'A natural fit',
+      partnersBody:
+        'Edna works with selected brands, venues and hospitality partners whose world naturally complements our events and community, from food and drink to fashion, wellness, travel and design.',
       opportunitiesTitle: 'Ways to collaborate',
       opportunities: [
         'Event partnerships',
@@ -221,6 +222,12 @@ const pages = {
     home: {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
+      aboutTitle: 'Ednasta',
+      privateTitle: 'Yksityiset & yritykset',
+      partnershipsTitle: 'Yhteistyöt',
+      contactTitle: 'Yhteystiedot',
+      explore: 'Lue lisää',
+      partnershipsCta: 'Tutustu yhteistyöhön',
     },
     about: {
       eyebrow: 'Ednasta',
@@ -297,17 +304,12 @@ const pages = {
       lead: 'Edna tekee yhteistyötä kumppaneiden kanssa, jotka arvostavat kulttuuria, vieraanvaraisuutta, yhteisöä ja mieleen jääviä kohtaamisia.',
       intro:
         'Yhteistyö rakentuu yhteisen ajatuksen ja kokemukseen aidosti sopivan roolin ympärille. Edna tarjoaa harkitun ympäristön, jossa brändit voivat kohdata ihmisiä kulttuurin ja vieraanvaraisuuden kautta.',
-      partnersTitle: 'Kumppanimme',
-      partners: [
-        'Ednaan sopivat brändit',
-        'Hotellit',
-        'Ravintolat',
-        'Tapahtumapaikat',
-        'Ruoka ja juoma',
-        'Muoti ja kauneus',
-        'Hyvinvointi ja matkailu',
-        'Muotoilu ja kulttuuri',
-      ],
+      audienceTitle: 'Ednan yleisö',
+      audience:
+        'Ednan yleisö arvostaa kaunista pukeutumista, estetiikkaa, vanhan maailman tunnelmaa, musiikkia, taidetta, arkkitehtuuria, gastronomiaa ja elämän pieniä ylellisyyksiä. Heille laatu, harkitut yksityiskohdat ja kauniisti suunnitellut kokemukset ovat tärkeitä.',
+      partnersTitle: 'Luonteva yhteys',
+      partnersBody:
+        'Edna tekee yhteistyötä valittujen brändien, tapahtumapaikkojen ja vieraanvaraisuuden kumppaneiden kanssa, joiden maailma täydentää luontevasti tapahtumiamme ja yhteisöämme. Kumppanuudet voivat liittyä esimerkiksi ruokaan, juomaan, muotiin, hyvinvointiin, matkailuun tai muotoiluun.',
       opportunitiesTitle: 'Yhteistyön muodot',
       opportunities: [
         'Tapahtumayhteistyöt',

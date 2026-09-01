@@ -97,7 +97,6 @@ function AboutPage({ locale }: { locale: Locale }) {
       <section className="page-section page-section--tint">
         <div className="page-section__inner instagram-note">
           <div>
-            <p className="brand-note">{copy.phrase}</p>
             <h2>{copy.eventsTitle}</h2>
             <p>{copy.eventsBody}</p>
             <p>{copy.instagramNote}</p>
@@ -199,18 +198,16 @@ function PartnershipsPage({ locale }: { locale: Locale }) {
       <section className="page-section page-section--tint">
         <div className="page-section__inner page-section__inner--narrow body-copy">
           <p>{copy.intro}</p>
+          <h2>{copy.audienceTitle}</h2>
+          <p>{copy.audience}</p>
         </div>
       </section>
 
       <section className="page-section">
         <div className="page-section__inner commercial-columns">
-          <div>
+          <div className="body-copy">
             <h2>{copy.partnersTitle}</h2>
-            <ul className="plain-list">
-              {copy.partners.map((partner) => (
-                <li key={partner}>{partner}</li>
-              ))}
-            </ul>
+            <p>{copy.partnersBody}</p>
           </div>
           <div>
             <h2>{copy.opportunitiesTitle}</h2>
@@ -263,8 +260,6 @@ function ContactPage({ locale }: { locale: Locale }) {
             </a>
           </div>
         </div>
-
-        <p className="brand-note contact-phrase">{copy.phrase}</p>
       </div>
     </section>
   );

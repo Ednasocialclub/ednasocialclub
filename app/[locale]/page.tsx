@@ -12,6 +12,8 @@ import {
 } from '@/lib/i18n';
 
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
+const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
+const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 
 export async function generateMetadata({
@@ -80,6 +82,136 @@ export default async function HomePage({
             >
               {copy.nav.apply}
             </a>
+          </div>
+        </section>
+
+        <section className="overview-section overview-about" id="about">
+          <div className="overview-section__inner overview-split">
+            <div className="overview-heading">
+              <p className="brand-note">{copy.pages.about.phrase}</p>
+              <p className="page-eyebrow">{copy.pages.about.eyebrow}</p>
+              <h2>{copy.pages.home.aboutTitle}</h2>
+            </div>
+            <div className="overview-copy">
+              <p className="overview-lead">{copy.pages.about.lead}</p>
+              <p>{copy.pages.about.eventsBody}</p>
+              <p className="overview-note">
+                {copy.pages.about.instagramNote}{' '}
+                <a href={instagramUrl} target="_blank" rel="noreferrer">
+                  {copy.pages.about.instagramCta} ↗
+                </a>
+              </p>
+              <a className="text-link" href={localizedPath(locale, 'about')}>
+                {copy.pages.home.explore}
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="overview-section overview-section--wine overview-members"
+          id="members"
+        >
+          <div className="overview-section__inner overview-section__inner--narrow">
+            <p className="page-eyebrow">{copy.pages.members.eyebrow}</p>
+            <h2>{copy.pages.members.title}</h2>
+            <p className="overview-lead">{copy.pages.members.lead}</p>
+            <p>{copy.pages.members.body[0]}</p>
+            <div className="overview-actions">
+              <a
+                className="button button--ivory"
+                href={membershipUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {copy.nav.apply}
+              </a>
+              <a
+                className="text-link text-link--light"
+                href={localizedPath(locale, 'members')}
+              >
+                {copy.pages.home.explore}
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="overview-section overview-private"
+          id="private-corporate"
+        >
+          <div className="overview-section__inner overview-split">
+            <div className="overview-heading">
+              <p className="page-eyebrow">{copy.pages.privateEvents.eyebrow}</p>
+              <h2>{copy.pages.home.privateTitle}</h2>
+              <p className="overview-lead">{copy.pages.privateEvents.lead}</p>
+            </div>
+            <div className="overview-copy">
+              <ul className="overview-list">
+                {copy.pages.privateEvents.types.map((type) => (
+                  <li key={type}>{type}</li>
+                ))}
+              </ul>
+              <div className="overview-actions overview-actions--start">
+                <a
+                  className="button button--wine"
+                  href={localizedPath(locale, 'privateEvents')}
+                >
+                  {copy.pages.home.explore}
+                </a>
+                <a
+                  className="text-link"
+                  href="mailto:contact@ednasocialclub.com"
+                >
+                  {copy.pages.privateEvents.contactCta}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="overview-section overview-section--tint overview-partnerships"
+          id="partnerships"
+        >
+          <div className="overview-section__inner overview-section__inner--medium">
+            <p className="page-eyebrow">{copy.pages.partnerships.eyebrow}</p>
+            <h2>{copy.pages.home.partnershipsTitle}</h2>
+            <p className="partnerships-audience">
+              {copy.pages.partnerships.audience}
+            </p>
+            <p>{copy.pages.partnerships.partnersBody}</p>
+            <a
+              className="button button--wine"
+              href={localizedPath(locale, 'partnerships')}
+            >
+              {copy.pages.home.partnershipsCta}
+            </a>
+          </div>
+        </section>
+
+        <section
+          className="overview-section overview-section--wine overview-contact"
+          id="contact"
+        >
+          <div className="overview-section__inner">
+            <p className="brand-note">{copy.pages.contact.phrase}</p>
+            <p className="page-eyebrow">{copy.pages.contact.eyebrow}</p>
+            <h2>{copy.pages.home.contactTitle}</h2>
+            <div className="overview-contact__links">
+              <a href="mailto:contact@ednasocialclub.com">
+                contact@ednasocialclub.com
+              </a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                Instagram @ednasocialclub ↗
+              </a>
+              <a href={tiktokUrl} target="_blank" rel="noreferrer">
+                TikTok @ednasocialclub ↗
+              </a>
+            </div>
           </div>
         </section>
       </main>
