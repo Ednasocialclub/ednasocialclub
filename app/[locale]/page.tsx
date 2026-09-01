@@ -14,7 +14,6 @@ const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 
 const footerRoutes: RouteKey[] = [
   'about',
-  'events',
   'members',
   'privateEvents',
   'partnerships',
@@ -39,126 +38,63 @@ export default async function HomePage({
         menuLabel={copy.menu}
         closeLabel={copy.close}
         languageLabel={copy.languageLabel}
+        brandAlt={copy.hero.logoAlt}
         primaryNavLabel={copy.primaryNavLabel}
         mobileNavLabel={copy.mobileNavLabel}
         mobileNavDescription={copy.mobileNavDescription}
       />
 
       <main>
-        <section className="hero" id="top">
-          <div className="hero__grid">
-            <div className="hero__copy reveal">
-              <p className="eyebrow">{copy.eyebrow}</p>
-              <h1>{copy.title}</h1>
-              <p className="hero__intro">{copy.intro}</p>
-              <div className="hero__actions">
-                <a className="button button--primary" href="#events">
-                  {copy.primaryCta}
-                </a>
-                <a
-                  className="editorial-link"
-                  href={localizedPath(locale, 'members')}
-                >
-                  {copy.secondaryCta}
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="hero__mark" aria-hidden="true">
-              <img
-                src="/edna-emblem.png"
-                alt=""
-                width="1254"
-                height="1254"
-              />
-            </div>
-
-            <div className="hero__footer">
-              <p className="script-line">{copy.philosophy}</p>
-              <a href="#philosophy" className="scroll-cue">
-                <span>{copy.scroll}</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="philosophy-section section" id="philosophy">
-          <div className="section-index" aria-hidden="true">
-            01
-          </div>
-          <div className="philosophy-section__content">
-            <p className="eyebrow eyebrow--light">
-              {copy.philosophySection.eyebrow}
-            </p>
-            <h2 className="script-heading">
-              {copy.philosophySection.title}
-            </h2>
-            <p className="large-copy">{copy.philosophySection.body}</p>
-          </div>
-          <div className="philosophy-section__details">
-            <p>{copy.philosophySection.detailOne}</p>
-            <p>{copy.philosophySection.detailTwo}</p>
-          </div>
-        </section>
-
-        <section className="experience-section section section--black">
-          <div className="section-index" aria-hidden="true">
-            02
-          </div>
-          <div className="experience-section__intro">
-            <p className="eyebrow eyebrow--light">{copy.experience.eyebrow}</p>
-            <h2>{copy.experience.title}</h2>
-          </div>
-          <div className="experience-list">
-            {copy.experience.items.map((item, index) => (
-              <article className="experience-item" key={item.title}>
-                <p className="experience-item__number" aria-hidden="true">
-                  0{index + 1}
-                </p>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="events-section section" id="events">
-          <div className="section-index" aria-hidden="true">
-            03
-          </div>
-          <div className="events-section__heading">
-            <p className="eyebrow">{copy.events.eyebrow}</p>
-            <h2>{copy.events.title}</h2>
-          </div>
-          <div className="events-empty">
-            <span className="events-empty__line" aria-hidden="true" />
-            <p>{copy.events.body}</p>
+        <section className="calm-hero" id="top">
+          <div className="calm-hero__content reveal">
+            <img
+              className="calm-hero__logo"
+              src="/edna-emblem.png"
+              alt={copy.hero.logoAlt}
+              width="1254"
+              height="1254"
+            />
+            <h1>{copy.hero.title}</h1>
+            <p>{copy.hero.eyebrow}</p>
             <a
-              className="editorial-link"
-              href={instagramUrl}
+              className="button button--primary"
+              href={membershipUrl}
               target="_blank"
               rel="noreferrer"
             >
-              {copy.events.follow}
-              <span aria-hidden="true">↗</span>
+              {copy.nav.apply}
             </a>
           </div>
         </section>
 
-        <section className="members-section section section--wine">
-          <div className="section-index" aria-hidden="true">
-            04
+        <section className="home-about home-section" id="about">
+          <div className="home-section__inner home-section__inner--narrow">
+            <p className="quiet-label">{copy.about.eyebrow}</p>
+            <h2>{copy.about.title}</h2>
+            <p className="home-about__lead">{copy.about.body}</p>
+            <p>{copy.about.secondary}</p>
+            <a
+              className="quiet-link"
+              href={localizedPath(locale, 'about')}
+            >
+              {copy.about.cta}
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <div className="members-section__ghost" aria-hidden="true">
-            Members
-          </div>
-          <div className="members-section__content">
-            <p className="eyebrow eyebrow--light">{copy.members.eyebrow}</p>
+        </section>
+
+        <section className="brand-moment brand-moment--wine">
+          <p>{copy.brand.gathering}</p>
+        </section>
+
+        <section className="home-members home-section home-section--wine">
+          <div className="home-section__inner home-section__inner--narrow">
+            <p className="quiet-label quiet-label--light">
+              {copy.members.eyebrow}
+            </p>
             <h2>{copy.members.title}</h2>
             <p>{copy.members.body}</p>
-            <div className="members-section__actions">
+            <div className="calm-actions">
               <a
                 className="button button--ivory"
                 href={membershipUrl}
@@ -166,10 +102,9 @@ export default async function HomePage({
                 rel="noreferrer"
               >
                 {copy.members.apply}
-                <span aria-hidden="true">↗</span>
               </a>
               <a
-                className="editorial-link editorial-link--light"
+                className="quiet-link quiet-link--light"
                 href={localizedPath(locale, 'members')}
               >
                 {copy.members.explore}
@@ -179,60 +114,97 @@ export default async function HomePage({
           </div>
         </section>
 
-        <section className="private-section section">
-          <div className="section-index" aria-hidden="true">
-            05
-          </div>
-          <div className="private-section__title">
-            <p className="eyebrow">{copy.privateEvents.eyebrow}</p>
-            <h2>{copy.privateEvents.title}</h2>
-          </div>
-          <div className="private-section__body">
-            <p>{copy.privateEvents.body}</p>
-            <a
-              className="editorial-link"
-              href={localizedPath(locale, 'privateEvents')}
-            >
-              {copy.privateEvents.cta}
-              <span aria-hidden="true">→</span>
-            </a>
+        <section className="commercial-section home-section">
+          <div className="home-section__inner">
+            <div className="commercial-section__heading">
+              <p className="quiet-label">{copy.commercial.eyebrow}</p>
+              <h2>{copy.commercial.title}</h2>
+            </div>
+
+            <div className="commercial-grid">
+              <article className="commercial-card">
+                <h3>{copy.privateEvents.title}</h3>
+                <p>{copy.privateEvents.body}</p>
+                <p className="commercial-card__detail">
+                  {copy.privateEvents.detail}
+                </p>
+                <a
+                  className="quiet-link"
+                  href={localizedPath(locale, 'privateEvents')}
+                >
+                  {copy.privateEvents.cta}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <article className="commercial-card">
+                <h3>{copy.partnerships.title}</h3>
+                <p>{copy.partnerships.body}</p>
+                <p className="commercial-card__detail">
+                  {copy.partnerships.detail}
+                </p>
+                <a
+                  className="quiet-link"
+                  href={localizedPath(locale, 'partnerships')}
+                >
+                  {copy.partnerships.cta}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section className="partnerships-section section section--black">
-          <div className="section-index" aria-hidden="true">
-            06
-          </div>
-          <div className="partnerships-section__content">
-            <p className="eyebrow eyebrow--light">
-              {copy.partnerships.eyebrow}
-            </p>
-            <h2>{copy.partnerships.title}</h2>
-            <p>{copy.partnerships.body}</p>
-            <a
-              className="editorial-link editorial-link--light"
-              href={localizedPath(locale, 'partnerships')}
-            >
-              {copy.partnerships.cta}
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-          <div className="partnerships-section__word" aria-hidden="true">
-            Together
+        <section className="home-philosophy home-section">
+          <div className="home-section__inner">
+            <div className="home-philosophy__heading">
+              <p className="quiet-label">{copy.philosophy.eyebrow}</p>
+              <h2>{copy.philosophy.title}</h2>
+            </div>
+            <div className="philosophy-grid">
+              <article>
+                <h3>{copy.philosophy.jazzTitle}</h3>
+                <p>{copy.philosophy.jazzBody}</p>
+              </article>
+              <article>
+                <h3>{copy.philosophy.gatheringTitle}</h3>
+                <p>{copy.philosophy.gatheringBody}</p>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section className="closing-section section section--wine">
-          <p className="eyebrow eyebrow--light">{copy.closing.context}</p>
-          <h2 className="script-heading script-heading--closing">
-            {copy.closing.line}
-          </h2>
+        <section className="events-notice" id="events">
+          <div>
+            <p className="quiet-label">{copy.events.eyebrow}</p>
+            <h2>{copy.events.title}</h2>
+          </div>
           <a
-            className="button button--ivory"
-            href="mailto:contact@ednasocialclub.com"
+            className="quiet-link"
+            href={instagramUrl}
+            target="_blank"
+            rel="noreferrer"
           >
-            {copy.closing.contact}
+            {copy.events.follow}
+            <span aria-hidden="true">↗</span>
           </a>
+        </section>
+
+        <section className="home-contact home-section home-section--wine">
+          <div className="home-section__inner home-section__inner--narrow">
+            <p className="brand-statement">{copy.brand.feeling}</p>
+            <p className="quiet-label quiet-label--light">
+              {copy.contact.eyebrow}
+            </p>
+            <h2>{copy.contact.title}</h2>
+            <p>{copy.contact.body}</p>
+            <a
+              className="button button--ivory"
+              href="mailto:contact@ednasocialclub.com"
+            >
+              {copy.contact.cta}
+            </a>
+          </div>
         </section>
       </main>
 
@@ -241,12 +213,12 @@ export default async function HomePage({
           <a href={localizedPath(locale, 'home')}>
             <img
               src="/edna-signature.png"
-              alt="Edna Social & Jazz Club"
+              alt="Edna Social Club"
               width="1774"
               height="887"
             />
           </a>
-          <p>Helsinki, Finland</p>
+          <p>{copy.footer.location}</p>
         </div>
 
         <div className="site-footer__column">

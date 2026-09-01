@@ -43,78 +43,78 @@ export const homeCopy = {
     close: 'Close',
     primaryNavLabel: 'Primary navigation',
     mobileNavLabel: 'Mobile navigation',
-    mobileNavDescription: 'Edna Social & Jazz Club navigation',
+    mobileNavDescription: 'Edna Social Club navigation',
     nav: {
       about: 'About',
       events: 'Events',
       members: 'Members Club',
-      privateEvents: 'Private Events',
+      privateEvents: 'Private & Corporate',
       partnerships: 'Partnerships',
       contact: 'Contact',
+      apply: 'Apply for membership',
     },
-    eyebrow: 'Social & Jazz Club · Helsinki',
-    title: 'Edna is a Social & Jazz Club in Helsinki.',
-    intro:
-      'An evening for live jazz, conversation and meeting new people — with a little old-world romance.',
-    primaryCta: 'See upcoming events',
-    secondaryCta: 'Explore Members Club',
-    philosophy: 'The art of gathering.',
-    scroll: 'Discover Edna',
-    philosophySection: {
-      eyebrow: 'A note on Edna',
-      title: 'The art of gathering.',
-      body:
-        'Edna creates evenings where people can slow down, dress for the occasion and meet beyond familiar circles. Jazz gives the room its rhythm. The people give it meaning.',
-      detailOne: 'Old-world romance',
-      detailTwo: 'Modern social culture',
+    hero: {
+      title: 'Edna Social Club',
+      eyebrow: 'Social & Jazz Club · Helsinki',
+      logoAlt: 'Edna Social Club, established 2025',
     },
-    experience: {
-      eyebrow: 'An evening with Edna',
-      title: 'Come for the music. Stay for the conversation.',
-      items: [
-        {
-          title: 'Live jazz',
-          body: 'Present, spontaneous and shared — live music gives every Edna evening its pulse.',
-        },
-        {
-          title: 'Real conversation',
-          body: 'A setting made for being present, meeting naturally and looking beyond familiar circles.',
-        },
-        {
-          title: 'An evening as an occasion',
-          body: 'A reason to dress up, step out and let the night feel special again.',
-        },
-      ],
+    about: {
+      eyebrow: 'About Edna',
+      title: 'What is Edna?',
+      body: 'Edna is a Social & Jazz Club in Helsinki built around live music, beautiful settings, conversation, community and meeting new people.',
+      secondary:
+        'We create evenings where people can slow down, dress for the occasion and connect naturally.',
+      cta: 'About Edna',
     },
-    events: {
-      eyebrow: 'Upcoming evenings',
-      title: 'The next Edna evening is taking shape.',
-      body: 'New events will appear here as soon as every detail is confirmed.',
-      follow: 'Follow Edna on Instagram',
+    brand: {
+      gathering: 'The art of gathering.',
+      feeling: 'Not a place, a feeling.',
     },
     members: {
       eyebrow: 'Members Club',
-      title: 'A club built around belonging.',
-      body: 'Edna Members Club is for people who want to make more room for culture, conversation and new connections. Applications are open through Edna’s official membership form.',
+      title: 'Edna Members Club',
+      body: 'A growing community for people who value culture, conversation and meeting beyond familiar circles. Membership applications are open through our official form.',
       apply: 'Apply for membership',
-      explore: 'Explore Members Club',
+      explore: 'Members Club',
+    },
+    commercial: {
+      eyebrow: 'For companies and partners',
+      title: 'Create something with Edna',
     },
     privateEvents: {
-      eyebrow: 'Private & corporate events',
-      title: 'Bring Edna to your own evening.',
-      body: 'Edna creates private and corporate occasions shaped by live music, atmosphere, hospitality and a considered social experience.',
-      cta: 'Private & corporate events',
+      title: 'Private & Corporate Events',
+      body: 'Edna creates private dinners, corporate events, client evenings, celebrations, launches, networking events and tailored social experiences.',
+      detail:
+        'We bring together creative direction, live music, atmosphere and hospitality.',
+      cta: 'Private & Corporate Events',
     },
     partnerships: {
-      eyebrow: 'Partnerships',
-      title: 'Ideas are better in good company.',
-      body: 'Edna collaborates with venues, hospitality partners, cultural organisations and brands to create thoughtful shared experiences.',
-      cta: 'Explore partnerships',
+      title: 'Partnerships',
+      body: 'Edna collaborates with brands, hotels, restaurants, venues and partners across food and beverage, fashion, beauty, wellness, travel, design and culture.',
+      detail:
+        'Collaborations can include events, hospitality, venues, content and thoughtfully integrated brand moments.',
+      cta: 'Partnerships',
     },
-    closing: {
-      line: 'Not a place, a feeling.',
-      context: 'Edna Social & Jazz Club · Helsinki',
-      contact: 'Write to Edna',
+    philosophy: {
+      eyebrow: 'Our philosophy',
+      title: 'Why Edna exists',
+      jazzTitle: 'Why jazz',
+      jazzBody:
+        'Jazz brings presence and spontaneity to the room. Conversation and community turn an evening into something shared.',
+      gatheringTitle: 'Why gathering',
+      gatheringBody:
+        'Edna was created to give people beautiful reasons to leave the house, dress for the occasion and meet naturally.',
+    },
+    events: {
+      eyebrow: 'Current events',
+      title: 'Upcoming Edna evenings are announced on Instagram.',
+      follow: 'Visit @ednasocialclub',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Contact Edna',
+      body: 'For general enquiries, private and corporate events, and partnerships.',
+      cta: 'contact@ednasocialclub.com',
     },
     footer: {
       navigation: 'Explore',
@@ -122,7 +122,8 @@ export const homeCopy = {
       social: 'Social',
       membership: 'Membership application',
       privacy: 'Privacy',
-      copyright: 'Edna Social & Jazz Club',
+      copyright: 'Edna Social Club',
+      location: 'Helsinki, Finland',
     },
   },
   fi: {
@@ -132,78 +133,78 @@ export const homeCopy = {
     close: 'Sulje',
     primaryNavLabel: 'Päänavigaatio',
     mobileNavLabel: 'Mobiilinavigaatio',
-    mobileNavDescription: 'Edna Social & Jazz Clubin navigaatio',
+    mobileNavDescription: 'Edna Social Clubin navigaatio',
     nav: {
       about: 'Ednasta',
       events: 'Tapahtumat',
       members: 'Jäsenklubi',
-      privateEvents: 'Yksityistapahtumat',
+      privateEvents: 'Yritys & yksityinen',
       partnerships: 'Yhteistyöt',
       contact: 'Yhteystiedot',
+      apply: 'Hae jäsenyyttä',
     },
-    eyebrow: 'Social & Jazz Club · Helsinki',
-    title: 'Edna on helsinkiläinen Social & Jazz Club.',
-    intro:
-      'Iltoja elävälle jazzille, keskusteluille ja uusille kohtaamisille — ripauksella vanhan maailman romantiikkaa.',
-    primaryCta: 'Tulevat tapahtumat',
-    secondaryCta: 'Tutustu jäsenklubiin',
-    philosophy: 'The art of gathering.',
-    scroll: 'Tutustu Ednaan',
-    philosophySection: {
-      eyebrow: 'Ajatus Ednasta',
-      title: 'The art of gathering.',
-      body:
-        'Edna luo iltoja, joissa pysähdytään, pukeudutaan tilaisuutta varten ja kohdataan tuttujen piirien ulkopuolella. Jazz antaa illalle rytmin. Ihmiset antavat sille merkityksen.',
-      detailOne: 'Vanhan maailman romantiikkaa',
-      detailTwo: 'Modernia sosiaalista kulttuuria',
+    hero: {
+      title: 'Edna Social Club',
+      eyebrow: 'Social & Jazz Club · Helsinki',
+      logoAlt: 'Edna Social Club, perustettu 2025',
     },
-    experience: {
-      eyebrow: 'Ilta Ednan kanssa',
-      title: 'Tule musiikin vuoksi. Jää keskustelun takia.',
-      items: [
-        {
-          title: 'Elävää jazzia',
-          body: 'Läsnä oleva, spontaani ja jaettu musiikki antaa jokaiselle Edna-illalle sykkeen.',
-        },
-        {
-          title: 'Aitoja keskusteluja',
-          body: 'Ympäristö, jossa on helppo olla läsnä, kohdata luontevasti ja tutustua uusiin ihmisiin.',
-        },
-        {
-          title: 'Ilta, joka tuntuu tilaisuudelta',
-          body: 'Syy pukeutua, lähteä ulos ja antaa illan tuntua jälleen erityiseltä.',
-        },
-      ],
+    about: {
+      eyebrow: 'Ednasta',
+      title: 'Mikä Edna on?',
+      body: 'Edna on helsinkiläinen Social & Jazz Club, jonka ytimessä ovat elävä musiikki, kauniit ympäristöt, keskustelut, yhteisö ja uusiin ihmisiin tutustuminen.',
+      secondary:
+        'Luomme iltoja, joissa voi pysähtyä, pukeutua tilaisuutta varten ja kohdata uusia ihmisiä luontevasti.',
+      cta: 'Tutustu Ednaan',
     },
-    events: {
-      eyebrow: 'Tulevat illat',
-      title: 'Seuraava Edna-ilta on muotoutumassa.',
-      body: 'Uudet tapahtumat julkaistaan täällä heti, kun kaikki yksityiskohdat on vahvistettu.',
-      follow: 'Seuraa Ednaa Instagramissa',
+    brand: {
+      gathering: 'The art of gathering.',
+      feeling: 'Not a place, a feeling.',
     },
     members: {
       eyebrow: 'Jäsenklubi',
-      title: 'Klubi, jonka ytimessä on kuuluminen.',
-      body: 'Edna Members Club on ihmisille, jotka haluavat tehdä enemmän tilaa kulttuurille, keskusteluille ja uusille yhteyksille. Jäsenyyttä voi hakea Ednan virallisella hakulomakkeella.',
+      title: 'Edna Members Club',
+      body: 'Kasvava yhteisö ihmisille, jotka arvostavat kulttuuria, keskusteluja ja kohtaamisia tuttujen piirien ulkopuolella. Jäsenyyttä voi hakea virallisella hakulomakkeellamme.',
       apply: 'Hae jäsenyyttä',
       explore: 'Tutustu jäsenklubiin',
     },
+    commercial: {
+      eyebrow: 'Yrityksille ja kumppaneille',
+      title: 'Luo jotain yhdessä Ednan kanssa',
+    },
     privateEvents: {
-      eyebrow: 'Yksityis- ja yritystapahtumat',
-      title: 'Tuo Edna omaan iltaasi.',
-      body: 'Edna luo yksityis- ja yritystilaisuuksia, joita rakentavat elävä musiikki, tunnelma, vieraanvaraisuus ja harkittu sosiaalinen kokemus.',
-      cta: 'Yksityis- ja yritystapahtumat',
+      title: 'Yksityiset ja yritystapahtumat',
+      body: 'Edna luo yksityisiä illallisia, yritystapahtumia, asiakasiltoja, juhlia, lanseerauksia, verkostoitumistilaisuuksia ja räätälöityjä sosiaalisia kokemuksia.',
+      detail:
+        'Yhdistämme luovan suunnittelun, elävän musiikin, tunnelman ja vieraanvaraisuuden.',
+      cta: 'Yksityiset ja yritystapahtumat',
     },
     partnerships: {
-      eyebrow: 'Yhteistyöt',
-      title: 'Hyvät ideat syntyvät hyvässä seurassa.',
-      body: 'Edna tekee yhteistyötä tapahtumapaikkojen, ravintola- ja hotellialan toimijoiden, kulttuuriorganisaatioiden ja brändien kanssa luodakseen harkittuja yhteisiä kokemuksia.',
-      cta: 'Tutustu yhteistöihin',
+      title: 'Yhteistyöt',
+      body: 'Edna tekee yhteistyötä brändien, hotellien, ravintoloiden, tapahtumapaikkojen sekä ruoan, juoman, muodin, kauneuden, hyvinvoinnin, matkailun, muotoilun ja kulttuurin toimijoiden kanssa.',
+      detail:
+        'Yhteistyö voi sisältää tapahtumia, vieraanvaraisuutta, tiloja, sisältöä ja harkittuja brändikohtaamisia.',
+      cta: 'Tutustu yhteistyömahdollisuuksiin',
     },
-    closing: {
-      line: 'Not a place, a feeling.',
-      context: 'Edna Social & Jazz Club · Helsinki',
-      contact: 'Kirjoita Ednalle',
+    philosophy: {
+      eyebrow: 'Filosofiamme',
+      title: 'Miksi Edna on olemassa',
+      jazzTitle: 'Miksi jazz',
+      jazzBody:
+        'Jazz tuo tilaan läsnäoloa ja spontaaniutta. Keskustelut ja yhteisö tekevät illasta yhteisen.',
+      gatheringTitle: 'Miksi kokoonnumme',
+      gatheringBody:
+        'Edna syntyi antamaan ihmisille kauniita syitä lähteä ulos, pukeutua tilaisuutta varten ja kohdata luontevasti.',
+    },
+    events: {
+      eyebrow: 'Ajankohtaiset tapahtumat',
+      title: 'Ednan tulevista illoista ilmoitetaan Instagramissa.',
+      follow: 'Siirry Ednan Instagramiin',
+    },
+    contact: {
+      eyebrow: 'Yhteys',
+      title: 'Ota yhteyttä Ednaan',
+      body: 'Yleiset tiedustelut, yksityiset ja yritystapahtumat sekä yhteistyöt.',
+      cta: 'contact@ednasocialclub.com',
     },
     footer: {
       navigation: 'Tutustu',
@@ -211,7 +212,8 @@ export const homeCopy = {
       social: 'Seuraa',
       membership: 'Jäsenyyshakemus',
       privacy: 'Tietosuoja',
-      copyright: 'Edna Social & Jazz Club',
+      copyright: 'Edna Social Club',
+      location: 'Helsinki, Suomi',
     },
   },
 } as const;

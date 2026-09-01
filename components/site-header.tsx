@@ -23,16 +23,18 @@ type NavigationCopy = {
   privateEvents: string;
   partnerships: string;
   contact: string;
+  apply: string;
 };
 
 const navigation: RouteKey[] = [
   'about',
-  'events',
   'members',
   'privateEvents',
   'partnerships',
   'contact',
 ];
+
+const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 
 function LanguageSwitcher({
   locale,
@@ -75,6 +77,7 @@ export function SiteHeader({
   menuLabel,
   closeLabel,
   languageLabel,
+  brandAlt,
   primaryNavLabel,
   mobileNavLabel,
   mobileNavDescription,
@@ -84,6 +87,7 @@ export function SiteHeader({
   menuLabel: string;
   closeLabel: string;
   languageLabel: string;
+  brandAlt: string;
   primaryNavLabel: string;
   mobileNavLabel: string;
   mobileNavDescription: string;
@@ -94,7 +98,7 @@ export function SiteHeader({
         <img
           className="site-header__logo"
           src="/edna-signature.png"
-          alt="Edna Social & Jazz Club"
+          alt={brandAlt}
           width="1774"
           height="887"
         />
@@ -110,6 +114,14 @@ export function SiteHeader({
 
       <div className="site-header__actions">
         <LanguageSwitcher locale={locale} label={languageLabel} />
+        <a
+          className="header-apply"
+          href={membershipUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {nav.apply}
+        </a>
         <Sheet>
           <SheetTrigger className="menu-trigger">{menuLabel}</SheetTrigger>
           <SheetContent
@@ -136,7 +148,14 @@ export function SiteHeader({
                 </SheetClose>
               ))}
             </nav>
-            <p className="mobile-menu__signature">The art of gathering.</p>
+            <a
+              className="mobile-menu__apply"
+              href={membershipUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {nav.apply}
+            </a>
           </SheetContent>
         </Sheet>
       </div>
