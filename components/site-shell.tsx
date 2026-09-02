@@ -82,7 +82,12 @@ export function SiteShell({
         </div>
 
         <div className="site-footer__bottom">
-          <p>© {copy.footer.copyright}</p>
+          <div className="site-footer__legal">
+            <p>© {copy.footer.copyright}</p>
+            <p className="site-footer__trademark">
+              EDNA SOCIAL CLUB® is a registered trademark in Finland.
+            </p>
+          </div>
           <a href="#top">{copy.footer.backToTop} ↑</a>
         </div>
       </footer>

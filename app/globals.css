@@ -837,6 +837,19 @@ button {
   margin: 0;
 }
 
+.site-footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.site-footer__trademark {
+  font-size: 0.6rem;
+  letter-spacing: 0.035em;
+  opacity: 0.62;
+  text-transform: none;
+}
+
 .mobile-menu {
   width: 100% !important;
   max-width: none !important;
