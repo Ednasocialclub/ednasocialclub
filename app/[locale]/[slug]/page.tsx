@@ -81,8 +81,8 @@ function AboutPage({ locale }: { locale: Locale }) {
     {
       ...copy.pillars[2],
       image: {
-        src: '/edna-social-club-atmosphere-helsinki.jpg',
-        alt: 'Guests dining in an elegant setting at an Edna Social Club evening in Helsinki',
+        src: '/edna-warm-dining-room-atmosphere-helsinki.jpg',
+        alt: 'Guests seated in a warmly lit dining room during an Edna Social Club evening in Helsinki',
         position: 'center center',
       },
     },

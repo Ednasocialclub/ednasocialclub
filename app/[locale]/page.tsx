@@ -1,6 +1,5 @@
-/* oxlint-disable next/no-img-element */
-
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { SiteShell } from '@/components/site-shell';
@@ -87,8 +86,8 @@ export default async function HomePage({
     {
       ...copy.pages.home.aboutPillars.atmosphere,
       image: {
-        src: '/edna-social-club-atmosphere-helsinki.jpg',
-        alt: 'Guests dining in an elegant setting at an Edna Social Club evening in Helsinki',
+        src: '/edna-warm-dining-room-atmosphere-helsinki.jpg',
+        alt: 'Guests seated in a warmly lit dining room during an Edna Social Club evening in Helsinki',
         position: 'center center',
       },
     },
@@ -107,7 +106,7 @@ export default async function HomePage({
       <main id="top">
         <section className="home-hero">
           <div className="home-hero__content reveal">
-            <img
+            <Image
               className="home-hero__emblem"
               src="/edna-emblem.png"
               alt={copy.emblemAlt}

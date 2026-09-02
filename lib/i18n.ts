@@ -106,7 +106,7 @@ const pages = {
   en: {
     home: {
       title: 'Edna Social Club',
-      eyebrow: 'Social & Jazz Club · Helsinki',
+      eyebrow: 'Social & Jazz Club in Helsinki',
       aboutTitle: 'About Edna',
       aboutLead: 'Edna is a Social & Jazz Club in Helsinki.',
       aboutBody:
@@ -267,7 +267,7 @@ const pages = {
   fi: {
     home: {
       title: 'Edna Social Club',
-      eyebrow: 'Social & Jazz Club · Helsinki',
+      eyebrow: 'Social & Jazz Club in Helsinki',
       aboutTitle: 'Ednasta',
       aboutLead: 'Edna on helsinkiläinen Social & Jazz Club.',
       aboutBody:
