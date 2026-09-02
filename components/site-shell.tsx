@@ -67,17 +67,17 @@ export function SiteShell({
             contact@ednasocialclub.com
           </a>
           <a href={membershipUrl} target="_blank" rel="noreferrer">
-            {copy.footer.membership} ↗
+            {copy.footer.membership}
           </a>
         </div>
 
         <div className="site-footer__social">
           <p className="footer-label">{copy.footer.social}</p>
           <a href={instagramUrl} target="_blank" rel="noreferrer">
-            Instagram ↗
+            Instagram
           </a>
           <a href={tiktokUrl} target="_blank" rel="noreferrer">
-            TikTok ↗
+            TikTok
           </a>
         </div>
 
@@ -88,7 +88,10 @@ export function SiteShell({
               EDNA SOCIAL CLUB® is a registered trademark in Finland.
             </p>
           </div>
-          <a href="#top">{copy.footer.backToTop} ↑</a>
+          <a className="back-to-top" href="#top">
+            {copy.footer.backToTop}
+            <span className="link-arrow link-arrow--up" aria-hidden="true" />
+          </a>
         </div>
       </footer>
     </>

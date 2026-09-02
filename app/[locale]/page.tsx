@@ -16,6 +16,21 @@ const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 
+const pressEntries = [
+  {
+    publication: 'Hufvudstadsbladet',
+    title: 'Exklusiva jazzkvällar blev succé bland unga',
+    url: 'https://www.hbl.fi/helsingfors/exklusiva-jazzkvallar-blev-succe-bland-unga/',
+    published: true,
+  },
+  {
+    publication: 'Iltalehti',
+    title: null,
+    url: null,
+    published: false,
+  },
+] as const;
+
 export async function generateMetadata({
   params,
 }: {
@@ -98,12 +113,15 @@ export default async function HomePage({
               <p className="overview-note">
                 {copy.pages.about.instagramNote}{' '}
                 <a href={instagramUrl} target="_blank" rel="noreferrer">
-                  {copy.pages.about.instagramCta} ↗
+                  {copy.pages.about.instagramCta}
                 </a>
               </p>
               <a className="text-link" href={localizedPath(locale, 'about')}>
                 {copy.pages.home.explore}
-                <span aria-hidden="true">→</span>
+                <span
+                  className="link-arrow link-arrow--right"
+                  aria-hidden="true"
+                />
               </a>
             </div>
           </div>
@@ -132,7 +150,10 @@ export default async function HomePage({
                 href={localizedPath(locale, 'members')}
               >
                 {copy.pages.home.explore}
-                <span aria-hidden="true">→</span>
+                <span
+                  className="link-arrow link-arrow--right"
+                  aria-hidden="true"
+                />
               </a>
             </div>
           </div>
@@ -166,7 +187,10 @@ export default async function HomePage({
                   href="mailto:contact@ednasocialclub.com"
                 >
                   {copy.pages.privateEvents.contactCta}
-                  <span aria-hidden="true">→</span>
+                  <span
+                    className="link-arrow link-arrow--right"
+                    aria-hidden="true"
+                  />
                 </a>
               </div>
             </div>
@@ -198,19 +222,49 @@ export default async function HomePage({
           id="contact"
         >
           <div className="overview-section__inner">
-            <p className="brand-note">{copy.pages.contact.phrase}</p>
-            <p className="page-eyebrow">{copy.pages.contact.eyebrow}</p>
-            <h2>{copy.pages.home.contactTitle}</h2>
-            <div className="overview-contact__links">
-              <a href="mailto:contact@ednasocialclub.com">
-                contact@ednasocialclub.com
-              </a>
-              <a href={instagramUrl} target="_blank" rel="noreferrer">
-                Instagram @ednasocialclub ↗
-              </a>
-              <a href={tiktokUrl} target="_blank" rel="noreferrer">
-                TikTok @ednasocialclub ↗
-              </a>
+            <section className="overview-press" aria-labelledby="press-heading">
+              <h3 className="page-eyebrow" id="press-heading">
+                PRESS
+              </h3>
+              <div className="overview-press__entries">
+                {pressEntries.map((entry) => {
+                  if (!entry.published || !entry.title || !entry.url)
+                    return null;
+
+                  return (
+                    <article
+                      className="overview-press__entry"
+                      key={entry.publication}
+                    >
+                      <p>{entry.publication}</p>
+                      <a
+                        href={entry.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        “{entry.title}”
+                      </a>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+
+            <div className="overview-contact__details">
+              <p className="brand-note">{copy.pages.contact.phrase}</p>
+              <p className="page-eyebrow">{copy.pages.contact.eyebrow}</p>
+              <h2>{copy.pages.home.contactTitle}</h2>
+              <div className="overview-contact__links">
+                <a href="mailto:contact@ednasocialclub.com">
+                  contact@ednasocialclub.com
+                </a>
+                <a href={instagramUrl} target="_blank" rel="noreferrer">
+                  Instagram @ednasocialclub
+                </a>
+                <a href={tiktokUrl} target="_blank" rel="noreferrer">
+                  TikTok @ednasocialclub
+                </a>
+              </div>
             </div>
           </div>
         </section>

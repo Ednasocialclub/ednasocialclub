@@ -259,12 +259,26 @@ button {
   text-transform: uppercase;
 }
 
-.text-link span {
+.link-arrow {
+  display: inline-block;
+  width: 0.42rem;
+  height: 0.42rem;
+  flex: 0 0 auto;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.link-arrow--right {
+  transform: rotate(45deg);
   transition: transform 180ms ease;
 }
 
-.text-link:hover span {
-  transform: translateX(0.2rem);
+.text-link:hover .link-arrow--right {
+  transform: translateX(0.2rem) rotate(45deg);
+}
+
+.link-arrow--up {
+  transform: rotate(-45deg);
 }
 
 .text-link--light {
@@ -409,6 +423,39 @@ button {
 
 .overview-contact {
   text-align: center;
+}
+
+.overview-press {
+  margin-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.overview-press .page-eyebrow {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.overview-press__entries {
+  display: flex;
+  justify-content: center;
+}
+
+.overview-press__entry p {
+  margin: 0 0 0.25rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.overview-press__entry a {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.78;
+  transition: opacity 180ms ease;
+}
+
+.overview-press__entry a:hover {
+  opacity: 1;
 }
 
 .overview-contact .brand-note {
@@ -838,6 +885,12 @@ button {
 
 .site-footer__bottom p {
   margin: 0;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
 }
 
 .site-footer__legal {

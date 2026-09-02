@@ -250,13 +250,13 @@ function ContactPage({ locale }: { locale: Locale }) {
           <div className="contact-item">
             <p>{copy.instagramLabel}</p>
             <a href={instagramUrl} target="_blank" rel="noreferrer">
-              @ednasocialclub ↗
+              @ednasocialclub
             </a>
           </div>
           <div className="contact-item">
             <p>{copy.tiktokLabel}</p>
             <a href={tiktokUrl} target="_blank" rel="noreferrer">
-              @ednasocialclub ↗
+              @ednasocialclub
             </a>
           </div>
         </div>
