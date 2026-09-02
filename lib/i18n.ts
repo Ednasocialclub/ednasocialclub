@@ -205,20 +205,18 @@ const pages = {
       questions: [
         {
           title: 'What does membership open up?',
-          body: 'Priority access to selected Edna events, members-only gatherings and experiences created especially for the community, alongside more opportunities to meet, reconnect and become part of the wider Edna world.',
+          body: 'Priority access to selected Edna events, members-only gatherings and chosen benefits, with more ways to take part in the Edna community.',
         },
         {
           title: 'Can I attend without being a member?',
-          body: 'Yes. Selected Edna events will remain open to everyone, while membership offers more ways to connect with the Edna community and access members-only experiences.',
+          body: 'Yes. Selected Edna events remain open to everyone, while membership gives you access to more of the community and members-only experiences.',
         },
         {
           title: 'Who is membership for?',
-          body: 'For people who are curious about others, enjoy good conversation and want to meet beyond the social and professional circles they already know.',
+          body: 'For people who enjoy good conversation and want to meet beyond the social and professional circles they already know.',
         },
       ],
       applicationTitle: 'Become part of Edna',
-      applicationBody:
-        'Meet beyond your usual circles and become part of the community behind Edna.',
       apply: 'Apply for membership',
     },
     privateEvents: {

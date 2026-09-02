@@ -835,6 +835,72 @@ button {
   align-items: center;
 }
 
+.membership-editorial-page {
+  padding-top: clamp(6.5rem, 10vw, 9.5rem);
+}
+
+.membership-editorial-page__grid {
+  display: grid;
+  grid-template-areas:
+    'intro sidebar'
+    'questions sidebar';
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.72fr);
+  align-items: start;
+  column-gap: clamp(3rem, 8vw, 8rem);
+  row-gap: clamp(3.25rem, 5vw, 4.5rem);
+}
+
+.membership-editorial-page__intro {
+  grid-area: intro;
+  max-width: 45rem;
+}
+
+.membership-editorial-page__intro h1 {
+  max-width: 16ch;
+  margin: 0;
+  color: var(--wine);
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.membership-editorial-page__intro .page-lead {
+  margin: 2rem 0 0;
+}
+
+.membership-editorial-page__intro .membership-intro-secondary {
+  margin-top: 1.5rem;
+}
+
+.membership-editorial-page__sidebar {
+  grid-area: sidebar;
+  width: 100%;
+}
+
+.membership-editorial-page__sidebar .membership-application .button {
+  margin-top: 2rem;
+}
+
+.membership-social-image-slot {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1.5rem;
+  aspect-ratio: 4 / 3;
+}
+
+.membership-social-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.membership-editorial-page__questions {
+  grid-area: questions;
+  max-width: 45rem;
+}
+
 .membership-intro-secondary,
 .membership-question p {
   margin: 0;
@@ -848,6 +914,10 @@ button {
 
 .membership-question + .membership-question {
   margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.membership-editorial-page .membership-question + .membership-question {
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .page-section .membership-question h2 {
@@ -1198,6 +1268,32 @@ button {
   .page-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .membership-editorial-page {
+    padding-top: 5.5rem;
+  }
+
+  .membership-editorial-page__grid {
+    grid-template-areas:
+      'intro'
+      'sidebar'
+      'questions';
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .membership-editorial-page__intro h1 {
+    font-size: clamp(2.4rem, 12vw, 3.75rem);
+  }
+
+  .membership-editorial-page__sidebar .membership-application {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .membership-social-image-slot {
+    aspect-ratio: 3 / 2;
   }
 
   .about-pillars-section {

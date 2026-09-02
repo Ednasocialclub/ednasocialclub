@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
@@ -126,34 +127,67 @@ function AboutPage({ locale }: { locale: Locale }) {
 function MembersPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].pages.members;
 
+  if ('questions' in copy) {
+    return (
+      <section className="page-section page-section--tint membership-editorial-page">
+        <div className="page-section__inner membership-editorial-page__grid">
+          <header className="membership-editorial-page__intro">
+            <h1>{copy.title}</h1>
+            <p className="page-lead">{copy.lead}</p>
+            <p className="membership-intro-secondary">
+              {copy.introSecondary}
+            </p>
+          </header>
+
+          <aside className="membership-editorial-page__sidebar">
+            <div className="membership-application">
+              <h2>{copy.applicationTitle}</h2>
+              <a
+                className="button button--ivory"
+                href={membershipUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {copy.apply}
+              </a>
+            </div>
+            <div className="membership-social-image-slot">
+              <Image
+                className="membership-social-image"
+                src="/edna-members-club-dinner-helsinki.jpg"
+                alt="Guests dining together at an Edna Social Club evening in Helsinki"
+                width="1440"
+                height="960"
+                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 31vw"
+              />
+            </div>
+          </aside>
+
+          <div className="membership-editorial-page__questions">
+            {copy.questions.map((question) => (
+              <section className="membership-question" key={question.title}>
+                <h2>{question.title}</h2>
+                <p>{question.body}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       <PageHero title={copy.title} lead={copy.lead} />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner membership-panel">
-          {'questions' in copy ? (
-            <div className="membership-content">
-              <p className="membership-intro-secondary">
-                {copy.introSecondary}
-              </p>
-              <div className="membership-questions">
-                {copy.questions.map((question) => (
-                  <section className="membership-question" key={question.title}>
-                    <h2>{question.title}</h2>
-                    <p>{question.body}</p>
-                  </section>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="body-copy">
-              <h2>{copy.bodyTitle}</h2>
-              {copy.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          )}
+          <div className="body-copy">
+            <h2>{copy.bodyTitle}</h2>
+            {copy.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
           <aside className="membership-application">
             <h2>{copy.applicationTitle}</h2>
             <p>{copy.applicationBody}</p>
