@@ -18,19 +18,10 @@ const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const emailUrl = 'mailto:contact@ednasocialclub.com';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 
-function PageHero({
-  eyebrow,
-  title,
-  lead,
-}: {
-  eyebrow: string;
-  title: string;
-  lead: string;
-}) {
+function PageHero({ title, lead }: { title: string; lead: string }) {
   return (
     <section className="page-hero">
       <div className="page-hero__inner reveal">
-        <p className="page-eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
         <p className="page-lead">{lead}</p>
       </div>
@@ -67,12 +58,11 @@ function AboutPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <PageHero eyebrow={copy.eyebrow} title={copy.title} lead={copy.lead} />
+      <PageHero title={copy.title} lead={copy.lead} />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner split-section">
           <div>
-            <p className="page-eyebrow">{copy.eyebrow}</p>
             <h2>{copy.ideaTitle}</h2>
           </div>
           <div className="body-copy">
@@ -120,7 +110,7 @@ function MembersPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <PageHero eyebrow={copy.eyebrow} title={copy.title} lead={copy.lead} />
+      <PageHero title={copy.title} lead={copy.lead} />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner membership-panel">
@@ -153,7 +143,7 @@ function PrivateEventsPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <PageHero eyebrow={copy.eyebrow} title={copy.title} lead={copy.lead} />
+      <PageHero title={copy.title} lead={copy.lead} />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner page-section__inner--narrow body-copy">
@@ -193,7 +183,7 @@ function PartnershipsPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <PageHero eyebrow={copy.eyebrow} title={copy.title} lead={copy.lead} />
+      <PageHero title={copy.title} lead={copy.lead} />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner page-section__inner--narrow body-copy">
@@ -237,7 +227,6 @@ function ContactPage({ locale }: { locale: Locale }) {
     <section className="contact-page page-section">
       <div className="page-section__inner">
         <div className="page-hero__inner reveal">
-          <p className="page-eyebrow">{copy.eyebrow}</p>
           <h1 className="contact-title">{copy.title}</h1>
           <p className="page-lead">{copy.lead}</p>
         </div>

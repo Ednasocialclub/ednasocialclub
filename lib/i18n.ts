@@ -112,6 +112,8 @@ const pages = {
       partnershipsTitle: 'Partnerships',
       contactTitle: 'Contact',
       explore: 'Learn more',
+      membersCta: 'Explore Members Club',
+      privateCta: 'Learn more about Private & Corporate',
       partnershipsCta: 'Explore partnerships',
     },
     about: {
@@ -215,7 +217,6 @@ const pages = {
       emailLabel: 'Email',
       instagramLabel: 'Instagram',
       tiktokLabel: 'TikTok',
-      phrase: 'Not a place, a feeling.',
     },
   },
   fi: {
@@ -227,6 +228,8 @@ const pages = {
       partnershipsTitle: 'Yhteistyöt',
       contactTitle: 'Yhteystiedot',
       explore: 'Lue lisää',
+      membersCta: 'Tutustu jäsenklubiin',
+      privateCta: 'Lue lisää yksityisistä ja yritystapahtumista',
       partnershipsCta: 'Tutustu yhteistyöhön',
     },
     about: {
@@ -330,7 +333,6 @@ const pages = {
       emailLabel: 'Sähköposti',
       instagramLabel: 'Instagram',
       tiktokLabel: 'TikTok',
-      phrase: 'Not a place, a feeling.',
     },
   },
 } as const;

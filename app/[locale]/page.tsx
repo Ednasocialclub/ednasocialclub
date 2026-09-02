@@ -103,9 +103,8 @@ export default async function HomePage({
         <section className="overview-section overview-about" id="about">
           <div className="overview-section__inner overview-split">
             <div className="overview-heading">
-              <p className="brand-note">{copy.pages.about.phrase}</p>
-              <p className="page-eyebrow">{copy.pages.about.eyebrow}</p>
               <h2>{copy.pages.home.aboutTitle}</h2>
+              <p className="brand-note">{copy.pages.about.phrase}</p>
             </div>
             <div className="overview-copy">
               <p className="overview-lead">{copy.pages.about.lead}</p>
@@ -132,7 +131,6 @@ export default async function HomePage({
           id="members"
         >
           <div className="overview-section__inner overview-section__inner--narrow">
-            <p className="page-eyebrow">{copy.pages.members.eyebrow}</p>
             <h2>{copy.pages.members.title}</h2>
             <p className="overview-lead">{copy.pages.members.lead}</p>
             <p>{copy.pages.members.body[0]}</p>
@@ -149,7 +147,7 @@ export default async function HomePage({
                 className="text-link text-link--light"
                 href={localizedPath(locale, 'members')}
               >
-                {copy.pages.home.explore}
+                {copy.pages.home.membersCta}
                 <span
                   className="link-arrow link-arrow--right"
                   aria-hidden="true"
@@ -165,7 +163,6 @@ export default async function HomePage({
         >
           <div className="overview-section__inner overview-split">
             <div className="overview-heading">
-              <p className="page-eyebrow">{copy.pages.privateEvents.eyebrow}</p>
               <h2>{copy.pages.home.privateTitle}</h2>
               <p className="overview-lead">{copy.pages.privateEvents.lead}</p>
             </div>
@@ -178,15 +175,15 @@ export default async function HomePage({
               <div className="overview-actions overview-actions--start">
                 <a
                   className="button button--wine"
-                  href={localizedPath(locale, 'privateEvents')}
-                >
-                  {copy.pages.home.explore}
-                </a>
-                <a
-                  className="text-link"
                   href="mailto:contact@ednasocialclub.com"
                 >
                   {copy.pages.privateEvents.contactCta}
+                </a>
+                <a
+                  className="text-link"
+                  href={localizedPath(locale, 'privateEvents')}
+                >
+                  {copy.pages.home.privateCta}
                   <span
                     className="link-arrow link-arrow--right"
                     aria-hidden="true"
@@ -202,18 +199,29 @@ export default async function HomePage({
           id="partnerships"
         >
           <div className="overview-section__inner overview-section__inner--medium">
-            <p className="page-eyebrow">{copy.pages.partnerships.eyebrow}</p>
             <h2>{copy.pages.home.partnershipsTitle}</h2>
             <p className="partnerships-audience">
               {copy.pages.partnerships.audience}
             </p>
             <p>{copy.pages.partnerships.partnersBody}</p>
-            <a
-              className="button button--wine"
-              href={localizedPath(locale, 'partnerships')}
-            >
-              {copy.pages.home.partnershipsCta}
-            </a>
+            <div className="overview-actions">
+              <a
+                className="button button--wine"
+                href="mailto:contact@ednasocialclub.com"
+              >
+                {copy.pages.partnerships.contactCta}
+              </a>
+              <a
+                className="text-link text-link--light"
+                href={localizedPath(locale, 'partnerships')}
+              >
+                {copy.pages.home.partnershipsCta}
+                <span
+                  className="link-arrow link-arrow--right"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
           </div>
         </section>
 
@@ -222,6 +230,21 @@ export default async function HomePage({
           id="contact"
         >
           <div className="overview-section__inner">
+            <div className="overview-contact__details">
+              <h2>{copy.pages.home.contactTitle}</h2>
+              <div className="overview-contact__links">
+                <a href="mailto:contact@ednasocialclub.com">
+                  contact@ednasocialclub.com
+                </a>
+                <a href={instagramUrl} target="_blank" rel="noreferrer">
+                  Instagram @ednasocialclub
+                </a>
+                <a href={tiktokUrl} target="_blank" rel="noreferrer">
+                  TikTok @ednasocialclub
+                </a>
+              </div>
+            </div>
+
             <section className="overview-press" aria-labelledby="press-heading">
               <h3 className="page-eyebrow" id="press-heading">
                 PRESS
@@ -249,23 +272,6 @@ export default async function HomePage({
                 })}
               </div>
             </section>
-
-            <div className="overview-contact__details">
-              <p className="brand-note">{copy.pages.contact.phrase}</p>
-              <p className="page-eyebrow">{copy.pages.contact.eyebrow}</p>
-              <h2>{copy.pages.home.contactTitle}</h2>
-              <div className="overview-contact__links">
-                <a href="mailto:contact@ednasocialclub.com">
-                  contact@ednasocialclub.com
-                </a>
-                <a href={instagramUrl} target="_blank" rel="noreferrer">
-                  Instagram @ednasocialclub
-                </a>
-                <a href={tiktokUrl} target="_blank" rel="noreferrer">
-                  TikTok @ednasocialclub
-                </a>
-              </div>
-            </div>
           </div>
         </section>
       </main>

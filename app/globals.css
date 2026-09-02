@@ -339,7 +339,7 @@ button {
 }
 
 .overview-heading .brand-note {
-  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
   color: var(--wine);
 }
 
@@ -426,7 +426,7 @@ button {
 }
 
 .overview-press {
-  margin-bottom: clamp(3.5rem, 7vw, 5.5rem);
+  margin-top: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .overview-press .page-eyebrow {
@@ -456,10 +456,6 @@ button {
 
 .overview-press__entry a:hover {
   opacity: 1;
-}
-
-.overview-contact .brand-note {
-  margin-bottom: 2.5rem;
 }
 
 .overview-contact__links {
@@ -1069,10 +1065,6 @@ button {
     scroll-margin-top: 4.6rem;
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
-  }
-
-  .overview-heading .brand-note {
-    margin-bottom: 2rem;
   }
 
   .overview-actions {
