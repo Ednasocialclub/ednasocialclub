@@ -108,22 +108,23 @@ const pages = {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
       aboutTitle: 'About Edna',
+      aboutLead: 'Edna is a Social & Jazz Club in Helsinki.',
       aboutBody:
         'We create jazz evenings, dinners, cocktail events and social gatherings in carefully chosen spaces around Helsinki.',
-      aboutEventsNote: 'Future events are announced on',
+      aboutEventsNote: 'Future events are announced on our Instagram',
       aboutCta: 'Learn more about Edna',
       aboutPillars: {
         liveMusic: {
           title: 'Live music',
-          body: 'Live jazz sets the rhythm, from dinner and conversation to late night dancing.',
+          body: 'Jazz gives every evening its rhythm, from dinner and conversation to late night dancing.',
         },
         atmosphere: {
           title: 'Atmosphere',
-          body: 'Every detail is considered, from the setting and table to the music and mood.',
+          body: 'Every detail is considered, from the setting and table to the music, service and mood.',
         },
         community: {
           title: 'Community',
-          body: 'A community where new friendships, collaborations, clients and opportunities can begin naturally.',
+          body: 'Edna is where new friendships, collaborations, clients and opportunities begin naturally, and where you become part of a wider social circle.',
         },
       },
       privateTitle: 'Private & Corporate',
@@ -137,7 +138,7 @@ const pages = {
     about: {
       eyebrow: 'About',
       title: 'Edna brings people together.',
-      lead: 'Edna is a Social & Jazz Club in Helsinki built around community, live music, beautiful settings and genuine social connection.',
+      lead: 'Edna is a Social & Jazz Club in Helsinki for people who still want a reason to dress up, stay a little longer, meet someone new and feel part of something.',
       ideaTitle: 'The idea',
       ideaBody: [
         'Edna creates thoughtful occasions for people to leave the everyday behind, dress for the evening and meet one another naturally.',
@@ -164,6 +165,32 @@ const pages = {
         'Future events are announced on Instagram at @ednasocialclub.',
       instagramCta: 'Visit Instagram',
       phrase: 'The art of gathering.',
+      editorialSections: [
+        {
+          title: 'What happens at Edna?',
+          body: 'From candlelit jazz dinners and cocktail evenings to garden parties, yacht cruises and private gatherings, no two Edna evenings are meant to feel exactly the same.',
+        },
+        {
+          title: 'Why jazz?',
+          body: 'Long before Edna existed, jazz was already part of the world that inspired it. It carries the soul of another era, when evenings moved a little slower, romance mattered and music set the mood.',
+        },
+        {
+          title: 'Where do we meet?',
+          body: 'Edna has no single address. We move through some of Helsinki’s most beautiful restaurants, private spaces and unexpected venues, giving each evening a world of its own.',
+        },
+        {
+          title: 'Who is Edna for?',
+          body: 'For curious, social people who appreciate music, beauty and good conversation, and like the idea of leaving with a new connection.',
+        },
+        {
+          title: 'Can I come alone?',
+          body: 'Absolutely. Edna is made for meeting people you did not arrive with, so coming alone is often where the best conversations begin.',
+        },
+        {
+          title: 'What do we believe in?',
+          body: 'We believe people still want to dress up, stay a little longer, meet someone new and feel part of something bigger than just another night out.',
+        },
+      ],
     },
     members: {
       eyebrow: 'Members Club',
@@ -242,22 +269,23 @@ const pages = {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
       aboutTitle: 'Ednasta',
+      aboutLead: 'Edna on helsinkiläinen Social & Jazz Club.',
       aboutBody:
         'Luomme jazziltoja, illallisia, cocktailtilaisuuksia ja sosiaalisia kokoontumisia tarkoin valituissa tiloissa ympäri Helsinkiä.',
-      aboutEventsNote: 'Tulevista tapahtumista ilmoitetaan tilillä',
+      aboutEventsNote: 'Tulevista tapahtumista ilmoitetaan Instagramissamme',
       aboutCta: 'Lue lisää Ednasta',
       aboutPillars: {
         liveMusic: {
           title: 'Elävä musiikki',
-          body: 'Elävä jazz luo illan rytmin illallisesta ja keskusteluista myöhäisillan tanssiin.',
+          body: 'Jazz antaa jokaiselle illalle rytmin illallisesta ja keskusteluista myöhäisillan tanssiin.',
         },
         atmosphere: {
           title: 'Tunnelma',
-          body: 'Jokainen yksityiskohta on harkittu ympäristöstä ja kattauksesta musiikkiin ja tunnelmaan.',
+          body: 'Jokainen yksityiskohta on harkittu ympäristöstä ja kattauksesta musiikkiin, palveluun ja tunnelmaan.',
         },
         community: {
           title: 'Yhteisö',
-          body: 'Yhteisö, jossa uudet ystävyydet, yhteistyöt, asiakkuudet ja mahdollisuudet voivat syntyä luontevasti.',
+          body: 'Edna on paikka, jossa uudet ystävyydet, yhteistyöt, asiakkuudet ja mahdollisuudet alkavat luontevasti ja jossa sinusta tulee osa laajempaa sosiaalista piiriä.',
         },
       },
       privateTitle: 'Yksityiset & yritykset',
@@ -271,7 +299,7 @@ const pages = {
     about: {
       eyebrow: 'Ednasta',
       title: 'Edna tuo ihmiset yhteen.',
-      lead: 'Edna on helsinkiläinen Social & Jazz Club, jonka ytimessä ovat yhteisö, elävä musiikki, kauniit ympäristöt ja aidot kohtaamiset.',
+      lead: 'Edna on helsinkiläinen Social & Jazz Club ihmisille, jotka haluavat yhä syyn pukeutua, viipyä hieman pidempään, tavata jonkun uuden ja tuntea olevansa osa jotakin.',
       ideaTitle: 'Ajatus',
       ideaBody: [
         'Edna luo harkittuja tilaisuuksia, joissa ihmiset voivat jättää arjen hetkeksi taakseen, pukeutua iltaa varten ja tutustua toisiinsa luontevasti.',
@@ -298,6 +326,32 @@ const pages = {
         'Tulevista tapahtumista ilmoitetaan Instagramissa tilillä @ednasocialclub.',
       instagramCta: 'Siirry Instagramiin',
       phrase: 'The art of gathering.',
+      editorialSections: [
+        {
+          title: 'Mitä Ednassa tapahtuu?',
+          body: 'Kynttilänvalossa järjestettävistä jazzillallisista ja cocktaililloista puutarhajuhliin, risteilyihin ja yksityistilaisuuksiin, kahta Edna-iltaa ei ole tarkoitettu tuntumaan täysin samalta.',
+        },
+        {
+          title: 'Miksi jazz?',
+          body: 'Jo kauan ennen Ednan syntyä jazz oli osa sitä maailmaa, josta se sai inspiraationsa. Jazz kantaa toisen aikakauden sielua, jolloin illat etenivät hieman hitaammin, romantiikalla oli merkitystä ja musiikki loi tunnelman.',
+        },
+        {
+          title: 'Missä tapaamme?',
+          body: 'Ednalla ei ole yhtä osoitetta. Liikumme Helsingin kauneimmissa ravintoloissa, yksityisissä tiloissa ja odottamattomissa tapahtumapaikoissa, mikä antaa jokaiselle illalle oman maailmansa.',
+        },
+        {
+          title: 'Kenelle Edna on?',
+          body: 'Uteliaille ja sosiaalisille ihmisille, jotka arvostavat musiikkia, kauneutta ja hyvää keskustelua ja pitävät ajatuksesta, että illasta voi lähteä uuden tuttavuuden kanssa.',
+        },
+        {
+          title: 'Voinko tulla yksin?',
+          body: 'Ehdottomasti. Edna on luotu sitä varten, että tapaat ihmisiä, joiden kanssa et saapunut, joten yksin tuleminen johtaa usein parhaisiin keskusteluihin.',
+        },
+        {
+          title: 'Mihin uskomme?',
+          body: 'Uskomme, että ihmiset haluavat yhä pukeutua, viipyä hieman pidempään, tavata jonkun uuden ja tuntea olevansa osa jotakin suurempaa kuin vain yhtä illanviettoa.',
+        },
+      ],
     },
     members: {
       eyebrow: 'Jäsenklubi',
@@ -386,9 +440,9 @@ export const metadataCopy = {
         'Edna is a Social & Jazz Club in Helsinki built around community, live music and genuine social connection.',
     },
     about: {
-      title: 'About | Edna Social Club',
+      title: 'About Edna Social Club | Social & Jazz Club Helsinki',
       description:
-        'Discover Edna Social Club, its community, live jazz, beautiful settings and social gatherings in Helsinki.',
+        'Learn about Edna Social Club, a Social & Jazz Club in Helsinki creating jazz evenings, dinners, cocktail events and social gatherings.',
     },
     members: {
       title: 'Members Club | Edna Social Club',
@@ -418,9 +472,9 @@ export const metadataCopy = {
         'Edna on helsinkiläinen Social & Jazz Club, jonka ytimessä ovat yhteisö, elävä musiikki ja aidot kohtaamiset.',
     },
     about: {
-      title: 'Ednasta | Edna Social Club',
+      title: 'Ednasta | Social & Jazz Club Helsinki',
       description:
-        'Tutustu Edna Social Clubiin, sen yhteisöön, elävään jazziin, kauniisiin ympäristöihin ja sosiaalisiin kokoontumisiin.',
+        'Tutustu Edna Social Clubiin, helsinkiläiseen Social & Jazz Clubiin, joka luo jazziltoja, illallisia, cocktailtilaisuuksia ja sosiaalisia kokoontumisia.',
     },
     members: {
       title: 'Jäsenklubi | Edna Social Club',

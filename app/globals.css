@@ -577,6 +577,12 @@ button {
   line-height: 1.02;
 }
 
+.page-hero__brand-note {
+  margin-top: 1.5rem;
+  color: var(--wine);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+}
+
 .page-lead {
   max-width: var(--text-width);
   margin: 2rem auto 0;
@@ -727,10 +733,40 @@ button {
   line-height: 1.2;
 }
 
+.about-pillars--compact .about-pillar__heading {
+  margin-top: clamp(1.25rem, 2vw, 1.625rem);
+}
+
 .about-pillar p {
   margin: clamp(1.125rem, 2vw, 1.5rem) 0 0;
   font-size: 1.02rem;
   line-height: 1.74;
+}
+
+.about-editorial__inner {
+  width: min(100%, 62rem);
+}
+
+.about-editorial__item {
+  max-width: 43rem;
+}
+
+.about-editorial__item:nth-child(even) {
+  margin-left: auto;
+}
+
+.about-editorial__item + .about-editorial__item {
+  margin-top: clamp(4.5rem, 8vw, 7rem);
+}
+
+.page-section .about-editorial__item h2 {
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+}
+
+.about-editorial__item p {
+  margin: 1.5rem 0 0;
+  font-size: 1.06rem;
+  line-height: 1.78;
 }
 
 .brand-note {
@@ -1111,6 +1147,10 @@ button {
   .about-pillars-section {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+  }
+
+  .about-editorial__item:nth-child(even) {
+    margin-left: 0;
   }
 
   .split-section,

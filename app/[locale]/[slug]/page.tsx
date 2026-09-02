@@ -19,11 +19,22 @@ const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const emailUrl = 'mailto:contact@ednasocialclub.com';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 
-function PageHero({ title, lead }: { title: string; lead: string }) {
+function PageHero({
+  title,
+  lead,
+  supportingLine,
+}: {
+  title: string;
+  lead: string;
+  supportingLine?: string;
+}) {
   return (
     <section className="page-hero">
       <div className="page-hero__inner reveal">
         <h1>{title}</h1>
+        {supportingLine && (
+          <p className="brand-note page-hero__brand-note">{supportingLine}</p>
+        )}
         <p className="page-lead">{lead}</p>
       </div>
     </section>
@@ -88,40 +99,21 @@ function AboutPage({ locale }: { locale: Locale }) {
       <PageHero
         title={siteCopy[locale].pages.home.aboutTitle}
         lead={copy.lead}
+        supportingLine={copy.phrase}
       />
-
-      <section className="page-section page-section--tint">
-        <div className="page-section__inner split-section">
-          <div>
-            <h2>{copy.ideaTitle}</h2>
-          </div>
-          <div className="body-copy">
-            {copy.ideaBody.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="page-section about-pillars-section">
         <AboutPillars pillars={pillars} />
       </section>
 
-      <section className="page-section page-section--tint">
-        <div className="page-section__inner instagram-note">
-          <div>
-            <h2>{copy.eventsTitle}</h2>
-            <p>{copy.eventsBody}</p>
-            <p>{copy.instagramNote}</p>
-          </div>
-          <a
-            className="button button--wine"
-            href={instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {copy.instagramCta}
-          </a>
+      <section className="page-section page-section--tint about-editorial">
+        <div className="page-section__inner about-editorial__inner">
+          {copy.editorialSections.map((section) => (
+            <section className="about-editorial__item" key={section.title}>
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+            </section>
+          ))}
         </div>
       </section>
     </>

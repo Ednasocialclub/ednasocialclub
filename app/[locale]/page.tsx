@@ -135,7 +135,7 @@ export default async function HomePage({
                 <p className="brand-note">{copy.pages.about.phrase}</p>
               </div>
               <div className="overview-copy">
-                <p className="overview-lead">{copy.pages.about.lead}</p>
+                <p className="overview-lead">{copy.pages.home.aboutLead}</p>
                 <p>{copy.pages.home.aboutBody}</p>
                 <p className="overview-note">
                   {copy.pages.home.aboutEventsNote}{' '}
