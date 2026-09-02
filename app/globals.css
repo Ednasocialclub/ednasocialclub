@@ -76,8 +76,8 @@ button {
 
 .site-header__logo-link {
   display: flex;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.5rem;
+  height: 3.5rem;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
@@ -734,7 +734,7 @@ button {
 }
 
 .about-pillars--compact .about-pillar__heading {
-  margin-top: clamp(1.25rem, 2vw, 1.625rem);
+  margin-top: clamp(0.75rem, 1.25vw, 1rem);
 }
 
 .about-pillar p {
@@ -1111,8 +1111,8 @@ button {
   }
 
   .site-header__logo-link {
-    width: 2.65rem;
-    height: 2.65rem;
+    width: 3.3125rem;
+    height: 3.3125rem;
   }
 
   .home-hero {
