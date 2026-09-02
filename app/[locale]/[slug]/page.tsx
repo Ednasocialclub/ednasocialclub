@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
+import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { SiteShell } from '@/components/site-shell';
 import {
   contentRouteForSlug,
@@ -55,10 +56,39 @@ function PageCta({
 
 function AboutPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].pages.about;
+  const pillars: AboutPillar[] = [
+    {
+      ...copy.pillars[1],
+      image: {
+        src: '/edna-live-jazz-helsinki.jpg',
+        alt: 'Live jazz musicians performing on piano and double bass at Edna Social Club in Helsinki',
+        position: 'center center',
+      },
+    },
+    {
+      ...copy.pillars[2],
+      image: {
+        src: '/edna-social-club-atmosphere-helsinki.jpg',
+        alt: 'Guests dining in an elegant setting at an Edna Social Club evening in Helsinki',
+        position: 'center center',
+      },
+    },
+    {
+      ...copy.pillars[0],
+      image: {
+        src: '/edna-community-dinner-helsinki.jpg',
+        alt: 'Guests sharing dinner and conversation at an Edna Social Club event in Helsinki',
+        position: 'center center',
+      },
+    },
+  ];
 
   return (
     <>
-      <PageHero title={copy.title} lead={copy.lead} />
+      <PageHero
+        title={siteCopy[locale].pages.home.aboutTitle}
+        lead={copy.lead}
+      />
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner split-section">
@@ -73,15 +103,8 @@ function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="page-section">
-        <div className="page-section__inner information-grid">
-          {copy.pillars.map((pillar) => (
-            <article key={pillar.title}>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.body}</p>
-            </article>
-          ))}
-        </div>
+      <section className="page-section about-pillars-section">
+        <AboutPillars pillars={pillars} />
       </section>
 
       <section className="page-section page-section--tint">

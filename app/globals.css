@@ -666,6 +666,47 @@ button {
   line-height: 1.74;
 }
 
+.about-pillars {
+  display: grid;
+  width: min(100%, 82.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(4.375rem, 6vw, 6.25rem);
+  margin-inline: auto;
+}
+
+.about-pillar {
+  width: 100%;
+  max-width: 24.375rem;
+  justify-self: center;
+}
+
+.about-pillar__media {
+  position: relative;
+  width: 100%;
+  max-width: 22.5rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.about-pillar__media img {
+  object-fit: cover;
+}
+
+.page-section .about-pillar h2 {
+  margin: clamp(2rem, 3vw, 2.5rem) 0 0;
+  color: var(--wine);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.about-pillar p {
+  margin: clamp(1.125rem, 2vw, 1.5rem) 0 0;
+  font-size: 1.02rem;
+  line-height: 1.74;
+}
+
 .brand-note {
   margin: 0;
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
@@ -994,6 +1035,14 @@ button {
   }
 }
 
+@media (max-width: 64rem) {
+  .about-pillars {
+    width: min(100%, 24.375rem);
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
 @media (max-width: 48rem) {
   .site-header {
     min-height: 4.6rem;
@@ -1031,6 +1080,11 @@ button {
   .page-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .about-pillars-section {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   .split-section,
