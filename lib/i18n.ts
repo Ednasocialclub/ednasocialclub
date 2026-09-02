@@ -132,6 +132,10 @@ const pages = {
       contactTitle: 'Contact',
       explore: 'Learn more',
       membersCta: 'Explore Members Club',
+      membersLead:
+        'Your way into meaningful connections and evenings you will remember.',
+      membersBody:
+        'Membership brings you closer to the people and moments that make Edna what it is. A chance to meet people outside your usual circles, return to familiar faces and become part of a social world where friendships, introductions and new possibilities can begin naturally.',
       privateCta: 'Learn more about Private & Corporate',
       partnershipsCta: 'Explore partnerships',
     },
@@ -195,15 +199,26 @@ const pages = {
     members: {
       eyebrow: 'Members Club',
       title: 'Edna Members Club',
-      lead: 'A growing community for people who value culture, conversation and meeting beyond familiar circles.',
-      bodyTitle: 'A social club for real life',
-      body: [
-        'Edna Members Club exists to make meaningful social connection easier. It brings together people who are curious, open minded and interested in sharing good evenings with others.',
-        'Membership is intended for those who want to take part in the Edna community and return to it over time. The spirit is considered and welcoming, never exclusive for its own sake.',
+      lead: 'Edna Members Club is for people who want to meet beyond their usual circles and be part of a social world built around culture, conversation and shared experiences.',
+      introSecondary:
+        'Membership opens the door to priority access to selected Edna events, members-only gatherings and carefully chosen benefits, while bringing you closer to a community where new friendships, introductions, collaborations and opportunities can develop naturally over time.',
+      questions: [
+        {
+          title: 'What does membership open up?',
+          body: 'Priority access to selected Edna events, members-only gatherings and experiences created especially for the community, alongside more opportunities to meet, reconnect and become part of the wider Edna world.',
+        },
+        {
+          title: 'Can I attend without being a member?',
+          body: 'Yes. Selected Edna events will remain open to everyone, while membership offers more ways to connect with the Edna community and access members-only experiences.',
+        },
+        {
+          title: 'Who is membership for?',
+          body: 'For people who are curious about others, enjoy good conversation and want to meet beyond the social and professional circles they already know.',
+        },
       ],
-      applicationTitle: 'Membership applications',
+      applicationTitle: 'Become part of Edna',
       applicationBody:
-        'Applications are submitted through Edna’s official membership form. The form opens in a new window.',
+        'Meet beyond your usual circles and become part of the community behind Edna.',
       apply: 'Apply for membership',
     },
     privateEvents: {
@@ -293,6 +308,10 @@ const pages = {
       contactTitle: 'Yhteystiedot',
       explore: 'Lue lisää',
       membersCta: 'Tutustu jäsenklubiin',
+      membersLead:
+        'Kasvava yhteisö ihmisille, jotka arvostavat kulttuuria, keskusteluja ja kohtaamisia tuttujen piirien ulkopuolella.',
+      membersBody:
+        'Edna Members Club tekee merkityksellisistä kohtaamisista helpompia. Se kokoaa yhteen uteliaita ja avoimia ihmisiä, jotka haluavat jakaa hyviä iltoja muiden kanssa.',
       privateCta: 'Lue lisää yksityisistä ja yritystapahtumista',
       partnershipsCta: 'Tutustu yhteistyöhön',
     },

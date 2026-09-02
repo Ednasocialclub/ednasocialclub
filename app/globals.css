@@ -812,6 +812,29 @@ button {
   align-items: center;
 }
 
+.membership-intro-secondary,
+.membership-question p {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.78;
+}
+
+.membership-questions {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.membership-question + .membership-question {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.page-section .membership-question h2 {
+  font-size: clamp(1.65rem, 2.7vw, 2.4rem);
+}
+
+.membership-question h2 + p {
+  margin-top: 0.9rem;
+}
+
 .membership-application {
   padding: clamp(2rem, 4vw, 3.5rem);
   background: var(--wine);

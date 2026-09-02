@@ -132,12 +132,28 @@ function MembersPage({ locale }: { locale: Locale }) {
 
       <section className="page-section page-section--tint">
         <div className="page-section__inner membership-panel">
-          <div className="body-copy">
-            <h2>{copy.bodyTitle}</h2>
-            {copy.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
+          {'questions' in copy ? (
+            <div className="membership-content">
+              <p className="membership-intro-secondary">
+                {copy.introSecondary}
+              </p>
+              <div className="membership-questions">
+                {copy.questions.map((question) => (
+                  <section className="membership-question" key={question.title}>
+                    <h2>{question.title}</h2>
+                    <p>{question.body}</p>
+                  </section>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="body-copy">
+              <h2>{copy.bodyTitle}</h2>
+              {copy.body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          )}
           <aside className="membership-application">
             <h2>{copy.applicationTitle}</h2>
             <p>{copy.applicationBody}</p>

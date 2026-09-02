@@ -167,8 +167,8 @@ export default async function HomePage({
         >
           <div className="overview-section__inner overview-section__inner--narrow">
             <h2>{copy.pages.members.title}</h2>
-            <p className="overview-lead">{copy.pages.members.lead}</p>
-            <p>{copy.pages.members.body[0]}</p>
+            <p className="overview-lead">{copy.pages.home.membersLead}</p>
+            <p>{copy.pages.home.membersBody}</p>
             <div className="overview-actions">
               <a
                 className="button button--ivory"
