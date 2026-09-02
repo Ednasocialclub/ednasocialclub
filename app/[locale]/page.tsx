@@ -165,29 +165,41 @@ export default async function HomePage({
           className="overview-section overview-section--wine overview-members"
           id="members"
         >
-          <div className="overview-section__inner overview-section__inner--narrow">
-            <h2>{copy.pages.members.title}</h2>
-            <p className="overview-lead">{copy.pages.home.membersLead}</p>
-            <p>{copy.pages.home.membersBody}</p>
-            <div className="overview-actions">
-              <a
-                className="button button--ivory"
-                href={membershipUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {copy.nav.apply}
-              </a>
-              <a
-                className="text-link text-link--light"
-                href={localizedPath(locale, 'members')}
-              >
-                {copy.pages.home.membersCta}
-                <span
-                  className="link-arrow link-arrow--right"
-                  aria-hidden="true"
-                />
-              </a>
+          <div className="overview-section__inner overview-members__inner">
+            <div className="overview-members__media">
+              <Image
+                className="overview-members__image"
+                src="/edna-members-club-dinner-helsinki.jpg"
+                alt="Guests seated together around a dinner table at an Edna Social Club evening in Helsinki"
+                width="1440"
+                height="960"
+                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
+              />
+            </div>
+            <div className="overview-members__content">
+              <h2>{copy.pages.members.title}</h2>
+              <p className="overview-lead">{copy.pages.home.membersLead}</p>
+              <p>{copy.pages.home.membersBody}</p>
+              <div className="overview-actions overview-actions--start">
+                <a
+                  className="button button--ivory"
+                  href={membershipUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {copy.nav.apply}
+                </a>
+                <a
+                  className="text-link text-link--light"
+                  href={localizedPath(locale, 'members')}
+                >
+                  {copy.pages.home.membersCta}
+                  <span
+                    className="link-arrow link-arrow--right"
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>

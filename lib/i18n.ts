@@ -135,7 +135,7 @@ const pages = {
       membersLead:
         'Your way into meaningful connections and evenings you will remember.',
       membersBody:
-        'Membership brings you closer to the people and moments that make Edna what it is. A chance to meet people outside your usual circles, return to familiar faces and become part of a social world where friendships, introductions and new possibilities can begin naturally.',
+        'Meet beyond your usual circles and become part of a social world where friendships, introductions and new possibilities can begin naturally.',
       privateCta: 'Learn more about Private & Corporate',
       partnershipsCta: 'Explore partnerships',
     },
