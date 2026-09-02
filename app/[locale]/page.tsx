@@ -2,6 +2,7 @@
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { SiteShell } from '@/components/site-shell';
 import {
   isLocale,
@@ -74,6 +75,32 @@ export default async function HomePage({
 
   const locale: Locale = candidate;
   const copy = siteCopy[locale];
+  const aboutPillars: AboutPillar[] = [
+    {
+      ...copy.pages.home.aboutPillars.liveMusic,
+      image: {
+        src: '/edna-live-jazz-helsinki.jpg',
+        alt: 'Live jazz musicians performing on piano and double bass at Edna Social Club in Helsinki',
+        position: 'center center',
+      },
+    },
+    {
+      ...copy.pages.home.aboutPillars.atmosphere,
+      image: {
+        src: '/edna-social-club-atmosphere-helsinki.jpg',
+        alt: 'Guests dining in an elegant setting at an Edna Social Club evening in Helsinki',
+        position: 'center center',
+      },
+    },
+    {
+      ...copy.pages.home.aboutPillars.community,
+      image: {
+        src: '/edna-community-dinner-helsinki.jpg',
+        alt: 'Guests sharing dinner and conversation at an Edna Social Club event in Helsinki',
+        position: 'center center',
+      },
+    },
+  ];
 
   return (
     <SiteShell locale={locale}>
@@ -101,28 +128,37 @@ export default async function HomePage({
         </section>
 
         <section className="overview-section overview-about" id="about">
-          <div className="overview-section__inner overview-split">
-            <div className="overview-heading">
-              <h2>{copy.pages.home.aboutTitle}</h2>
-              <p className="brand-note">{copy.pages.about.phrase}</p>
+          <div className="overview-section__inner overview-about__inner">
+            <div className="overview-split overview-about__intro">
+              <div className="overview-heading">
+                <h2>{copy.pages.home.aboutTitle}</h2>
+                <p className="brand-note">{copy.pages.about.phrase}</p>
+              </div>
+              <div className="overview-copy">
+                <p className="overview-lead">{copy.pages.about.lead}</p>
+                <p>{copy.pages.home.aboutBody}</p>
+                <p className="overview-note">
+                  {copy.pages.home.aboutEventsNote}{' '}
+                  <a href={instagramUrl} target="_blank" rel="noreferrer">
+                    @ednasocialclub
+                  </a>
+                  .
+                </p>
+              </div>
             </div>
-            <div className="overview-copy">
-              <p className="overview-lead">{copy.pages.about.lead}</p>
-              <p>{copy.pages.about.eventsBody}</p>
-              <p className="overview-note">
-                {copy.pages.about.instagramNote}{' '}
-                <a href={instagramUrl} target="_blank" rel="noreferrer">
-                  {copy.pages.about.instagramCta}
-                </a>
-              </p>
-              <a className="text-link" href={localizedPath(locale, 'about')}>
-                {copy.pages.home.explore}
-                <span
-                  className="link-arrow link-arrow--right"
-                  aria-hidden="true"
-                />
-              </a>
-            </div>
+
+            <AboutPillars pillars={aboutPillars} headingLevel="h3" compact />
+
+            <a
+              className="text-link text-link--light overview-about__cta"
+              href={localizedPath(locale, 'about')}
+            >
+              {copy.pages.home.aboutCta}
+              <span
+                className="link-arrow link-arrow--right"
+                aria-hidden="true"
+              />
+            </a>
           </div>
         </section>
 

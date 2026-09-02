@@ -108,6 +108,24 @@ const pages = {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
       aboutTitle: 'About Edna',
+      aboutBody:
+        'We create jazz evenings, dinners, cocktail events and social gatherings in carefully chosen spaces around Helsinki.',
+      aboutEventsNote: 'Future events are announced on',
+      aboutCta: 'Learn more about Edna',
+      aboutPillars: {
+        liveMusic: {
+          title: 'Live music',
+          body: 'Live jazz sets the rhythm, from dinner and conversation to late night dancing.',
+        },
+        atmosphere: {
+          title: 'Atmosphere',
+          body: 'Every detail is considered, from the setting and table to the music and mood.',
+        },
+        community: {
+          title: 'Community',
+          body: 'A community where new friendships, collaborations, clients and opportunities can begin naturally.',
+        },
+      },
       privateTitle: 'Private & Corporate',
       partnershipsTitle: 'Partnerships',
       contactTitle: 'Contact',
@@ -224,6 +242,24 @@ const pages = {
       title: 'Edna Social Club',
       eyebrow: 'Social & Jazz Club · Helsinki',
       aboutTitle: 'Ednasta',
+      aboutBody:
+        'Luomme jazziltoja, illallisia, cocktailtilaisuuksia ja sosiaalisia kokoontumisia tarkoin valituissa tiloissa ympäri Helsinkiä.',
+      aboutEventsNote: 'Tulevista tapahtumista ilmoitetaan tilillä',
+      aboutCta: 'Lue lisää Ednasta',
+      aboutPillars: {
+        liveMusic: {
+          title: 'Elävä musiikki',
+          body: 'Elävä jazz luo illan rytmin illallisesta ja keskusteluista myöhäisillan tanssiin.',
+        },
+        atmosphere: {
+          title: 'Tunnelma',
+          body: 'Jokainen yksityiskohta on harkittu ympäristöstä ja kattauksesta musiikkiin ja tunnelmaan.',
+        },
+        community: {
+          title: 'Yhteisö',
+          body: 'Yhteisö, jossa uudet ystävyydet, yhteistyöt, asiakkuudet ja mahdollisuudet voivat syntyä luontevasti.',
+        },
+      },
       privateTitle: 'Yksityiset & yritykset',
       partnershipsTitle: 'Yhteistyöt',
       contactTitle: 'Yhteystiedot',

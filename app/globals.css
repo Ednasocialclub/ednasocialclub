@@ -481,6 +481,19 @@ button {
   color: var(--ivory);
 }
 
+.overview-about .about-pillars {
+  margin-top: clamp(4.5rem, 7vw, 6.5rem);
+}
+
+.overview-about .about-pillar__heading {
+  color: var(--ivory);
+}
+
+.overview-about__cta {
+  width: fit-content;
+  margin: clamp(3.5rem, 6vw, 5rem) auto 0;
+}
+
 .overview-members {
   background: var(--warm-neutral);
   color: var(--black);
@@ -674,10 +687,19 @@ button {
   margin-inline: auto;
 }
 
+.about-pillars--compact {
+  width: min(100%, 70rem);
+  gap: clamp(3.5rem, 5vw, 5rem);
+}
+
 .about-pillar {
   width: 100%;
   max-width: 24.375rem;
   justify-self: center;
+}
+
+.about-pillars--compact .about-pillar {
+  max-width: 20.75rem;
 }
 
 .about-pillar__media {
@@ -688,11 +710,15 @@ button {
   aspect-ratio: 4 / 3;
 }
 
+.about-pillars--compact .about-pillar__media {
+  max-width: 19.125rem;
+}
+
 .about-pillar__media img {
   object-fit: cover;
 }
 
-.page-section .about-pillar h2 {
+.about-pillar .about-pillar__heading {
   margin: clamp(2rem, 3vw, 2.5rem) 0 0;
   color: var(--wine);
   font-size: clamp(1.35rem, 2vw, 1.85rem);

@@ -10,9 +10,23 @@ export type AboutPillar = {
   };
 };
 
-export function AboutPillars({ pillars }: { pillars: readonly AboutPillar[] }) {
+export function AboutPillars({
+  pillars,
+  headingLevel = 'h2',
+  compact = false,
+}: {
+  pillars: readonly AboutPillar[];
+  headingLevel?: 'h2' | 'h3';
+  compact?: boolean;
+}) {
+  const Heading = headingLevel;
+
   return (
-    <div className="about-pillars">
+    <div
+      className={
+        compact ? 'about-pillars about-pillars--compact' : 'about-pillars'
+      }
+    >
       {pillars.map((pillar) => (
         <article className="about-pillar" key={pillar.title}>
           <div className="about-pillar__media">
@@ -21,11 +35,15 @@ export function AboutPillars({ pillars }: { pillars: readonly AboutPillar[] }) {
               alt={pillar.image.alt}
               fill
               loading="lazy"
-              sizes="(max-width: 1024px) calc(100vw - 48px), 360px"
+              sizes={
+                compact
+                  ? '(max-width: 1024px) min(calc(100vw - 48px), 306px), 306px'
+                  : '(max-width: 1024px) min(calc(100vw - 48px), 360px), 360px'
+              }
               style={{ objectPosition: pillar.image.position }}
             />
           </div>
-          <h2>{pillar.title}</h2>
+          <Heading className="about-pillar__heading">{pillar.title}</Heading>
           <p>{pillar.body}</p>
         </article>
       ))}
