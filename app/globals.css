@@ -66,9 +66,9 @@ button {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: 3.75rem 1fr auto;
+  grid-template-columns: 4.5rem 1fr auto;
   align-items: center;
-  min-height: 5rem;
+  min-height: 5.5rem;
   padding: 0 var(--page-gutter);
   border-bottom: 1px solid var(--wine-line);
   background: var(--ivory);
@@ -76,8 +76,8 @@ button {
 
 .site-header__logo-link {
   display: flex;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
@@ -175,7 +175,7 @@ button {
 
 .home-hero {
   display: flex;
-  min-height: calc(100svh - 5rem);
+  min-height: calc(100svh - 5.5rem);
   align-items: center;
   justify-content: center;
   padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
@@ -193,7 +193,7 @@ button {
 .home-hero__emblem {
   width: clamp(9rem, 13vw, 12rem);
   height: auto;
-  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+  margin-bottom: clamp(2.25rem, 3.2vw, 2.875rem);
 }
 
 .home-hero h1 {
@@ -207,7 +207,7 @@ button {
 }
 
 .home-hero p {
-  margin: 0.55rem 0 clamp(1rem, 2vh, 1.4rem);
+  margin: 1rem 0 clamp(1.5rem, 2.5vh, 1.875rem);
   font-size: 0.69rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
@@ -1117,23 +1117,23 @@ button {
 
 @media (max-width: 48rem) {
   .site-header {
-    min-height: 4.6rem;
+    min-height: 5.1rem;
   }
 
   .site-header__logo-link {
-    width: 3.3125rem;
-    height: 3.3125rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   .home-hero {
-    min-height: calc(100svh - 4.6rem);
+    min-height: calc(100svh - 5.1rem);
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
   }
 
   .home-hero__emblem {
     width: clamp(8.5rem, 36vw, 10rem);
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   .home-hero h1 {
