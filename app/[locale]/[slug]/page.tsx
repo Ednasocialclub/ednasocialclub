@@ -23,13 +23,15 @@ function PageHero({
   title,
   lead,
   supportingLine,
+  className,
 }: {
   title: string;
   lead: string;
   supportingLine?: string;
+  className?: string;
 }) {
   return (
-    <section className="page-hero">
+    <section className={className ? `page-hero ${className}` : 'page-hero'}>
       <div className="page-hero__inner reveal">
         <h1>{title}</h1>
         {supportingLine && (
@@ -100,6 +102,7 @@ function AboutPage({ locale }: { locale: Locale }) {
         title={siteCopy[locale].pages.home.aboutTitle}
         lead={copy.lead}
         supportingLine={copy.phrase}
+        className="about-page-hero"
       />
 
       <section className="page-section about-pillars-section">

@@ -556,6 +556,14 @@ button {
   margin: 0 auto;
 }
 
+.page-hero.about-page-hero {
+  padding-bottom: 0;
+}
+
+.about-page-hero + .about-pillars-section {
+  padding-top: clamp(3.75rem, 5vw, 5rem);
+}
+
 .page-eyebrow {
   margin: 0 0 1.6rem;
   font-size: 0.68rem;
