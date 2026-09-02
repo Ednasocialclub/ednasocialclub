@@ -272,8 +272,11 @@ button {
 }
 
 .overview-section {
+  display: flex;
+  min-height: calc(100svh - 5rem);
+  align-items: center;
   scroll-margin-top: 5rem;
-  padding: clamp(6.5rem, 10vw, 10rem) var(--page-gutter);
+  padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
   background: var(--ivory);
 }
 
@@ -1009,9 +1012,10 @@ button {
   }
 
   .overview-section {
+    min-height: calc(100svh - 4.6rem);
     scroll-margin-top: 4.6rem;
-    padding-top: 5.75rem;
-    padding-bottom: 5.75rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
   }
 
   .overview-heading .brand-note {
