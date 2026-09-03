@@ -61,11 +61,11 @@ function PageCta({
   href: string;
 }) {
   return (
-    <section className="page-cta">
+    <section className="page-cta page-cta--neutral">
       <div className="page-cta__inner">
         <h2>{title}</h2>
         <p>{body}</p>
-        <a className="button button--ivory" href={href}>
+        <a className="button button--wine" href={href}>
           {label}
         </a>
       </div>

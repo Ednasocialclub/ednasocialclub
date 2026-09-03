@@ -1347,6 +1347,15 @@ button {
   line-height: 1.72;
 }
 
+.page-cta--neutral {
+  background: var(--warm-neutral);
+  color: var(--wine);
+}
+
+.page-cta--neutral h2 {
+  color: var(--wine);
+}
+
 .contact-page {
   min-height: calc(100svh - 5rem);
   padding-top: clamp(6.5rem, 10vw, 9.5rem);
