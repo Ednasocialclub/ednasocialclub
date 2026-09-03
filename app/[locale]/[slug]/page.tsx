@@ -19,6 +19,8 @@ const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const emailUrl = 'mailto:contact@ednasocialclub.com';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
+const hufvudstadsbladetUrl =
+  'https://www.hbl.fi/helsingfors/exklusiva-jazzkvallar-blev-succe-bland-unga/';
 
 function PageHero({
   title,
@@ -294,6 +296,98 @@ function PartnershipsPage({ locale }: { locale: Locale }) {
 
 function ContactPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].pages.contact;
+
+  if ('form' in copy) {
+    return (
+      <section className="contact-page contact-page--editorial page-section">
+        <div className="page-section__inner">
+          <header className="contact-page__intro reveal">
+            <h1 className="contact-title">{copy.title}</h1>
+            <p className="page-lead">{copy.lead}</p>
+          </header>
+
+          <form
+            className="contact-form"
+            action={emailUrl}
+            method="post"
+            encType="text/plain"
+          >
+            <div className="contact-field">
+              <label htmlFor="contact-name">{copy.form.name}</label>
+              <input id="contact-name" name="Name" type="text" required />
+            </div>
+
+            <div className="contact-field">
+              <label htmlFor="contact-email">{copy.form.email}</label>
+              <input id="contact-email" name="Email" type="email" required />
+            </div>
+
+            <div className="contact-field">
+              <label htmlFor="contact-enquiry-type">
+                {copy.form.enquiryType}
+              </label>
+              <select
+                id="contact-enquiry-type"
+                name="Enquiry type"
+                defaultValue=""
+                required
+              >
+                <option value="" disabled>
+                  {copy.form.enquiryPlaceholder}
+                </option>
+                {copy.form.enquiryOptions.map((option) => (
+                  <option value={option} key={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="contact-field">
+              <label htmlFor="contact-message">{copy.form.message}</label>
+              <textarea
+                id="contact-message"
+                name="Message"
+                rows={6}
+                required
+              />
+            </div>
+
+            <button className="button button--wine" type="submit">
+              {copy.form.submit}
+            </button>
+          </form>
+
+          <div className="contact-page__details" aria-label="Contact details">
+            <a href={emailUrl}>contact@ednasocialclub.com</a>
+            <a href={instagramUrl} target="_blank" rel="noreferrer">
+              Instagram @ednasocialclub
+            </a>
+            <a href={tiktokUrl} target="_blank" rel="noreferrer">
+              TikTok @ednasocialclub
+            </a>
+          </div>
+
+          <section
+            className="contact-page__press"
+            aria-labelledby="contact-press-heading"
+          >
+            <h2 className="page-eyebrow" id="contact-press-heading">
+              PRESS
+            </h2>
+            <p>HUFVUDSTADSBLADET</p>
+            <a
+              href={hufvudstadsbladetUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              “Exklusiva jazzkvällar blev succé bland unga”
+            </a>
+          </section>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="contact-page page-section">

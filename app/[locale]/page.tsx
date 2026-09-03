@@ -282,6 +282,17 @@ export default async function HomePage({
           <div className="overview-section__inner">
             <div className="overview-contact__details">
               <h2>{copy.pages.home.contactTitle}</h2>
+              {copy.pages.home.contactLead ? (
+                <p className="overview-contact__lead">
+                  {copy.pages.home.contactLead}
+                </p>
+              ) : null}
+              <a
+                className="button button--wine overview-contact__cta"
+                href="mailto:contact@ednasocialclub.com"
+              >
+                Contact Edna
+              </a>
               <div className="overview-contact__links">
                 <a href="mailto:contact@ednasocialclub.com">
                   contact@ednasocialclub.com

@@ -130,6 +130,7 @@ const pages = {
       privateTitle: 'Private & Corporate',
       partnershipsTitle: 'Partnerships',
       contactTitle: 'Contact',
+      contactLead: 'For partnerships, private events and general enquiries.',
       explore: 'Learn more',
       membersCta: 'Explore Members Club',
       membersLead:
@@ -272,7 +273,21 @@ const pages = {
     contact: {
       eyebrow: 'Contact Us',
       title: 'Contact Edna',
-      lead: 'For general enquiries, private and corporate events, partnerships and membership, use the contact paths below.',
+      lead: 'For private events, partnerships and general enquiries.',
+      form: {
+        name: 'Name',
+        email: 'Email',
+        enquiryType: 'What is your enquiry about?',
+        enquiryPlaceholder: 'Select an option',
+        enquiryOptions: [
+          'Private & Corporate',
+          'Partnerships',
+          'Membership',
+          'General enquiry',
+        ],
+        message: 'Message',
+        submit: 'Send enquiry',
+      },
       emailLabel: 'Email',
       instagramLabel: 'Instagram',
       tiktokLabel: 'TikTok',
@@ -305,6 +320,7 @@ const pages = {
       privateTitle: 'Yksityiset & yritykset',
       partnershipsTitle: 'Yhteistyöt',
       contactTitle: 'Yhteystiedot',
+      contactLead: null,
       explore: 'Lue lisää',
       membersCta: 'Tutustu jäsenklubiin',
       membersLead:
