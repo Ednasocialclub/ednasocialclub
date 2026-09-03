@@ -228,11 +228,12 @@ const pages = {
       title: 'Private & Corporate',
       lead: 'Edna creates tailored private and corporate events, bringing together atmosphere, live music, entertainment and hospitality.',
       intro:
-        'Each event is tailored around the client’s wishes, occasion and setting, with Edna shaping the concept and coordinating the details into one seamless experience.',
+        'From the first idea to the final detail, each event is shaped around the client’s wishes and the occasion.',
       typesTitle: 'Occasions',
       types: [
         'Private events',
         'Corporate events',
+        'Christmas parties',
         'Client evenings',
         'Celebrations',
         'Launches',
@@ -241,7 +242,7 @@ const pages = {
       ],
       approachTitle: 'What Edna brings',
       approachBody:
-        'Edna can bring together creative direction, event concept, live music, atmosphere, hospitality and the social flow of the evening. The result is tailored to the host, the guests and the setting.',
+        'Edna can bring together creative direction, event concept, live music, entertainment, hospitality and coordination to create a seamless experience for the host and their guests.',
       contactTitle: 'Plan an occasion with Edna',
       contactBody:
         'Tell us what you are planning and what you want the evening to achieve.',
@@ -490,9 +491,9 @@ export const metadataCopy = {
         'Learn about Edna Members Club and apply to join the growing Helsinki community.',
     },
     privateEvents: {
-      title: 'Private & Corporate | Edna Social Club',
+      title: 'Private & Corporate Events Helsinki | Edna Social Club',
       description:
-        'Explore private events, corporate gatherings, client evenings, launches and dinners created by Edna.',
+        'Tailored private events, corporate events and Christmas parties in Helsinki, with live music, entertainment, hospitality and event coordination.',
     },
     partnerships: {
       title: 'Partnerships | Edna Social Club',
