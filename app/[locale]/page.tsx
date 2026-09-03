@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
+import { CollaborationGallery } from '@/components/collaboration-gallery';
 import { SiteShell } from '@/components/site-shell';
 import {
   isLocale,
@@ -250,10 +251,15 @@ export default async function HomePage({
         >
           <div className="overview-section__inner overview-section__inner--medium">
             <h2>{copy.pages.home.partnershipsTitle}</h2>
-            <p className="partnerships-audience">
-              {copy.pages.partnerships.audience}
+            <p className="overview-partnerships__intro">
+              {copy.pages.home.partnershipsBody}
             </p>
-            <p>{copy.pages.partnerships.partnersBody}</p>
+            <CollaborationGallery
+              label={copy.pages.partnerships.collaborationsLabel}
+              locale={locale}
+              showLabel={false}
+              variant="compact"
+            />
             <div className="overview-actions">
               <a
                 className="button button--wine"

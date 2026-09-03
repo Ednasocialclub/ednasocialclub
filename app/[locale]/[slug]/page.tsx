@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
+import { CollaborationGallery } from '@/components/collaboration-gallery';
 import { SiteShell } from '@/components/site-shell';
 import {
   contentRouteForSlug,
@@ -257,39 +258,54 @@ function PartnershipsPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <PageHero title={copy.title} lead={copy.lead} />
-
-      <section className="page-section page-section--tint">
-        <div className="page-section__inner page-section__inner--narrow body-copy">
-          <p>{copy.intro}</p>
-          <h2>{copy.audienceTitle}</h2>
-          <p>{copy.audience}</p>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="page-section__inner commercial-columns">
-          <div className="body-copy">
-            <h2>{copy.partnersTitle}</h2>
-            <p>{copy.partnersBody}</p>
-          </div>
-          <div>
-            <h2>{copy.opportunitiesTitle}</h2>
-            <ul className="plain-list">
-              {copy.opportunities.map((opportunity) => (
-                <li key={opportunity}>{opportunity}</li>
-              ))}
-            </ul>
+      <section className="partnerships-page-intro">
+        <div className="partnerships-page-intro__inner reveal">
+          <h1>{copy.title}</h1>
+          <p>{copy.lead}</p>
+          <div className="partnerships-page-intro__audience">
+            <h2>{copy.audienceTitle}</h2>
+            <p>{copy.audience}</p>
           </div>
         </div>
       </section>
 
-      <PageCta
-        title={copy.contactTitle}
-        body={copy.contactBody}
-        label={copy.contactCta}
-        href={emailUrl}
-      />
+      <section className="partnerships-page-lower">
+        <div className="partnerships-page-gallery">
+          <div className="partnerships-page-gallery__inner">
+            <CollaborationGallery
+              label={copy.collaborationsLabel}
+              locale={locale}
+              showLabel={false}
+              variant="expanded"
+            />
+          </div>
+        </div>
+
+        <div className="partnerships-page-commercial">
+          <div className="partnerships-page-commercial__inner">
+            <div className="body-copy">
+              <h2>{copy.partnersTitle}</h2>
+              <p>{copy.partnersBody}</p>
+            </div>
+            <div>
+              <h2>{copy.opportunitiesTitle}</h2>
+              <ul className="partnerships-page-commercial__list">
+                {copy.opportunities.map((opportunity) => (
+                  <li key={opportunity}>{opportunity}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="partnerships-page-commercial__cta">
+              <a
+                className="button button--wine"
+                href={localizedPath(locale, 'contact')}
+              >
+                {copy.contactCta}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
