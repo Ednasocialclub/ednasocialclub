@@ -97,9 +97,9 @@ export default async function HomePage({
     {
       ...copy.pages.home.aboutPillars.community,
       image: {
-        src: '/collaborations/edna-pilates-community-session.jpg',
-        alt: 'Guests taking part in an Edna Social Club Pilates community session in Helsinki',
-        position: 'center 52%',
+        src: '/edna-community-cheers-helsinki.jpg',
+        alt: 'Guests raising glasses together at an Edna Social Club gathering in Helsinki',
+        position: 'center 46%',
       },
     },
   ];
