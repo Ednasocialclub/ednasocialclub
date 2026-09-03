@@ -839,27 +839,22 @@ button {
   padding-top: clamp(6.5rem, 10vw, 9.5rem);
 }
 
-.membership-editorial-page__grid {
+.membership-editorial-page__intro-grid {
   display: grid;
-  grid-template-areas:
-    'intro sidebar'
-    'questions sidebar';
-  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.72fr);
-  align-items: start;
-  column-gap: clamp(3rem, 8vw, 8rem);
-  row-gap: clamp(3.25rem, 5vw, 4.5rem);
+  grid-template-areas: 'media intro';
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 7.5rem);
+  align-items: center;
 }
 
 .membership-editorial-page__intro {
   grid-area: intro;
-  max-width: 45rem;
 }
 
 .membership-editorial-page__intro h1 {
-  max-width: 16ch;
   margin: 0;
   color: var(--wine);
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-size: clamp(2.35rem, 4vw, 3.75rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.02;
@@ -873,19 +868,10 @@ button {
   margin-top: 1.5rem;
 }
 
-.membership-editorial-page__sidebar {
-  grid-area: sidebar;
-  width: 100%;
-}
-
-.membership-editorial-page__sidebar .membership-application .button {
-  margin-top: 2rem;
-}
-
-.membership-social-image-slot {
+.membership-editorial-page__media {
+  grid-area: media;
   overflow: hidden;
   width: 100%;
-  margin-top: 1.5rem;
   aspect-ratio: 4 / 3;
 }
 
@@ -897,8 +883,10 @@ button {
 }
 
 .membership-editorial-page__questions {
-  grid-area: questions;
-  max-width: 45rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2.5rem, 5vw, 5rem);
+  margin-top: clamp(4rem, 7vw, 6rem);
 }
 
 .membership-intro-secondary,
@@ -908,24 +896,30 @@ button {
   line-height: 1.78;
 }
 
-.membership-questions {
-  margin-top: clamp(3rem, 6vw, 5rem);
-}
-
-.membership-question + .membership-question {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-}
-
-.membership-editorial-page .membership-question + .membership-question {
-  margin-top: clamp(1.75rem, 3vw, 2.5rem);
-}
-
 .page-section .membership-question h2 {
-  font-size: clamp(1.65rem, 2.7vw, 2.4rem);
+  font-size: clamp(1.45rem, 2vw, 1.9rem);
 }
 
 .membership-question h2 + p {
   margin-top: 0.9rem;
+}
+
+.membership-editorial-page__cta {
+  width: 100%;
+  margin-top: clamp(4rem, 7vw, 6rem);
+  padding: clamp(3rem, 6vw, 5rem);
+  background: var(--wine);
+  color: var(--ivory);
+  text-align: center;
+}
+
+.membership-editorial-page__cta h2 {
+  color: var(--ivory);
+  font-size: clamp(2rem, 4vw, 3.65rem);
+}
+
+.membership-editorial-page__cta .button {
+  margin-top: 2rem;
 }
 
 .membership-application {
@@ -1274,26 +1268,31 @@ button {
     padding-top: 5.5rem;
   }
 
-  .membership-editorial-page__grid {
+  .membership-editorial-page__intro-grid {
     grid-template-areas:
       'intro'
-      'sidebar'
-      'questions';
+      'media';
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .membership-editorial-page__intro h1 {
-    font-size: clamp(2.4rem, 12vw, 3.75rem);
+    font-size: clamp(2.25rem, 10vw, 3.35rem);
   }
 
-  .membership-editorial-page__sidebar .membership-application {
-    width: 100%;
-    padding: 2rem;
-  }
-
-  .membership-social-image-slot {
+  .membership-editorial-page__media {
     aspect-ratio: 3 / 2;
+  }
+
+  .membership-editorial-page__questions {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-top: 3rem;
+  }
+
+  .membership-editorial-page__cta {
+    margin-top: 3.5rem;
+    padding: 2.75rem 2rem;
   }
 
   .about-pillars-section {

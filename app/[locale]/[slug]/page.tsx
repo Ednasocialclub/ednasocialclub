@@ -130,38 +130,27 @@ function MembersPage({ locale }: { locale: Locale }) {
   if ('questions' in copy) {
     return (
       <section className="page-section page-section--tint membership-editorial-page">
-        <div className="page-section__inner membership-editorial-page__grid">
-          <header className="membership-editorial-page__intro">
-            <h1>{copy.title}</h1>
-            <p className="page-lead">{copy.lead}</p>
-            <p className="membership-intro-secondary">
-              {copy.introSecondary}
-            </p>
-          </header>
+        <div className="page-section__inner membership-editorial-page__inner">
+          <div className="membership-editorial-page__intro-grid">
+            <header className="membership-editorial-page__intro">
+              <h1>{copy.title}</h1>
+              <p className="page-lead">{copy.lead}</p>
+              <p className="membership-intro-secondary">
+                {copy.introSecondary}
+              </p>
+            </header>
 
-          <aside className="membership-editorial-page__sidebar">
-            <div className="membership-application">
-              <h2>{copy.applicationTitle}</h2>
-              <a
-                className="button button--ivory"
-                href={membershipUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {copy.apply}
-              </a>
-            </div>
-            <div className="membership-social-image-slot">
+            <div className="membership-editorial-page__media">
               <Image
                 className="membership-social-image"
                 src="/edna-members-club-dinner-helsinki.jpg"
                 alt="Guests dining together at an Edna Social Club evening in Helsinki"
                 width="1440"
                 height="960"
-                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 31vw"
+                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
               />
             </div>
-          </aside>
+          </div>
 
           <div className="membership-editorial-page__questions">
             {copy.questions.map((question) => (
@@ -171,6 +160,18 @@ function MembersPage({ locale }: { locale: Locale }) {
               </section>
             ))}
           </div>
+
+          <section className="membership-editorial-page__cta">
+            <h2>{copy.applicationTitle}</h2>
+            <a
+              className="button button--ivory"
+              href={membershipUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {copy.apply}
+            </a>
+          </section>
         </div>
       </section>
     );

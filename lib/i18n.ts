@@ -199,13 +199,13 @@ const pages = {
     members: {
       eyebrow: 'Members Club',
       title: 'Edna Members Club',
-      lead: 'Edna Members Club is for people who want to meet beyond their usual circles and be part of a social world built around culture, conversation and shared experiences.',
+      lead: 'Edna Members Club is for people who want to meet beyond their usual circles and be part of a social world shaped by culture, conversation and shared experiences.',
       introSecondary:
-        'Membership opens the door to priority access to selected Edna events, members-only gatherings and carefully chosen benefits, while bringing you closer to a community where new friendships, introductions, collaborations and opportunities can develop naturally over time.',
+        'Membership brings you closer to a community where new friendships, introductions, collaborations and opportunities can develop naturally over time.',
       questions: [
         {
           title: 'What does membership open up?',
-          body: 'Priority access to selected Edna events, members-only gatherings and chosen benefits, with more ways to take part in the Edna community.',
+          body: 'Priority access to selected Edna events, members-only gatherings and carefully chosen benefits.',
         },
         {
           title: 'Can I attend without being a member?',
