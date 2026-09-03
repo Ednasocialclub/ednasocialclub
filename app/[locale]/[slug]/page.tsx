@@ -22,6 +22,8 @@ const emailUrl = 'mailto:contact@ednasocialclub.com';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 const hufvudstadsbladetUrl =
   'https://www.hbl.fi/helsingfors/exklusiva-jazzkvallar-blev-succe-bland-unga/';
+const newsletterUrl =
+  'https://ednasocialclub.myflodesk.com/privateclub?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAUGeatwZG9mAmZkaWQWUNvuZ1oMw8pmdJ5k9yoC_pSKys1SNGV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp3xTa0UeGLCby7uq3-F596v7h24fwR9AFK1M-z9THlDqEF4pzs_ptDNBiZvA_aem_k34N41oDHSdME7q8_J5k1A';
 
 function PageHero({
   title,
@@ -407,6 +409,22 @@ function ContactPage({ locale }: { locale: Locale }) {
               rel="noopener noreferrer"
             >
               “Exklusiva jazzkvällar blev succé bland unga”
+            </a>
+          </section>
+
+          <section
+            className="contact-page__newsletter"
+            aria-labelledby="contact-newsletter-heading"
+          >
+            <h2 className="page-eyebrow" id="contact-newsletter-heading">
+              NEWSLETTER
+            </h2>
+            <a
+              href={newsletterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the Edna newsletter
             </a>
           </section>
         </div>

@@ -79,25 +79,25 @@ export default async function HomePage({
     {
       ...copy.pages.home.aboutPillars.liveMusic,
       image: {
-        src: '/edna-live-jazz-helsinki.jpg',
-        alt: 'Live jazz musicians performing on piano and double bass at Edna Social Club in Helsinki',
-        position: 'center center',
+        src: '/edna-garden-party-live-music-helsinki.jpg',
+        alt: 'A singer performing beside a grand piano for guests at an Edna Social Club garden party in Helsinki',
+        position: '48% center',
       },
     },
     {
       ...copy.pages.home.aboutPillars.atmosphere,
       image: {
-        src: '/edna-warm-dining-room-atmosphere-helsinki.jpg',
-        alt: 'Guests seated in a warmly lit dining room during an Edna Social Club evening in Helsinki',
-        position: 'center center',
+        src: '/collaborations/edna-champagne-tower-collaboration.jpg',
+        alt: 'A champagne tower surrounded by guests at an Edna Social Club event in Helsinki',
+        position: 'center 48%',
       },
     },
     {
       ...copy.pages.home.aboutPillars.community,
       image: {
-        src: '/edna-community-dinner-helsinki.jpg',
-        alt: 'Guests sharing dinner and conversation at an Edna Social Club event in Helsinki',
-        position: 'center center',
+        src: '/collaborations/edna-pilates-community-session.jpg',
+        alt: 'Guests taking part in an Edna Social Club Pilates community session in Helsinki',
+        position: 'center 52%',
       },
     },
   ];

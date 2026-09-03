@@ -1483,6 +1483,31 @@ button {
   opacity: 1;
 }
 
+.contact-page__newsletter {
+  margin-top: clamp(2.25rem, 4vw, 3rem);
+}
+
+.contact-page__newsletter .page-eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+
+.contact-page__newsletter a {
+  display: block;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.78;
+  transition: opacity 180ms ease;
+}
+
+.contact-page__newsletter a:hover {
+  opacity: 1;
+}
+
 .contact-title {
   max-width: 16ch;
   margin: 0 auto;
