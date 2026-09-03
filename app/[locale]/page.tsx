@@ -128,14 +128,13 @@ export default async function HomePage({
 
         <section className="overview-section overview-about" id="about">
           <div className="overview-section__inner overview-about__inner">
-            <div className="overview-split overview-about__intro">
-              <div className="overview-heading">
-                <h2>{copy.pages.home.aboutTitle}</h2>
-                <p className="brand-note">{copy.pages.about.phrase}</p>
-              </div>
+            <header className="overview-about__intro">
+              <h2>{copy.pages.home.aboutTitle}</h2>
               <div className="overview-copy">
                 <p className="overview-lead">{copy.pages.home.aboutLead}</p>
-                <p>{copy.pages.home.aboutBody}</p>
+                {copy.pages.home.aboutBody ? (
+                  <p>{copy.pages.home.aboutBody}</p>
+                ) : null}
                 <p className="overview-note">
                   {copy.pages.home.aboutEventsNote}{' '}
                   <a href={instagramUrl} target="_blank" rel="noreferrer">
@@ -144,7 +143,7 @@ export default async function HomePage({
                   .
                 </p>
               </div>
-            </div>
+            </header>
 
             <AboutPillars pillars={aboutPillars} headingLevel="h3" compact />
 
@@ -158,6 +157,10 @@ export default async function HomePage({
                 aria-hidden="true"
               />
             </a>
+
+            <p className="brand-note overview-about__signature">
+              {copy.pages.about.phrase}
+            </p>
           </div>
         </section>
 

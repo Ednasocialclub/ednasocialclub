@@ -506,13 +506,29 @@ button {
   color: var(--ivory);
 }
 
+.overview-about__intro {
+  width: min(100%, 37.5rem);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-about__intro .overview-copy {
+  margin-top: 1.75rem;
+}
+
 .overview-about .about-pillars {
-  margin-top: 2.5rem;
+  margin-top: clamp(3rem, 5vw, 4rem);
 }
 
 .overview-about__cta {
+  display: flex;
   width: fit-content;
   margin: clamp(3.5rem, 6vw, 5rem) auto 0;
+}
+
+.overview-about .overview-about__signature {
+  width: fit-content;
+  margin: clamp(2.5rem, 4vw, 3.5rem) 0 0 auto;
 }
 
 .overview-members {
@@ -1344,6 +1360,15 @@ button {
     scroll-margin-top: 4.6rem;
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
+  }
+
+  .overview-about .about-pillars {
+    margin-top: 2.75rem;
+  }
+
+  .overview-about .overview-about__signature {
+    margin-top: 2.5rem;
+    margin-left: 0;
   }
 
   .overview-members__inner {
