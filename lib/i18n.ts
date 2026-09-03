@@ -110,8 +110,8 @@ const pages = {
       aboutTitle: 'About Edna',
       aboutLead: 'Edna is a Social & Jazz Club in Helsinki.',
       aboutBody:
-        'We create jazz evenings, dinners, cocktail events and social gatherings in carefully chosen spaces around Helsinki.',
-      aboutEventsNote: 'Future events are announced on our Instagram',
+        'Jazz evenings, dinners, cocktail events and seasonal balls.',
+      aboutEventsNote: 'Future events are announced on Instagram',
       aboutCta: 'Learn more about Edna',
       aboutPillars: {
         liveMusic: {
