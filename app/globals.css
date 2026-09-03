@@ -497,6 +497,8 @@ button {
 }
 
 .overview-about {
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
   background: var(--wine);
   color: var(--ivory);
 }
@@ -517,18 +519,19 @@ button {
 }
 
 .overview-about .about-pillars {
-  margin-top: clamp(3rem, 5vw, 4rem);
+  margin-top: 2rem;
 }
 
 .overview-about__cta {
   display: flex;
   width: fit-content;
-  margin: clamp(3.5rem, 6vw, 5rem) auto 0;
+  margin: 1.75rem auto 0;
 }
 
 .overview-about .overview-about__signature {
   width: fit-content;
-  margin: clamp(2.5rem, 4vw, 3.5rem) 0 0 auto;
+  margin: 0.75rem 0 0 auto;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
 }
 
 .overview-members {
@@ -1366,8 +1369,12 @@ button {
     margin-top: 2.75rem;
   }
 
-  .overview-about .overview-about__signature {
+  .overview-about__cta {
     margin-top: 2.5rem;
+  }
+
+  .overview-about .overview-about__signature {
+    margin-top: 1.75rem;
     margin-left: 0;
   }
 
