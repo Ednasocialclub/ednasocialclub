@@ -226,9 +226,9 @@ const pages = {
     privateEvents: {
       eyebrow: 'Private & Corporate',
       title: 'Private & Corporate',
-      lead: 'Edna creates private and corporate occasions that combine atmosphere, live music, hospitality and genuine social connection.',
+      lead: 'Edna creates tailored private and corporate events, bringing together atmosphere, live music, entertainment and hospitality.',
       intro:
-        'Each occasion is shaped around the people, the setting and the reason for gathering, with every detail considered to make the experience feel personal and effortless.',
+        'Each event is tailored around the client’s wishes, occasion and setting, with Edna shaping the concept and coordinating the details into one seamless experience.',
       typesTitle: 'Occasions',
       types: [
         'Private events',
