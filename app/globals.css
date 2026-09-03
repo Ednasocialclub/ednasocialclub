@@ -492,6 +492,27 @@ button {
   opacity: 1;
 }
 
+.overview-newsletter {
+  margin-top: 1.75rem;
+}
+
+.overview-newsletter .page-eyebrow {
+  margin-bottom: 0.65rem;
+  font-weight: 400;
+}
+
+.overview-newsletter a {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.78;
+  transition: opacity 180ms ease;
+}
+
+.overview-newsletter a:hover {
+  opacity: 1;
+}
+
 .overview-contact__links {
   display: flex;
   align-items: center;

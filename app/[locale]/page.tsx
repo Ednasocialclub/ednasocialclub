@@ -15,6 +15,8 @@ import {
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
+const newsletterUrl =
+  'https://ednasocialclub.myflodesk.com/privateclub?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAUGeatwZG9mAmZkaWQWUNvuZ1oMw8pmdJ5k9yoC_pSKys1SNGV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp3xTa0UeGLCby7uq3-F596v7h24fwR9AFK1M-z9THlDqEF4pzs_ptDNBiZvA_aem_k34N41oDHSdME7q8_J5k1A';
 const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 
 const pressEntries = [
@@ -338,6 +340,22 @@ export default async function HomePage({
                   );
                 })}
               </div>
+            </section>
+
+            <section
+              className="overview-newsletter"
+              aria-labelledby="home-newsletter-heading"
+            >
+              <h3 className="page-eyebrow" id="home-newsletter-heading">
+                NEWSLETTER
+              </h3>
+              <a
+                href={newsletterUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the Edna newsletter
+              </a>
             </section>
           </div>
         </section>
