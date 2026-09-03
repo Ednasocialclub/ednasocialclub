@@ -1062,9 +1062,13 @@ button {
   margin: 1.5rem auto 0;
 }
 
+.contact-page--editorial .contact-title {
+  font-size: clamp(2.35rem, 4.5vw, 4.35rem);
+}
+
 .contact-form {
   display: grid;
-  width: min(100%, 38rem);
+  width: min(100%, 35rem);
   gap: 1.75rem;
   margin: clamp(3.5rem, 6vw, 5rem) auto 0;
   text-align: left;
@@ -1086,7 +1090,7 @@ button {
 .contact-field select,
 .contact-field textarea {
   width: 100%;
-  padding: 0.7rem 0;
+  padding: 0.45rem 0;
   border: 0;
   border-bottom: 1px solid var(--wine-line);
   border-radius: 0;
@@ -1096,8 +1100,44 @@ button {
   transition: border-color 180ms ease;
 }
 
+.contact-field input,
+.contact-field select {
+  min-height: 2.75rem;
+}
+
+.contact-select {
+  position: relative;
+  display: block;
+}
+
+.contact-select select {
+  appearance: none;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.contact-select svg {
+  position: absolute;
+  top: 50%;
+  right: 0.15rem;
+  width: 0.65rem;
+  height: auto;
+  color: var(--wine);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.contact-select path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.15;
+}
+
 .contact-field textarea {
-  min-height: 8rem;
+  min-height: 5.25rem;
+  field-sizing: content;
   resize: vertical;
 }
 

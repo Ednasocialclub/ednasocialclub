@@ -326,21 +326,30 @@ function ContactPage({ locale }: { locale: Locale }) {
               <label htmlFor="contact-enquiry-type">
                 {copy.form.enquiryType}
               </label>
-              <select
-                id="contact-enquiry-type"
-                name="Enquiry type"
-                defaultValue=""
-                required
-              >
-                <option value="" disabled>
-                  {copy.form.enquiryPlaceholder}
-                </option>
-                {copy.form.enquiryOptions.map((option) => (
-                  <option value={option} key={option}>
-                    {option}
+              <span className="contact-select">
+                <select
+                  id="contact-enquiry-type"
+                  name="Enquiry type"
+                  defaultValue=""
+                  required
+                >
+                  <option value="" disabled>
+                    {copy.form.enquiryPlaceholder}
                   </option>
-                ))}
-              </select>
+                  {copy.form.enquiryOptions.map((option) => (
+                    <option value={option} key={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 12 7"
+                  focusable="false"
+                >
+                  <path d="m1 1 5 5 5-5" />
+                </svg>
+              </span>
             </div>
 
             <div className="contact-field">
@@ -348,7 +357,7 @@ function ContactPage({ locale }: { locale: Locale }) {
               <textarea
                 id="contact-message"
                 name="Message"
-                rows={6}
+                rows={3}
                 required
               />
             </div>
