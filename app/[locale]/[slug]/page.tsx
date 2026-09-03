@@ -163,6 +163,9 @@ function MembersPage({ locale }: { locale: Locale }) {
 
           <section className="membership-editorial-page__cta">
             <h2>{copy.applicationTitle}</h2>
+            <p className="membership-editorial-page__cta-line">
+              {copy.applicationTagline}
+            </p>
             <a
               className="button button--ivory"
               href={membershipUrl}

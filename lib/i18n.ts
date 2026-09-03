@@ -209,7 +209,7 @@ const pages = {
         },
         {
           title: 'Can I attend without being a member?',
-          body: 'Yes. Selected Edna events remain open to everyone, while membership gives you access to more of the community and members-only experiences.',
+          body: 'Some Edna events are open to non-members, while membership gives you access to more of the community and members-only experiences.',
         },
         {
           title: 'Who is membership for?',
@@ -217,6 +217,7 @@ const pages = {
         },
       ],
       applicationTitle: 'Become part of Edna',
+      applicationTagline: 'More access. More connection.',
       apply: 'Apply for membership',
     },
     privateEvents: {
