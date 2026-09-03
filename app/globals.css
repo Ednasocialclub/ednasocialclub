@@ -907,7 +907,7 @@ button {
 .membership-editorial-page__cta {
   width: 100%;
   margin-top: clamp(4rem, 7vw, 6rem);
-  padding: clamp(3rem, 6vw, 5rem);
+  padding: clamp(2rem, 3.5vw, 3rem);
   background: var(--wine);
   color: var(--ivory);
   text-align: center;
@@ -1300,7 +1300,7 @@ button {
 
   .membership-editorial-page__cta {
     margin-top: 3.5rem;
-    padding: 2.75rem 2rem;
+    padding: 1.5rem 2rem;
   }
 
   .about-pillars-section {
