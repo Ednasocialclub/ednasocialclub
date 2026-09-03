@@ -225,10 +225,10 @@ const pages = {
     },
     privateEvents: {
       eyebrow: 'Private & Corporate',
-      title: 'Gatherings created with purpose.',
+      title: 'Private & Corporate',
       lead: 'Edna creates private and corporate occasions that combine atmosphere, live music, hospitality and genuine social connection.',
       intro:
-        'Every gathering begins with the people in the room and the purpose of the occasion. Edna shapes a clear concept around both, creating an evening that feels personal, polished and easy to enjoy.',
+        'Each occasion is shaped around the people, the setting and the reason for gathering, with every detail considered to make the experience feel personal and effortless.',
       typesTitle: 'Occasions',
       types: [
         'Private events',
