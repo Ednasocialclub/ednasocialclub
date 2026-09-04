@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { useRef, useState, type TouchEvent } from 'react';
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -24,6 +26,8 @@ export function CollaborationGallery({
   showLabel = true,
   variant = 'compact',
 }: CollaborationGalleryProps) {
+  const [api, setApi] = useState<CarouselApi>();
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const previousLabel =
     locale === 'fi'
       ? 'Edellinen yhteistyökuva'
@@ -32,18 +36,52 @@ export function CollaborationGallery({
     locale === 'fi' ? 'Seuraava yhteistyökuva' : 'Next collaboration image';
   const imageSizes =
     variant === 'expanded'
-      ? '(max-width: 767px) 285px, 352px'
-      : '(max-width: 767px) 285px, 300px';
+      ? '(max-width: 767px) calc(100vw - 2.5rem), 352px'
+      : '(max-width: 767px) calc(100vw - 2.5rem), 300px';
+
+  function handleTouchStart(event: TouchEvent<HTMLDivElement>) {
+    if (!window.matchMedia('(max-width: 767px)').matches) return;
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function handleTouchEnd(event: TouchEvent<HTMLDivElement>) {
+    if (!window.matchMedia('(max-width: 767px)').matches) return;
+    const start = touchStart.current;
+    const touch = event.changedTouches[0];
+    touchStart.current = null;
+    if (!start || !touch) return;
+
+    const distanceX = touch.clientX - start.x;
+    const distanceY = touch.clientY - start.y;
+    if (Math.abs(distanceX) < 40 || Math.abs(distanceX) <= Math.abs(distanceY)) {
+      return;
+    }
+
+    if (distanceX < 0) api?.scrollNext();
+    else api?.scrollPrev();
+  }
 
   return (
     <Carousel
       className={`collaboration-gallery collaboration-gallery--${variant}`}
+      setApi={setApi}
       opts={{
         align: 'start',
         containScroll: 'trimSnaps',
         slidesToScroll: 3,
+        breakpoints: {
+          '(max-width: 767px)': {
+            slidesToScroll: 1,
+            dragFree: false,
+            skipSnaps: false,
+            watchDrag: false,
+          },
+        },
       }}
       aria-label={label}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div
         className={`collaboration-gallery__header${showLabel ? '' : ' collaboration-gallery__header--controls-only'}`}
