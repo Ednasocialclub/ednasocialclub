@@ -132,86 +132,55 @@ function AboutPage({ locale }: { locale: Locale }) {
 function MembersPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].pages.members;
 
-  if ('questions' in copy) {
-    return (
-      <section className="page-section page-section--tint membership-editorial-page">
-        <div className="page-section__inner membership-editorial-page__inner">
-          <div className="membership-editorial-page__intro-grid">
-            <header className="membership-editorial-page__intro">
-              <h1>{copy.title}</h1>
-              <p className="page-lead">{copy.lead}</p>
-              <p className="membership-intro-secondary">
-                {copy.introSecondary}
-              </p>
-            </header>
-
-            <div className="membership-editorial-page__media">
-              <Image
-                className="membership-social-image"
-                src="/edna-members-club-dinner-helsinki.jpg"
-                alt="Guests dining together at an Edna Social Club evening in Helsinki"
-                width="1440"
-                height="960"
-                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
-              />
-            </div>
-          </div>
-
-          <div className="membership-editorial-page__questions">
-            {copy.questions.map((question) => (
-              <section className="membership-question" key={question.title}>
-                <h2>{question.title}</h2>
-                <p>{question.body}</p>
-              </section>
-            ))}
-          </div>
-
-          <section className="membership-editorial-page__cta">
-            <h2>{copy.applicationTitle}</h2>
-            <p className="membership-editorial-page__cta-line">
-              {copy.applicationTagline}
-            </p>
-            <a
-              className="button button--ivory"
-              href={membershipUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {copy.apply}
-            </a>
-          </section>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <>
-      <PageHero title={copy.title} lead={copy.lead} />
+    <section className="page-section page-section--tint membership-editorial-page">
+      <div className="page-section__inner membership-editorial-page__inner">
+        <div className="membership-editorial-page__intro-grid">
+          <header className="membership-editorial-page__intro">
+            <h1>{copy.title}</h1>
+            <p className="page-lead">{copy.lead}</p>
+            <p className="membership-intro-secondary">
+              {copy.introSecondary}
+            </p>
+          </header>
 
-      <section className="page-section page-section--tint">
-        <div className="page-section__inner membership-panel">
-          <div className="body-copy">
-            <h2>{copy.bodyTitle}</h2>
-            {copy.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <div className="membership-editorial-page__media">
+            <Image
+              className="membership-social-image"
+              src="/edna-members-club-dinner-helsinki.jpg"
+              alt="Guests dining together at an Edna Social Club evening in Helsinki"
+              width="1440"
+              height="960"
+              sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
+            />
           </div>
-          <aside className="membership-application">
-            <h2>{copy.applicationTitle}</h2>
-            <p>{copy.applicationBody}</p>
-            <a
-              className="button button--ivory"
-              href={membershipUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {copy.apply}
-            </a>
-          </aside>
         </div>
-      </section>
-    </>
+
+        <div className="membership-editorial-page__questions">
+          {copy.questions.map((question) => (
+            <section className="membership-question" key={question.title}>
+              <h2>{question.title}</h2>
+              <p>{question.body}</p>
+            </section>
+          ))}
+        </div>
+
+        <section className="membership-editorial-page__cta">
+          <h2>{copy.applicationTitle}</h2>
+          <p className="membership-editorial-page__cta-line">
+            {copy.applicationTagline}
+          </p>
+          <a
+            className="button button--ivory"
+            href={membershipUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {copy.apply}
+          </a>
+        </section>
+      </div>
+    </section>
   );
 }
 
@@ -315,149 +284,120 @@ function PartnershipsPage({ locale }: { locale: Locale }) {
 function ContactPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].pages.contact;
 
-  if ('form' in copy) {
-    return (
-      <section className="contact-page contact-page--editorial page-section">
-        <div className="page-section__inner">
-          <header className="contact-page__intro reveal">
-            <h1 className="contact-title">{copy.title}</h1>
-            <p className="page-lead">{copy.lead}</p>
-          </header>
-
-          <form
-            className="contact-form"
-            action={emailUrl}
-            method="post"
-            encType="text/plain"
-          >
-            <div className="contact-field">
-              <label htmlFor="contact-name">{copy.form.name}</label>
-              <input id="contact-name" name="Name" type="text" required />
-            </div>
-
-            <div className="contact-field">
-              <label htmlFor="contact-email">{copy.form.email}</label>
-              <input id="contact-email" name="Email" type="email" required />
-            </div>
-
-            <div className="contact-field">
-              <label htmlFor="contact-enquiry-type">
-                {copy.form.enquiryType}
-              </label>
-              <span className="contact-select">
-                <select
-                  id="contact-enquiry-type"
-                  name="Enquiry type"
-                  defaultValue=""
-                  required
-                >
-                  <option value="" disabled>
-                    {copy.form.enquiryPlaceholder}
-                  </option>
-                  {copy.form.enquiryOptions.map((option) => (
-                    <option value={option} key={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 12 7"
-                  focusable="false"
-                >
-                  <path d="m1 1 5 5 5-5" />
-                </svg>
-              </span>
-            </div>
-
-            <div className="contact-field">
-              <label htmlFor="contact-message">{copy.form.message}</label>
-              <textarea
-                id="contact-message"
-                name="Message"
-                rows={3}
-                required
-              />
-            </div>
-
-            <button className="button button--wine" type="submit">
-              {copy.form.submit}
-            </button>
-          </form>
-
-          <div className="contact-page__details" aria-label="Contact details">
-            <a href={emailUrl}>contact@ednasocialclub.com</a>
-            <a href={instagramUrl} target="_blank" rel="noreferrer">
-              Instagram @ednasocialclub
-            </a>
-            <a href={tiktokUrl} target="_blank" rel="noreferrer">
-              TikTok @ednasocialclub
-            </a>
-          </div>
-
-          <section
-            className="contact-page__press"
-            aria-labelledby="contact-press-heading"
-          >
-            <h2 className="page-eyebrow" id="contact-press-heading">
-              PRESS
-            </h2>
-            <p>HUFVUDSTADSBLADET</p>
-            <a
-              href={hufvudstadsbladetUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              “Exklusiva jazzkvällar blev succé bland unga”
-            </a>
-          </section>
-
-          <section
-            className="contact-page__newsletter"
-            aria-labelledby="contact-newsletter-heading"
-          >
-            <h2 className="page-eyebrow" id="contact-newsletter-heading">
-              NEWSLETTER
-            </h2>
-            <a
-              href={newsletterUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join the Edna newsletter
-            </a>
-          </section>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section className="contact-page page-section">
+    <section className="contact-page contact-page--editorial page-section">
       <div className="page-section__inner">
-        <div className="page-hero__inner reveal">
+        <header className="contact-page__intro reveal">
           <h1 className="contact-title">{copy.title}</h1>
           <p className="page-lead">{copy.lead}</p>
+        </header>
+
+        <form
+          className="contact-form"
+          action={emailUrl}
+          method="post"
+          encType="text/plain"
+        >
+          <div className="contact-field">
+            <label htmlFor="contact-name">{copy.form.name}</label>
+            <input id="contact-name" name="Name" type="text" required />
+          </div>
+
+          <div className="contact-field">
+            <label htmlFor="contact-email">{copy.form.email}</label>
+            <input id="contact-email" name="Email" type="email" required />
+          </div>
+
+          <div className="contact-field">
+            <label htmlFor="contact-enquiry-type">
+              {copy.form.enquiryType}
+            </label>
+            <span className="contact-select">
+              <select
+                id="contact-enquiry-type"
+                name="Enquiry type"
+                defaultValue=""
+                required
+              >
+                <option value="" disabled>
+                  {copy.form.enquiryPlaceholder}
+                </option>
+                {copy.form.enquiryOptions.map((option) => (
+                  <option value={option} key={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 12 7"
+                focusable="false"
+              >
+                <path d="m1 1 5 5 5-5" />
+              </svg>
+            </span>
+          </div>
+
+          <div className="contact-field">
+            <label htmlFor="contact-message">{copy.form.message}</label>
+            <textarea
+              id="contact-message"
+              name="Message"
+              rows={3}
+              required
+            />
+          </div>
+
+          <button className="button button--wine" type="submit">
+            {copy.form.submit}
+          </button>
+        </form>
+
+        <div
+          className="contact-page__details"
+          aria-label={siteCopy[locale].contactDetailsLabel}
+        >
+          <a href={emailUrl}>contact@ednasocialclub.com</a>
+          <a href={instagramUrl} target="_blank" rel="noreferrer">
+            Instagram @ednasocialclub
+          </a>
+          <a href={tiktokUrl} target="_blank" rel="noreferrer">
+            TikTok @ednasocialclub
+          </a>
         </div>
 
-        <div className="contact-list">
-          <div className="contact-item">
-            <p>{copy.emailLabel}</p>
-            <a href={emailUrl}>contact@ednasocialclub.com</a>
-          </div>
-          <div className="contact-item">
-            <p>{copy.instagramLabel}</p>
-            <a href={instagramUrl} target="_blank" rel="noreferrer">
-              @ednasocialclub
-            </a>
-          </div>
-          <div className="contact-item">
-            <p>{copy.tiktokLabel}</p>
-            <a href={tiktokUrl} target="_blank" rel="noreferrer">
-              @ednasocialclub
-            </a>
-          </div>
-        </div>
+        <section
+          className="contact-page__press"
+          aria-labelledby="contact-press-heading"
+        >
+          <h2 className="page-eyebrow" id="contact-press-heading">
+            {siteCopy[locale].pressLabel}
+          </h2>
+          <p>HUFVUDSTADSBLADET</p>
+          <a
+            href={hufvudstadsbladetUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            “Exklusiva jazzkvällar blev succé bland unga”
+          </a>
+        </section>
+
+        <section
+          className="contact-page__newsletter"
+          aria-labelledby="contact-newsletter-heading"
+        >
+          <h2 className="page-eyebrow" id="contact-newsletter-heading">
+            {siteCopy[locale].newsletterLabel}
+          </h2>
+          <a
+            href={newsletterUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {siteCopy[locale].newsletterCta}
+          </a>
+        </section>
       </div>
     </section>
   );

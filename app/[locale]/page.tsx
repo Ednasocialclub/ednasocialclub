@@ -299,7 +299,7 @@ export default async function HomePage({
                 className="button button--wine overview-contact__cta"
                 href="mailto:contact@ednasocialclub.com"
               >
-                Contact Edna
+                {copy.pages.home.contactCta}
               </a>
               <div className="overview-contact__links">
                 <a href="mailto:contact@ednasocialclub.com">
@@ -316,7 +316,7 @@ export default async function HomePage({
 
             <section className="overview-press" aria-labelledby="press-heading">
               <h3 className="page-eyebrow" id="press-heading">
-                PRESS
+                {copy.pressLabel}
               </h3>
               <div className="overview-press__entries">
                 {pressEntries.map((entry) => {
@@ -347,14 +347,14 @@ export default async function HomePage({
               aria-labelledby="home-newsletter-heading"
             >
               <h3 className="page-eyebrow" id="home-newsletter-heading">
-                NEWSLETTER
+                {copy.newsletterLabel}
               </h3>
               <a
                 href={newsletterUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Join the Edna newsletter
+                {copy.newsletterCta}
               </a>
             </section>
           </div>

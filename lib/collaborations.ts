@@ -9,13 +9,13 @@ export type Collaboration = {
 
 export const collaborations: Collaboration[] = [
   {
-    id: 'champagne-hospitality',
-    src: '/collaborations/edna-champagne-glasses-collaboration.jpg',
+    id: 'live-jazz',
+    src: '/collaborations/edna-live-jazz-collaboration-helsinki.jpg',
     alt: {
-      en: 'Guests sharing champagne at an Edna collaboration event in Helsinki',
-      fi: 'Vieraat nauttimassa samppanjaa Ednan yhteistyötapahtumassa Helsingissä',
+      en: 'A pianist and double bassist performing live jazz at an Edna Social Club evening in Helsinki',
+      fi: 'Pianisti ja kontrabasisti esiintymässä Edna Social Clubin jazzillassa Helsingissä',
     },
-    objectPosition: 'center 52%',
+    objectPosition: 'center 50%',
   },
   {
     id: 'dressed-guests',
