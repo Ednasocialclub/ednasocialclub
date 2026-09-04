@@ -247,7 +247,7 @@ button {
 .home-hero h1 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 3.8vw, 3.45rem);
+  font-size: clamp(2.47rem, 4.07vw, 3.7rem);
   font-weight: 400;
   letter-spacing: 0.075em;
   line-height: 1.12;
@@ -1838,7 +1838,7 @@ button {
   }
 
   .home-hero h1 {
-    font-size: clamp(2rem, 9vw, 2.4rem);
+    font-size: clamp(2.15rem, 9.65vw, 2.58rem);
   }
 
   .page-hero {
