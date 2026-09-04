@@ -1,4 +1,8 @@
 import type { ReactNode } from 'react';
+import {
+  MembershipApplicationLink,
+  MembershipGateProvider,
+} from '@/components/membership-gate';
 import { SiteHeader } from '@/components/site-header';
 import {
   localizedPath,
@@ -31,7 +35,7 @@ export function SiteShell({
   const copy = siteCopy[locale];
 
   return (
-    <>
+    <MembershipGateProvider locale={locale}>
       <SiteHeader
         locale={locale}
         nav={copy.nav}
@@ -68,9 +72,13 @@ export function SiteShell({
           <a href="mailto:contact@ednasocialclub.com">
             contact@ednasocialclub.com
           </a>
-          <a href={membershipUrl} target="_blank" rel="noreferrer">
+          <MembershipApplicationLink
+            href={membershipUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             {copy.footer.membership}
-          </a>
+          </MembershipApplicationLink>
           <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">
             {copy.newsletterLabel}
           </a>
@@ -99,6 +107,6 @@ export function SiteShell({
           </a>
         </div>
       </footer>
-    </>
+    </MembershipGateProvider>
   );
 }

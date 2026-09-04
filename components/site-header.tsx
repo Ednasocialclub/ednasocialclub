@@ -3,6 +3,7 @@
 /* oxlint-disable next/no-img-element */
 
 import { usePathname, useRouter } from 'next/navigation';
+import { MembershipApplicationLink } from '@/components/membership-gate';
 import {
   Sheet,
   SheetClose,
@@ -130,14 +131,14 @@ export function SiteHeader({
 
       <div className="site-header__actions">
         <LanguageSwitcher locale={locale} label={languageLabel} />
-        <a
+        <MembershipApplicationLink
           className="header-apply"
           href={membershipUrl}
           target="_blank"
           rel="noreferrer"
         >
           {nav.apply}
-        </a>
+        </MembershipApplicationLink>
         <Sheet>
           <SheetTrigger className="menu-trigger">{menuLabel}</SheetTrigger>
           <SheetContent
@@ -171,14 +172,14 @@ export function SiteHeader({
                 </SheetClose>
               ))}
             </nav>
-            <a
+            <MembershipApplicationLink
               className="mobile-menu__apply"
               href={membershipUrl}
               target="_blank"
               rel="noreferrer"
             >
               {nav.apply}
-            </a>
+            </MembershipApplicationLink>
           </SheetContent>
         </Sheet>
       </div>

@@ -61,6 +61,54 @@ button {
   color: var(--ivory);
 }
 
+.membership-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow-y: auto;
+  padding: clamp(5rem, 10vw, 8rem) var(--page-gutter);
+  background: var(--wine);
+  color: var(--ivory);
+  text-align: center;
+}
+
+.membership-gate__content {
+  width: min(100%, 50rem);
+}
+
+.membership-gate__content h2 {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.membership-gate__content p {
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.015em;
+}
+
+.membership-gate__close {
+  position: absolute;
+  top: clamp(1.25rem, 3vw, 2.5rem);
+  right: var(--page-gutter);
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
 .site-header {
   position: sticky;
   top: 0;

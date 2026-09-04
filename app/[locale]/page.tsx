@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
+import { MembershipApplicationLink } from '@/components/membership-gate';
 import { SiteShell } from '@/components/site-shell';
 import {
   isLocale,
@@ -118,14 +119,14 @@ export default async function HomePage({
             />
             <h1>{copy.pages.home.title}</h1>
             <p>{copy.pages.home.eyebrow}</p>
-            <a
+            <MembershipApplicationLink
               className="button button--wine"
               href={membershipUrl}
               target="_blank"
               rel="noreferrer"
             >
               {copy.nav.apply}
-            </a>
+            </MembershipApplicationLink>
           </div>
         </section>
 
@@ -187,14 +188,14 @@ export default async function HomePage({
               <p className="overview-lead">{copy.pages.home.membersLead}</p>
               <p>{copy.pages.home.membersBody}</p>
               <div className="overview-actions overview-actions--start">
-                <a
+                <MembershipApplicationLink
                   className="button button--ivory"
                   href={membershipUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
                   {copy.nav.apply}
-                </a>
+                </MembershipApplicationLink>
                 <a
                   className="text-link text-link--light"
                   href={localizedPath(locale, 'members')}

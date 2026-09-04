@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { MembershipApplicationLink } from '@/components/membership-gate';
 import type { ReactNode } from 'react';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
@@ -170,14 +171,14 @@ function MembersPage({ locale }: { locale: Locale }) {
           <p className="membership-editorial-page__cta-line">
             {copy.applicationTagline}
           </p>
-          <a
+          <MembershipApplicationLink
             className="button button--ivory"
             href={membershipUrl}
             target="_blank"
             rel="noreferrer"
           >
             {copy.apply}
-          </a>
+          </MembershipApplicationLink>
         </section>
       </div>
     </section>
