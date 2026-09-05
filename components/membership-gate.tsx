@@ -17,14 +17,14 @@ const applicationsOpenAt = new Date('2026-09-14T00:00:00+03:00').getTime();
 
 const modalCopy = {
   en: {
-    title: 'Membership applications open September 14.',
-    body: 'The next chapter of Edna begins soon.',
+    title: 'Membership applications open September 14',
+    body: 'The next chapter of Edna begins soon',
     close: 'Close',
     privacy: 'Privacy Policy',
   },
   fi: {
-    title: 'Jäsenhakemukset avautuvat 14. syyskuuta.',
-    body: 'Ednan seuraava luku alkaa pian.',
+    title: 'Jäsenhakemukset avautuvat 14. syyskuuta',
+    body: 'Ednan seuraava luku alkaa pian',
     close: 'Sulje',
     privacy: 'Tietosuojaseloste',
   },

@@ -153,7 +153,6 @@ export default async function HomePage({
                   <a href={instagramUrl} target="_blank" rel="noreferrer">
                     @ednasocialclub
                   </a>
-                  .
                 </p>
               </div>
             </header>
