@@ -179,6 +179,12 @@ function MembersPage({ locale }: { locale: Locale }) {
           >
             {copy.apply}
           </MembershipApplicationLink>
+          <a
+            className="entry-privacy-link"
+            href={localizedPath(locale, 'privacy')}
+          >
+            {siteCopy[locale].privacyLink}
+          </a>
         </section>
       </div>
     </section>
@@ -352,6 +358,12 @@ function ContactPage({ locale }: { locale: Locale }) {
           <button className="button button--wine" type="submit">
             {copy.form.submit}
           </button>
+          <a
+            className="form-privacy-link"
+            href={localizedPath(locale, 'privacy')}
+          >
+            {siteCopy[locale].privacyLink}
+          </a>
         </form>
 
         <div
@@ -404,6 +416,112 @@ function ContactPage({ locale }: { locale: Locale }) {
   );
 }
 
+function PrivacyPage({ locale }: { locale: Locale }) {
+  const copy = siteCopy[locale].pages.privacy;
+  const dataProtectionAuthorityUrl =
+    locale === 'fi'
+      ? 'https://tietosuoja.fi/etusivu'
+      : 'https://tietosuoja.fi/en/home';
+
+  return (
+    <article className="privacy-page page-section">
+      <div className="privacy-page__inner">
+        <header className="privacy-page__header reveal">
+          <h1>{copy.title}</h1>
+          <p className="page-lead">{copy.lead}</p>
+          <p className="privacy-page__updated">{copy.updated}</p>
+        </header>
+
+        <div className="privacy-page__content">
+          <section>
+            <h2>{copy.handlingTitle}</h2>
+            <ul>
+              {copy.dataItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p>{copy.automated}</p>
+          </section>
+
+          <section>
+            <h2>{copy.whyTitle}</h2>
+            <ul>
+              {copy.whyItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2>{copy.providersTitle}</h2>
+            <p>{copy.providersBody}</p>
+            <p>{copy.transfersBody}</p>
+            <p className="privacy-page__provider-links">
+              <a
+                href="https://help.typeform.com/hc/en-us/articles/360029617191-What-other-companies-do-we-share-data-with"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Typeform
+              </a>
+              {' / '}
+              <a
+                href="https://flodesk.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Flodesk
+              </a>
+            </p>
+          </section>
+
+          <section>
+            <h2>{copy.retentionTitle}</h2>
+            <p>{copy.retentionBody}</p>
+          </section>
+
+          <section>
+            <h2>{copy.rightsTitle}</h2>
+            <p>{copy.rightsBody}</p>
+            <p>
+              {copy.complaint}{' '}
+              <a
+                href={dataProtectionAuthorityUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {copy.complaintLink}
+              </a>
+            </p>
+          </section>
+
+          <section>
+            <h2>{copy.cookiesTitle}</h2>
+            <p>{copy.cookiesBody}</p>
+          </section>
+
+          <section className="privacy-page__legal">
+            <h2>{copy.legalTitle}</h2>
+            <p>{copy.legalOperator}</p>
+            <p>{copy.businessId}: 3476352-4</p>
+            <p>{copy.vatId}: FI34763524</p>
+            <address>
+              Yrjönkatu 34 B 31<br />
+              00100 Helsinki<br />
+              Finland
+            </address>
+            <p>
+              <a href="mailto:contact@ednasocialclub.com">
+                contact@ednasocialclub.com
+              </a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 function renderPage(route: ContentRoute, locale: Locale): ReactNode {
   switch (route) {
     case 'about':
@@ -416,6 +534,8 @@ function renderPage(route: ContentRoute, locale: Locale): ReactNode {
       return <PartnershipsPage locale={locale} />;
     case 'contact':
       return <ContactPage locale={locale} />;
+    case 'privacy':
+      return <PrivacyPage locale={locale} />;
   }
 }
 

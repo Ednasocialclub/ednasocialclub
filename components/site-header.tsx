@@ -3,15 +3,9 @@
 /* oxlint-disable next/no-img-element */
 
 import { usePathname, useRouter } from 'next/navigation';
+import { createPortal } from 'react-dom';
+import { useEffect, useRef, useState } from 'react';
 import { MembershipApplicationLink } from '@/components/membership-gate';
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
 import {
   type Locale,
   type ContentRoute,
@@ -28,7 +22,9 @@ type NavigationCopy = {
   apply: string;
 };
 
-const navigation: ContentRoute[] = [
+type NavigationRoute = Exclude<ContentRoute, 'privacy'>;
+
+const navigation: NavigationRoute[] = [
   'about',
   'members',
   'privateEvents',
@@ -101,6 +97,55 @@ export function SiteHeader({
   mobileNavDescription: string;
 }) {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDialogElement>(null);
+
+  function closeMenu({ restoreFocus = true } = {}) {
+    setIsMenuOpen(false);
+    if (restoreFocus) {
+      window.requestAnimationFrame(() => menuButtonRef.current?.focus());
+    }
+  }
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const focusable = menuRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])',
+      );
+      if (!focusable?.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="site-header">
@@ -131,6 +176,9 @@ export function SiteHeader({
 
       <div className="site-header__actions">
         <LanguageSwitcher locale={locale} label={languageLabel} />
+        <div className="mobile-language-switcher">
+          <LanguageSwitcher locale={locale} label={languageLabel} />
+        </div>
         <MembershipApplicationLink
           className="header-apply"
           href={membershipUrl}
@@ -139,50 +187,79 @@ export function SiteHeader({
         >
           {nav.apply}
         </MembershipApplicationLink>
-        <Sheet>
-          <SheetTrigger className="menu-trigger">{menuLabel}</SheetTrigger>
-          <SheetContent
-            side="right"
-            showCloseButton={false}
-            className="mobile-menu"
-          >
-            <SheetTitle className="sr-only">{menuLabel}</SheetTitle>
-            <SheetDescription className="sr-only">
-              {mobileNavDescription}
-            </SheetDescription>
-            <div className="mobile-menu__topline">
-              <LanguageSwitcher locale={locale} label={languageLabel} />
-              <SheetClose className="mobile-menu__close">
-                {closeLabel}
-              </SheetClose>
-            </div>
-            <nav className="mobile-nav" aria-label={mobileNavLabel}>
-              {navigation.map((route) => (
-                <SheetClose
-                  key={route}
-                  nativeButton={false}
-                  render={
+        <button
+          ref={menuButtonRef}
+          className="menu-trigger"
+          type="button"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          onClick={() => setIsMenuOpen(true)}
+        >
+          {menuLabel}
+        </button>
+      </div>
+
+      {isMenuOpen && typeof document !== 'undefined'
+        ? createPortal(
+            <div className="mobile-menu-layer">
+              <button
+                className="mobile-menu__backdrop"
+                type="button"
+                aria-label={closeLabel}
+                onClick={() => closeMenu()}
+              />
+              <dialog
+                ref={menuRef}
+                id="mobile-menu"
+                className="mobile-menu"
+                open
+                aria-modal="true"
+                aria-labelledby="mobile-menu-title"
+                aria-describedby="mobile-menu-description"
+              >
+                <h2 className="sr-only" id="mobile-menu-title">
+                  {menuLabel}
+                </h2>
+                <p className="sr-only" id="mobile-menu-description">
+                  {mobileNavDescription}
+                </p>
+                <div className="mobile-menu__topline">
+                  <span aria-hidden="true" />
+                  <button
+                    ref={closeButtonRef}
+                    className="mobile-menu__close"
+                    type="button"
+                    onClick={() => closeMenu()}
+                  >
+                    {closeLabel}
+                  </button>
+                </div>
+                <nav className="mobile-nav" aria-label={mobileNavLabel}>
+                  {navigation.map((route) => (
                     <a
+                      key={route}
                       href={localizedPath(locale, route)}
                       aria-label={nav[route]}
-                    />
-                  }
+                      onClick={() => closeMenu({ restoreFocus: false })}
+                    >
+                      {nav[route]}
+                    </a>
+                  ))}
+                </nav>
+                <MembershipApplicationLink
+                  className="mobile-menu__apply"
+                  href={membershipUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => closeMenu({ restoreFocus: false })}
                 >
-                  {nav[route]}
-                </SheetClose>
-              ))}
-            </nav>
-            <MembershipApplicationLink
-              className="mobile-menu__apply"
-              href={membershipUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {nav.apply}
-            </MembershipApplicationLink>
-          </SheetContent>
-        </Sheet>
-      </div>
+                  {nav.apply}
+                </MembershipApplicationLink>
+              </dialog>
+            </div>,
+            document.body,
+          )
+        : null}
     </header>
   );
 }

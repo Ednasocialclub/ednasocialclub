@@ -11,6 +11,7 @@ export const routes = {
   },
   partnerships: { en: 'partnerships', fi: 'yhteistyot' },
   contact: { en: 'contact', fi: 'yhteystiedot' },
+  privacy: { en: 'privacy', fi: 'tietosuoja' },
 } as const;
 
 export type RouteKey = keyof typeof routes;
@@ -59,6 +60,7 @@ const shared = {
     newsletterLabel: 'Newsletter',
     newsletterCta: 'Join the Edna newsletter',
     contactDetailsLabel: 'Contact details',
+    privacyLink: 'Privacy Policy',
     nav: {
       about: 'About',
       members: 'Members Club',
@@ -76,6 +78,7 @@ const shared = {
       trademark: 'EDNA SOCIAL CLUB® is a registered trademark in Finland.',
       copyright: 'Edna Social Club',
       backToTop: 'Back to top',
+      privacy: 'Privacy',
     },
   },
   fi: {
@@ -91,6 +94,7 @@ const shared = {
     newsletterLabel: 'Uutiskirje',
     newsletterCta: 'Tilaa Ednan uutiskirje',
     contactDetailsLabel: 'Yhteystiedot',
+    privacyLink: 'Tietosuojaseloste',
     nav: {
       about: 'Ednasta',
       members: 'Jäsenklubi',
@@ -108,6 +112,7 @@ const shared = {
       trademark: 'EDNA SOCIAL CLUB® on Suomessa rekisteröity tavaramerkki.',
       copyright: 'Edna Social Club',
       backToTop: 'Sivun alkuun',
+      privacy: 'Tietosuoja',
     },
   },
 } as const;
@@ -307,6 +312,47 @@ const pages = {
       instagramLabel: 'Instagram',
       tiktokLabel: 'TikTok',
     },
+    privacy: {
+      title: 'Privacy Policy',
+      lead:
+        'How Edna Social Club handles personal data when you contact us, apply for membership or join the newsletter.',
+      updated: 'Last updated 5 September 2026',
+      handlingTitle: 'How we use personal data',
+      dataItems: [
+        'Membership applications: name, age, gender, email address, phone number and the other answers you submit through Typeform.',
+        'Contact enquiries: name, email address, enquiry type and message. The website form opens your email application and is not stored by the website itself.',
+        'Newsletter: email address and any other information you choose to provide through the Flodesk subscription form.',
+      ],
+      automated:
+        'We do not use automated decision-making or profiling.',
+      whyTitle: 'Why we use it',
+      whyItems: [
+        'We use enquiry details to respond and provide or prepare the service you request. This is based on steps taken at your request before a contract, a contract where applicable, and our legitimate interest in handling enquiries and services.',
+        'We use membership application details to assess and manage applications and the Edna community. This is based on steps taken at your request before membership and our legitimate interest in managing applications and the community.',
+        'We send the newsletter with your consent. You can unsubscribe or withdraw consent at any time. We may also process information where the law requires it or where needed for legal claims.',
+      ],
+      providersTitle: 'Service providers',
+      providersBody:
+        'Typeform processes membership applications and Flodesk processes newsletter subscriptions and delivery for us. Email and website hosting providers may process information needed to deliver and secure their services. We do not sell personal data.',
+      transfersBody:
+        'These providers may process data outside the EU or EEA. When they do, the transfer must use a lawful mechanism and appropriate safeguards. Typeform and Flodesk describe their international processing and safeguards in their privacy information.',
+      retentionTitle: 'How long we keep data',
+      retentionBody:
+        'We keep data only while it is needed for its purpose. Membership application data is kept while the application and necessary follow-up are handled. Enquiry data is kept while the enquiry and any related service or claim are handled. Newsletter data is kept until you unsubscribe or withdraw consent. We keep data longer only when the law requires it.',
+      rightsTitle: 'Your rights',
+      rightsBody:
+        'Depending on the situation, you may ask to access, correct, erase or restrict the use of your data, object to its use, or receive it in a portable format. You may withdraw consent at any time without affecting earlier processing. Contact contact@ednasocialclub.com to exercise your rights.',
+      complaint:
+        'You may also lodge a complaint with the Finnish Data Protection Ombudsman.',
+      complaintLink: 'Finnish Data Protection Ombudsman',
+      cookiesTitle: 'Cookies and tracking',
+      cookiesBody:
+        'The website currently uses only a necessary language-preference cookie. It does not use analytics or marketing tracking, so no cookie banner is shown. Third-party websites opened through external links use their own privacy and cookie practices.',
+      legalTitle: 'Legal information',
+      legalOperator: 'Edna Social Club is operated by Kerttu Laitinen',
+      businessId: 'Business ID',
+      vatId: 'VAT ID',
+    },
   },
   fi: {
     home: {
@@ -502,6 +548,47 @@ const pages = {
       instagramLabel: 'Instagram',
       tiktokLabel: 'TikTok',
     },
+    privacy: {
+      title: 'Tietosuojaseloste',
+      lead:
+        'Näin Edna Social Club käsittelee henkilötietoja, kun otat meihin yhteyttä, haet jäsenyyttä tai tilaat uutiskirjeen.',
+      updated: 'Päivitetty 5. syyskuuta 2026',
+      handlingTitle: 'Miten käytämme henkilötietoja',
+      dataItems: [
+        'Jäsenhakemukset: nimi, ikä, sukupuoli, sähköpostiosoite, puhelinnumero sekä muut Typeformin kautta antamasi vastaukset.',
+        'Yhteydenotot: nimi, sähköpostiosoite, tiedustelun aihe ja viesti. Verkkosivun lomake avaa sähköpostisovelluksesi, eikä verkkosivusto itse tallenna tietoja.',
+        'Uutiskirje: sähköpostiosoite sekä muut tiedot, jotka päätät antaa Flodeskin tilauslomakkeella.',
+      ],
+      automated:
+        'Emme käytä automatisoitua päätöksentekoa tai profilointia.',
+      whyTitle: 'Miksi käytämme tietoja',
+      whyItems: [
+        'Käytämme yhteydenottotietoja vastataksemme ja valmistellaksemme tai tarjotaksemme pyytämäsi palvelun. Perusteena ovat pyynnöstäsi tehtävät sopimusta edeltävät toimet, tarvittaessa sopimus sekä oikeutettu etumme tiedustelujen ja palveluiden hoitamiseen.',
+        'Käytämme jäsenhakemuksen tietoja hakemusten ja Ednan yhteisön hallinnointiin. Perusteena ovat pyynnöstäsi tehtävät jäsenyyttä edeltävät toimet sekä oikeutettu etumme hakemusten ja yhteisön hallinnointiin.',
+        'Lähetämme uutiskirjeen suostumuksellasi. Voit peruuttaa tilauksen tai suostumuksesi milloin tahansa. Voimme käsitellä tietoja myös silloin, kun laki tai oikeusvaateen käsittely sitä edellyttää.',
+      ],
+      providersTitle: 'Palveluntarjoajat',
+      providersBody:
+        'Typeform käsittelee jäsenhakemuksia ja Flodesk uutiskirjeiden tilauksia ja lähettämistä puolestamme. Sähköposti- ja verkkopalveluntarjoajat voivat käsitellä palveluidensa toimittamiseen ja suojaamiseen tarvittavia tietoja. Emme myy henkilötietoja.',
+      transfersBody:
+        'Palveluntarjoajat voivat käsitellä tietoja EU:n tai ETA:n ulkopuolella. Tällöin siirron on perustuttava lainmukaiseen siirtoperusteeseen ja asianmukaisiin suojatoimiin. Typeform ja Flodesk kertovat kansainvälisestä käsittelystään ja suojatoimistaan omissa tietosuojatiedoissaan.',
+      retentionTitle: 'Kuinka kauan säilytämme tietoja',
+      retentionBody:
+        'Säilytämme tietoja vain niin kauan kuin niitä tarvitaan. Jäsenhakemustietoja säilytetään hakemuksen ja tarvittavan yhteydenpidon ajan. Yhteydenottotietoja säilytetään asian ja siihen liittyvän palvelun tai vaateen käsittelyn ajan. Uutiskirjetietoja säilytetään siihen asti, kunnes peruutat tilauksen tai suostumuksesi. Säilytämme tietoja pidempään vain, jos laki sitä edellyttää.',
+      rightsTitle: 'Oikeutesi',
+      rightsBody:
+        'Tilanteesta riippuen voit pyytää pääsyä tietoihisi, niiden oikaisua tai poistamista, käsittelyn rajoittamista tai vastustaa käsittelyä. Sinulla voi myös olla oikeus saada tietosi siirrettävässä muodossa. Voit peruuttaa suostumuksesi milloin tahansa ilman, että se vaikuttaa aiempaan käsittelyyn. Voit käyttää oikeuksiasi osoitteessa contact@ednasocialclub.com.',
+      complaint:
+        'Voit myös tehdä valituksen Suomen tietosuojavaltuutetun toimistolle.',
+      complaintLink: 'Tietosuojavaltuutetun toimisto',
+      cookiesTitle: 'Evästeet ja seuranta',
+      cookiesBody:
+        'Verkkosivusto käyttää tällä hetkellä vain välttämätöntä kielivalinnan muistavaa evästettä. Sivustolla ei käytetä analytiikkaa tai markkinointiseurantaa, joten evästebanneria ei näytetä. Ulkoisten linkkien kautta avautuvat sivustot noudattavat omia tietosuoja- ja evästekäytäntöjään.',
+      legalTitle: 'Lakisääteiset tiedot',
+      legalOperator: 'Edna Social Clubin toiminnasta vastaa Kerttu Laitinen',
+      businessId: 'Y-tunnus',
+      vatId: 'ALV-tunniste',
+    },
   },
 } as const;
 
@@ -542,6 +629,11 @@ export const metadataCopy = {
       description:
         'Contact Edna Social Club for general enquiries, events, partnerships and membership.',
     },
+    privacy: {
+      title: 'Privacy Policy | Edna Social Club',
+      description:
+        'Read how Edna Social Club processes personal data for enquiries, membership applications and newsletter subscriptions.',
+    },
   },
   fi: {
     home: {
@@ -573,6 +665,11 @@ export const metadataCopy = {
       title: 'Yhteystiedot | Edna Social Club',
       description:
         'Ota yhteyttä Edna Social Clubiin yleisissä tiedusteluissa sekä tapahtumiin, yhteistyöhön ja jäsenyyteen liittyvissä asioissa.',
+    },
+    privacy: {
+      title: 'Tietosuojaseloste | Edna Social Club',
+      description:
+        'Lue, miten Edna Social Club käsittelee henkilötietoja yhteydenottojen, jäsenhakemusten ja uutiskirjetilausten yhteydessä.',
     },
   },
 } as const;

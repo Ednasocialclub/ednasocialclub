@@ -11,7 +11,7 @@ import {
   type ReactNode,
 } from 'react';
 import { createPortal } from 'react-dom';
-import type { Locale } from '@/lib/i18n';
+import { localizedPath, type Locale } from '@/lib/i18n';
 
 const applicationsOpenAt = new Date('2026-09-14T00:00:00+03:00').getTime();
 
@@ -20,13 +20,18 @@ const modalCopy = {
     title: 'Membership applications open September 14.',
     body: 'The next chapter of Edna begins soon.',
     close: 'Close',
+    privacy: 'Privacy Policy',
   },
   fi: {
     title: 'Jäsenhakemukset avautuvat 14. syyskuuta.',
     body: 'Ednan seuraava luku alkaa pian.',
     close: 'Sulje',
+    privacy: 'Tietosuojaseloste',
   },
-} satisfies Record<Locale, { title: string; body: string; close: string }>;
+} satisfies Record<
+  Locale,
+  { title: string; body: string; close: string; privacy: string }
+>;
 
 type MembershipGateContextValue = {
   open: (trigger: HTMLAnchorElement) => void;
@@ -42,12 +47,10 @@ export function MembershipGateProvider({
   children: ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLAnchorElement | null>(null);
   const copy = modalCopy[locale];
-
-  useEffect(() => setIsMounted(true), []);
 
   function close() {
     setIsOpen(false);
@@ -63,9 +66,19 @@ export function MembershipGateProvider({
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') close();
-      if (event.key === 'Tab') {
+      if (event.key !== 'Tab') return;
+      const focusable = modalRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])',
+      );
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
-        closeButtonRef.current?.focus();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     }
 
@@ -84,11 +97,12 @@ export function MembershipGateProvider({
   return (
     <MembershipGateContext.Provider value={{ open }}>
       {children}
-      {isMounted && isOpen
+      {isOpen && typeof document !== 'undefined'
         ? createPortal(
-            <div
+            <dialog
+              ref={modalRef}
               className="membership-gate"
-              role="dialog"
+              open
               aria-modal="true"
               aria-labelledby="membership-gate-title"
               aria-describedby="membership-gate-description"
@@ -104,8 +118,15 @@ export function MembershipGateProvider({
               <div className="membership-gate__content">
                 <h2 id="membership-gate-title">{copy.title}</h2>
                 <p id="membership-gate-description">{copy.body}</p>
+                <a
+                  className="membership-gate__privacy"
+                  href={localizedPath(locale, 'privacy')}
+                  onClick={close}
+                >
+                  {copy.privacy}
+                </a>
               </div>
-            </div>,
+            </dialog>,
             document.body,
           )
         : null}
@@ -114,6 +135,8 @@ export function MembershipGateProvider({
 }
 
 export function MembershipApplicationLink({
+  children,
+  href,
   onClick,
   ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
@@ -127,5 +150,9 @@ export function MembershipApplicationLink({
     gate?.open(event.currentTarget);
   }
 
-  return <a {...props} onClick={handleClick} />;
+  return (
+    <a href={href} {...props} onClick={handleClick}>
+      {children}
+    </a>
+  );
 }
