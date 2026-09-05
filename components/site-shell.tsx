@@ -64,7 +64,7 @@ export function SiteShell({
           <p className="footer-label">{copy.footer.navigation}</p>
           {footerRoutes.map((route) => (
             <a key={route} href={localizedPath(locale, route)}>
-              {copy.nav[route]}
+              {copy.footer.links[route]}
             </a>
           ))}
         </nav>

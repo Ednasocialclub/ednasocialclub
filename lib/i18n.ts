@@ -71,6 +71,13 @@ const shared = {
     footer: {
       location: 'Helsinki, Finland',
       navigation: 'Explore',
+      links: {
+        about: 'About',
+        members: 'Members Club',
+        privateEvents: 'Private & Corporate',
+        partnerships: 'Partnerships',
+        contact: 'Contact',
+      },
       contact: 'Contact',
       social: 'Social',
       membership: 'Apply for membership',
@@ -104,6 +111,13 @@ const shared = {
     footer: {
       location: 'Helsinki, Suomi',
       navigation: 'Tutustu',
+      links: {
+        about: 'About Edna',
+        members: 'Edna Members Club',
+        privateEvents: 'Yksityis- & yritystilaisuudet',
+        partnerships: 'Yhteistyöt',
+        contact: 'Yhteystiedot',
+      },
       contact: 'Yhteys',
       social: 'Seuraa',
       membership: 'HAE JÄSENEKSI',
@@ -373,7 +387,7 @@ const pages = {
         },
         community: {
           title: 'Yhteisö',
-          body: 'Edna on paikka, jossa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti ja jossa voi tulla osaksi laajempaa sosiaalista piiriä.',
+          body: 'Ednassa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti, ja samalla pääset osaksi laajempaa sosiaalista piiriä.',
         },
       },
       privateTitle: 'Yksityis- & yritystilaisuudet',
@@ -404,7 +418,7 @@ const pages = {
       pillars: [
         {
           title: 'Yhteisö',
-          body: 'Edna on paikka, jossa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti ja jossa voi tulla osaksi laajempaa sosiaalista piiriä.',
+          body: 'Ednassa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti, ja samalla pääset osaksi laajempaa sosiaalista piiriä.',
         },
         {
           title: 'Live-musiikki',
