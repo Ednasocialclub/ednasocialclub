@@ -81,7 +81,10 @@ function AboutPage({ locale }: { locale: Locale }) {
       ...copy.pillars[1],
       image: {
         src: '/edna-live-jazz-helsinki.jpg',
-        alt: 'Live jazz musicians performing on piano and double bass at Edna Social Club in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Pianisti ja kontrabasisti esiintymässä Edna Social Clubin jazzillassa Helsingissä'
+            : 'Live jazz musicians performing on piano and double bass at Edna Social Club in Helsinki',
         position: 'center center',
       },
     },
@@ -89,7 +92,10 @@ function AboutPage({ locale }: { locale: Locale }) {
       ...copy.pillars[2],
       image: {
         src: '/edna-warm-dining-room-atmosphere-helsinki.jpg',
-        alt: 'Guests seated in a warmly lit dining room during an Edna Social Club evening in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Vieraat lämpimästi valaistussa ruokasalissa Edna Social Clubin illassa Helsingissä'
+            : 'Guests seated in a warmly lit dining room during an Edna Social Club evening in Helsinki',
         position: 'center center',
       },
     },
@@ -97,7 +103,10 @@ function AboutPage({ locale }: { locale: Locale }) {
       ...copy.pillars[0],
       image: {
         src: '/edna-community-dinner-helsinki.jpg',
-        alt: 'Guests sharing dinner and conversation at an Edna Social Club event in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Vieraat illallisella ja keskustelemassa Edna Social Clubin tapahtumassa Helsingissä'
+            : 'Guests sharing dinner and conversation at an Edna Social Club event in Helsinki',
         position: 'center center',
       },
     },
@@ -149,7 +158,11 @@ function MembersPage({ locale }: { locale: Locale }) {
             <Image
               className="membership-social-image"
               src="/edna-members-club-dinner-helsinki.jpg"
-              alt="Guests dining together at an Edna Social Club evening in Helsinki"
+              alt={
+                locale === 'fi'
+                  ? 'Vieraat illallisella yhdessä Edna Social Clubin illassa Helsingissä'
+                  : 'Guests dining together at an Edna Social Club evening in Helsinki'
+              }
               width="1440"
               height="960"
               sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
@@ -508,7 +521,7 @@ function PrivacyPage({ locale }: { locale: Locale }) {
             <address>
               Yrjönkatu 34 B 31<br />
               00100 Helsinki<br />
-              Finland
+              {locale === 'fi' ? 'Suomi' : 'Finland'}
             </address>
             <p>
               <a href="mailto:contact@ednasocialclub.com">

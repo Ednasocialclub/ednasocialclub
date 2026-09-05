@@ -175,6 +175,7 @@ function CarouselPrevious({
   className,
   variant = 'outline',
   size = 'icon-sm',
+  'aria-label': ariaLabel = 'Previous slide',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -184,6 +185,7 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
+      aria-label={ariaLabel}
       className={cn(
         'rounded-full absolute touch-manipulation',
         orientation === 'horizontal'
@@ -196,7 +198,7 @@ function CarouselPrevious({
       {...props}
     >
       <ChevronLeftIcon className="cn-rtl-flip" />
-      <span className="sr-only">Previous slide</span>
+      <span className="sr-only">{ariaLabel}</span>
     </Button>
   );
 }
@@ -205,6 +207,7 @@ function CarouselNext({
   className,
   variant = 'outline',
   size = 'icon-sm',
+  'aria-label': ariaLabel = 'Next slide',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -214,6 +217,7 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
+      aria-label={ariaLabel}
       className={cn(
         'rounded-full absolute touch-manipulation',
         orientation === 'horizontal'
@@ -226,7 +230,7 @@ function CarouselNext({
       {...props}
     >
       <ChevronRightIcon className="cn-rtl-flip" />
-      <span className="sr-only">Next slide</span>
+      <span className="sr-only">{ariaLabel}</span>
     </Button>
   );
 }

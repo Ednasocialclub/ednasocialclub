@@ -109,7 +109,10 @@ export function SiteShell({
               {copy.footer.privacy}
             </a>
           </div>
-          <a className="back-to-top" href="#top">
+          <a
+            className="back-to-top"
+            href={`${localizedPath(locale, 'home')}#top`}
+          >
             {copy.footer.backToTop}
             <span className="link-arrow link-arrow--up" aria-hidden="true" />
           </a>

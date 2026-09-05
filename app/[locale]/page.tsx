@@ -83,7 +83,10 @@ export default async function HomePage({
       ...copy.pages.home.aboutPillars.liveMusic,
       image: {
         src: '/edna-garden-party-live-music-helsinki.jpg',
-        alt: 'A singer performing beside a grand piano for guests at an Edna Social Club garden party in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Laulaja esiintymässä flyygelin äärellä Edna Social Clubin puutarhajuhlissa Helsingissä'
+            : 'A singer performing beside a grand piano for guests at an Edna Social Club garden party in Helsinki',
         position: '48% center',
       },
     },
@@ -91,7 +94,10 @@ export default async function HomePage({
       ...copy.pages.home.aboutPillars.atmosphere,
       image: {
         src: '/collaborations/edna-champagne-tower-collaboration.jpg',
-        alt: 'A champagne tower surrounded by guests at an Edna Social Club event in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Samppanjatorni vieraiden ympäröimänä Edna Social Clubin tapahtumassa Helsingissä'
+            : 'A champagne tower surrounded by guests at an Edna Social Club event in Helsinki',
         position: 'center 48%',
       },
     },
@@ -99,7 +105,10 @@ export default async function HomePage({
       ...copy.pages.home.aboutPillars.community,
       image: {
         src: '/edna-community-cheers-helsinki.jpg',
-        alt: 'Guests raising glasses together at an Edna Social Club gathering in Helsinki',
+        alt:
+          locale === 'fi'
+            ? 'Vieraat kohottamassa laseja yhdessä Edna Social Clubin tilaisuudessa Helsingissä'
+            : 'Guests raising glasses together at an Edna Social Club gathering in Helsinki',
         position: 'center 46%',
       },
     },
@@ -177,7 +186,11 @@ export default async function HomePage({
               <Image
                 className="overview-members__image"
                 src="/edna-members-club-dinner-helsinki.jpg"
-                alt="Guests seated together around a dinner table at an Edna Social Club evening in Helsinki"
+                alt={
+                  locale === 'fi'
+                    ? 'Vieraat kokoontuneina illallispöydän ääreen Edna Social Clubin illassa Helsingissä'
+                    : 'Guests seated together around a dinner table at an Edna Social Club evening in Helsinki'
+                }
                 width="1440"
                 height="960"
                 sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"

@@ -29,11 +29,9 @@ export function CollaborationGallery({
   const [api, setApi] = useState<CarouselApi>();
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const previousLabel =
-    locale === 'fi'
-      ? 'Edellinen yhteistyökuva'
-      : 'Previous collaboration image';
+    locale === 'fi' ? 'Edellinen kuva' : 'Previous collaboration image';
   const nextLabel =
-    locale === 'fi' ? 'Seuraava yhteistyökuva' : 'Next collaboration image';
+    locale === 'fi' ? 'Seuraava kuva' : 'Next collaboration image';
   const imageSizes =
     variant === 'expanded'
       ? '(max-width: 767px) calc(100vw - 2.5rem), 352px'
