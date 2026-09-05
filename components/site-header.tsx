@@ -84,7 +84,7 @@ export function SiteHeader({
   brandAlt,
   primaryNavLabel,
   mobileNavLabel,
-  mobileNavDescription,
+  enquiryLabel,
 }: {
   locale: Locale;
   nav: NavigationCopy;
@@ -94,7 +94,7 @@ export function SiteHeader({
   brandAlt: string;
   primaryNavLabel: string;
   mobileNavLabel: string;
-  mobileNavDescription: string;
+  enquiryLabel: string;
 }) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -215,14 +215,10 @@ export function SiteHeader({
                 open
                 aria-modal="true"
                 aria-labelledby="mobile-menu-title"
-                aria-describedby="mobile-menu-description"
               >
                 <h2 className="sr-only" id="mobile-menu-title">
                   {menuLabel}
                 </h2>
-                <p className="sr-only" id="mobile-menu-description">
-                  {mobileNavDescription}
-                </p>
                 <div className="mobile-menu__topline">
                   <span aria-hidden="true" />
                   <button
@@ -255,6 +251,15 @@ export function SiteHeader({
                 >
                   {nav.apply}
                 </MembershipApplicationLink>
+                <a
+                  className="mobile-menu__enquiry"
+                  href="mailto:contact@ednasocialclub.com"
+                >
+                  <span>{enquiryLabel}</span>
+                  <span className="mobile-menu__enquiry-email">
+                    contact@ednasocialclub.com
+                  </span>
+                </a>
               </dialog>
             </div>,
             document.body,

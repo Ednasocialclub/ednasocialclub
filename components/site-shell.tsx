@@ -47,7 +47,7 @@ export function SiteShell({
         brandAlt={copy.brandAlt}
         primaryNavLabel={copy.primaryNavLabel}
         mobileNavLabel={copy.mobileNavLabel}
-        mobileNavDescription={copy.mobileNavDescription}
+        enquiryLabel={copy.pages.contact.form.submit}
       />
 
       {children}
