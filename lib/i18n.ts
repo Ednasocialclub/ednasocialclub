@@ -331,7 +331,7 @@ const pages = {
       updated: 'Last updated 5 September 2026',
       handlingTitle: 'How we use personal data',
       dataItems: [
-        'Membership applications: name, age, gender, email address, phone number and the other answers you submit through Typeform.',
+        'Membership applications: name, age, email address, phone number and the other answers you submit through Typeform.',
         'Contact enquiries: name, email address, enquiry type and message. The website form opens your email application and is not stored by the website itself.',
         'Newsletter: email address and any other information you choose to provide through the Flodesk subscription form.',
       ],
@@ -567,7 +567,7 @@ const pages = {
       updated: 'Päivitetty 5. syyskuuta 2026',
       handlingTitle: 'Miten käytämme henkilötietoja',
       dataItems: [
-        'Jäsenhakemukset: nimi, ikä, sukupuoli, sähköpostiosoite, puhelinnumero sekä muut Typeformin kautta antamasi vastaukset.',
+        'Jäsenhakemukset: nimi, ikä, sähköpostiosoite, puhelinnumero sekä muut Typeformin kautta antamasi vastaukset.',
         'Yhteydenotot: nimi, sähköpostiosoite, tiedustelun aihe ja viesti. Verkkosivun lomake avaa sähköpostisovelluksesi, eikä verkkosivusto itse tallenna tietoja.',
         'Uutiskirje: sähköpostiosoite sekä muut tiedot, jotka päätät antaa Flodeskin tilauslomakkeella.',
       ],
