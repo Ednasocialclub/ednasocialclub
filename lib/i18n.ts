@@ -173,7 +173,7 @@ const pages = {
     about: {
       eyebrow: 'About',
       title: 'Edna brings people together.',
-      lead: 'Edna is a Social & Jazz Club in Helsinki for people who still want a reason to dress up, stay a little longer, meet someone new and feel part of something',
+      lead: 'Inspired by the jazz clubs of the 1920s, Edna Social Club is for those who want a reason to dress up, stay a little longer, meet new people and feel part of something.',
       ideaTitle: 'The idea',
       ideaBody: [
         'Edna creates thoughtful occasions for people to leave the everyday behind, dress for the evening and meet one another naturally.',
@@ -372,22 +372,22 @@ const pages = {
       eyebrow: 'Social & Jazz Club in Helsinki',
       aboutTitle: 'About Edna',
       aboutLead:
-        'Edna on Social & Jazz Club, joka järjestää Helsingissä jazziltoja, illallisia, cocktail-iltoja ja kausittaisia juhlia',
+        'Edna on Social & Jazz Club, joka järjestää Helsingissä jazziltoja, illallisia ja kausittaisia juhlia',
       aboutBody: '',
       aboutEventsNote: 'Tulevista tapahtumista ilmoitetaan Instagramissa',
       aboutCta: 'Tutustu Ednaan',
       aboutPillars: {
         liveMusic: {
           title: 'Live-musiikki',
-          body: 'Jazz kantaa mukanaan toisen aikakauden henkeä, jolloin romantiikalla oli merkitystä ja musiikki loi tunnelman viemättä kaikkea huomiota.',
+          body: 'Jazz antaa jokaiselle illalle oman rytminsä: illallisesta ja keskusteluista aina myöhäisillan tansseihin',
         },
         atmosphere: {
           title: 'Tunnelma',
-          body: 'Jokainen yksityiskohta on harkittu, tilasta ja kattauksesta musiikkiin, palveluun ja illan tunnelmaan.',
+          body: 'Jokainen yksityiskohta on harkittu tilasta ja kattauksesta musiikkiin, palveluun ja illan tunnelmaan',
         },
         community: {
           title: 'Yhteisö',
-          body: 'Ednassa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti, ja samalla pääset osaksi laajempaa sosiaalista piiriä.',
+          body: 'Ednassa uudet ystävyydet, keskustelut ja yhteistyöt syntyvät luontevasti, ja uusien ihmisten kohtaaminen on tehty helpoksi',
         },
       },
       privateTitle: 'Yksityis- & yritystilaisuudet',
@@ -409,7 +409,7 @@ const pages = {
     about: {
       eyebrow: 'About Edna',
       title: 'Edna tuo ihmiset yhteen.',
-      lead: 'Edna on helsinkiläinen Social & Jazz Club niille, jotka kaipaavat syytä pukeutua, viipyä hieman pidempään, tavata jonkun uuden ja tuntea kuuluvansa johonkin',
+      lead: '1920-luvun jazzklubeista inspiroitunut Edna Social Club on niille, jotka kaipaavat syytä pukeutua, viipyä hieman pidempään, tavata uusia ihmisiä ja tuntea kuuluvansa johonkin',
       ideaTitle: 'Ajatus',
       ideaBody: [
         'Edna luo harkittuja tilaisuuksia, joissa ihmiset voivat jättää arjen hetkeksi taakseen, pukeutua iltaa varten ja tutustua toisiinsa luontevasti.',
@@ -418,15 +418,15 @@ const pages = {
       pillars: [
         {
           title: 'Yhteisö',
-          body: 'Ednassa uudet ystävyydet, yhteistyöt ja mahdollisuudet syntyvät luontevasti, ja samalla pääset osaksi laajempaa sosiaalista piiriä.',
+          body: 'Ednassa uudet ystävyydet, keskustelut ja yhteistyöt syntyvät luontevasti, ja uusien ihmisten kohtaaminen on tehty helpoksi',
         },
         {
           title: 'Live-musiikki',
-          body: 'Jazz kantaa mukanaan toisen aikakauden henkeä, jolloin romantiikalla oli merkitystä ja musiikki loi tunnelman viemättä kaikkea huomiota.',
+          body: 'Jazz tuo tapahtumiin ajatonta tunnelmaa ja elävöittää tapahtumia, antaen tilan seurustelulle ja kohtaamisille',
         },
         {
           title: 'Tunnelma',
-          body: 'Jokainen yksityiskohta on harkittu, tilasta ja kattauksesta musiikkiin, palveluun ja illan tunnelmaan.',
+          body: 'Jokainen yksityiskohta on harkittu tilasta ja kattauksesta musiikkiin, palveluun ja illan tunnelmaan',
         },
       ],
       eventsTitle: 'Mitä Edna luo',
@@ -443,7 +443,7 @@ const pages = {
         },
         {
           title: 'Miksi jazz?',
-          body: 'Jo kauan ennen Ednan syntyä jazz oli osa sitä maailmaa, josta se sai inspiraationsa. Jazz kantaa toisen aikakauden sielua, jolloin illat etenivät hieman hitaammin, romantiikalla oli merkitystä ja musiikki loi tunnelman.',
+          body: 'Jo kauan ennen Ednan syntyä jazz oli osa sitä maailmaa, josta se sai inspiraationsa. Jazz kantaa mukanaan menneiden iltojen tunnelmaa, jolloin aikaa oli enemmän, romantiikalle jäi tilaa ja musiikki loi illalle oman rytminsä.',
         },
         {
           title: 'Missä tapaamme?',
