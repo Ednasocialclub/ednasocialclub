@@ -8,7 +8,13 @@ import '../globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: '/edna-emblem.png',
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon-48.png', type: 'image/png', sizes: '48x48' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' },
+    ],
   },
 };
 
