@@ -15,12 +15,12 @@ import {
   type ContentRoute,
   type Locale,
 } from '@/lib/i18n';
+import { siteUrl } from '@/lib/site';
 
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const emailUrl = 'mailto:contact@ednasocialclub.com';
-const siteUrl = 'https://edna-social-jazz-club.helminondita.chatgpt.site';
 const hufvudstadsbladetUrl =
   'https://www.hbl.fi/helsingfors/exklusiva-jazzkvallar-blev-succe-bland-unga/';
 const newsletterUrl =
