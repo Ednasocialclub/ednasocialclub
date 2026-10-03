@@ -2343,19 +2343,22 @@ a.event-entry__cta:hover .event-entry__arrow {
     margin-top: 1.4rem;
   }
 
-  .overview-events {
-    min-height: calc(100svh - 4.6rem);
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+  .overview-section.overview-events {
+    min-height: 0;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .overview-events__layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
   }
 
   .overview-events__inner > h2 {
     text-align: center;
+    font-size: clamp(2.1rem, 9vw, 2.45rem);
+    transform: none;
   }
 
   .overview-events__image {
@@ -2366,7 +2369,7 @@ a.event-entry__cta:hover .event-entry__arrow {
   .overview-events__cta {
     position: static;
     width: fit-content;
-    margin: 2.75rem auto 0;
+    margin: 2rem auto 0;
     transform: none;
   }
 
@@ -2387,6 +2390,27 @@ a.event-entry__cta:hover .event-entry__arrow {
 
   .events-list--compact .event-entry + .event-entry {
     margin-top: 3rem;
+  }
+
+  .overview-events .events-list--compact {
+    margin-top: 0;
+  }
+
+  .overview-events .events-list--compact .event-entry time,
+  .overview-events .events-list--compact .event-entry h2 {
+    margin-bottom: 0.7rem;
+  }
+
+  .overview-events .events-list--compact .event-entry h2 {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+  }
+
+  .overview-events .events-list--compact .event-entry__cta {
+    margin-top: 1rem;
+  }
+
+  .overview-events .events-list--compact .event-entry + .event-entry {
+    margin-top: 2.5rem;
   }
 
   .membership-editorial-page {
