@@ -2402,7 +2402,7 @@ a.event-entry__cta:hover .event-entry__arrow {
   }
 
   .overview-events .events-list--compact .event-entry h2 {
-    font-size: clamp(1.65rem, 7vw, 2rem);
+    font-size: clamp(1.4rem, 6vw, 1.7rem);
   }
 
   .overview-events .events-list--compact .event-entry__cta {
