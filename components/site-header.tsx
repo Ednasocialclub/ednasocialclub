@@ -16,6 +16,7 @@ import {
 type NavigationCopy = {
   about: string;
   members: string;
+  events: string;
   privateEvents: string;
   partnerships: string;
   contact: string;
@@ -27,6 +28,7 @@ type NavigationRoute = Exclude<ContentRoute, 'privacy'>;
 const navigation: NavigationRoute[] = [
   'about',
   'members',
+  'events',
   'privateEvents',
   'partnerships',
   'contact',

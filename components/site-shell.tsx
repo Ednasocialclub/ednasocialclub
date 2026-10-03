@@ -17,7 +17,7 @@ const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const newsletterUrl =
   'https://ednasocialclub.myflodesk.com/privateclub?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAUGeatwZG9mAmZkaWQWUNvuZ1oMw8pmdJ5k9yoC_pSKys1SNGV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp3xTa0UeGLCby7uq3-F596v7h24fwR9AFK1M-z9THlDqEF4pzs_ptDNBiZvA_aem_k34N41oDHSdME7q8_J5k1A';
 
-type FooterRoute = Exclude<ContentRoute, 'privacy'>;
+type FooterRoute = Exclude<ContentRoute, 'events' | 'privacy'>;
 
 const footerRoutes: FooterRoute[] = [
   'about',

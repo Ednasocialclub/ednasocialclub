@@ -990,6 +990,203 @@ button {
   color: var(--wine);
 }
 
+.events-page {
+  display: flex;
+  min-height: calc(100svh - 5.5rem);
+  align-items: center;
+  padding: 2rem var(--page-gutter);
+  background: var(--wine);
+  color: var(--ivory);
+}
+
+.events-page__inner {
+  width: min(100%, var(--content-width));
+  margin: 0 auto;
+}
+
+.events-page__header {
+  text-align: center;
+}
+
+.events-page__header h1 {
+  max-width: 18ch;
+  margin: 0 auto;
+  color: inherit;
+  font-size: clamp(3rem, 6vw, 5.75rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.events-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 7.5rem);
+  align-items: start;
+  margin-top: clamp(1.5rem, 3vh, 2rem);
+}
+
+.events-page__layout .events-list--compact {
+  margin-top: 0;
+}
+
+.events-page__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.events-page__instagram {
+  margin: clamp(2rem, 3.5vh, 2.75rem) auto 0;
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.events-page__instagram a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.events-list {
+  margin-top: clamp(5rem, 8vw, 7rem);
+}
+
+.event-entry {
+  max-width: 44rem;
+  padding: 0;
+}
+
+.event-entry + .event-entry {
+  margin-top: clamp(5rem, 9vw, 8rem);
+}
+
+.event-entry time {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.event-entry h2 {
+  margin: 0 0 1.1rem;
+  color: inherit;
+  font-size: clamp(1.9rem, 3.8vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+.event-entry p {
+  max-width: 24rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  opacity: 0.74;
+}
+
+.event-entry .event-entry__detail {
+  max-width: 31rem;
+  margin-top: 0.85rem;
+  font-style: italic;
+  opacity: 0.78;
+}
+
+.event-entry__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.65rem;
+  padding: 0.25rem 0;
+  color: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.event-entry__arrow {
+  transition: transform 180ms ease;
+}
+
+a.event-entry__cta:hover .event-entry__arrow {
+  transform: translateX(0.2rem);
+}
+
+.event-entry__cta--disabled {
+  cursor: default;
+  opacity: 0.66;
+}
+
+.overview-events {
+  position: relative;
+  min-height: calc(100svh - 5.5rem);
+  padding-top: clamp(2.5rem, 4vh, 3.5rem);
+  padding-bottom: clamp(2.5rem, 4vh, 3.5rem);
+  background: var(--wine);
+}
+
+.overview-events__inner {
+  width: min(100%, var(--content-width));
+}
+
+.overview-events__inner > h2 {
+  text-align: center;
+  transform: translateY(-3.25rem);
+}
+
+.overview-events__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 7.5rem);
+  align-items: start;
+  margin-top: clamp(1.25rem, 2.5vh, 1.75rem);
+}
+
+.overview-events__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.events-list--compact {
+  margin-top: clamp(2.25rem, 4vh, 3rem);
+}
+
+.overview-events__layout .events-list--compact {
+  margin-top: 0;
+}
+
+.events-list--compact .event-entry {
+  max-width: 38rem;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.events-list--compact .event-entry + .event-entry {
+  margin-top: clamp(2.5rem, 4.5vh, 3.25rem);
+}
+
+.events-list--compact .event-entry h2 {
+  font-size: clamp(1.75rem, 3vw, 2.8rem);
+}
+
+.events-list--compact .event-entry p {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.overview-events__cta {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .page-hero {
   padding: clamp(6.5rem, 10vw, 9.5rem) var(--page-gutter)
     clamp(5.5rem, 8vw, 8rem);
@@ -1989,6 +2186,35 @@ button {
   }
 }
 
+@media (min-width: 48.01rem) {
+  .overview-events {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .overview-events__inner > h2 {
+    transform: translateY(-6.0625rem);
+  }
+
+  .events-list--compact {
+    margin-top: 1.5rem;
+  }
+
+  .events-list--compact .event-entry + .event-entry {
+    margin-top: 2rem;
+  }
+
+  .events-list--compact .event-entry time,
+  .events-list--compact .event-entry h2 {
+    margin-bottom: 0.65rem;
+  }
+
+  .events-list--compact .event-entry__cta {
+    margin-top: 1rem;
+  }
+
+}
+
 @media (max-width: 72rem) {
   .desktop-nav {
     display: none;
@@ -2071,6 +2297,96 @@ button {
   .page-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .events-page {
+    min-height: calc(100svh - 5.1rem);
+    padding-top: 5.25rem;
+    padding-bottom: 5rem;
+  }
+
+  .events-page__header h1 {
+    font-size: clamp(2.75rem, 13vw, 4.2rem);
+  }
+
+  .events-page__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .events-page__instagram {
+    margin-top: 2.75rem;
+  }
+
+  .events-list {
+    margin-top: 4.5rem;
+  }
+
+  .event-entry {
+    padding: 0;
+  }
+
+  .event-entry + .event-entry {
+    margin-top: 4.5rem;
+  }
+
+  .event-entry h2 {
+    font-size: clamp(1.95rem, 8.5vw, 2.8rem);
+  }
+
+  .events-list--compact .event-entry h2 {
+    font-size: clamp(1.75rem, 7.5vw, 2.4rem);
+  }
+
+  .event-entry__cta {
+    margin-top: 1.4rem;
+  }
+
+  .overview-events {
+    min-height: calc(100svh - 4.6rem);
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .overview-events__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .overview-events__inner > h2 {
+    text-align: center;
+  }
+
+  .overview-events__image {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .overview-events__cta {
+    position: static;
+    width: fit-content;
+    margin: 2.75rem auto 0;
+    transform: none;
+  }
+
+  .events-list--compact {
+    margin-top: 2.5rem;
+  }
+
+  .events-list--compact .event-entry {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .events-list--compact .event-entry p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .events-list--compact .event-entry + .event-entry {
+    margin-top: 3rem;
   }
 
   .membership-editorial-page {

@@ -10,6 +10,7 @@ const indexedRoutes = [
   'home',
   'about',
   'members',
+  'events',
   'privateEvents',
   'partnerships',
   'contact',

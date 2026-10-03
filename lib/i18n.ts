@@ -5,6 +5,7 @@ export const routes = {
   home: { en: '', fi: '' },
   about: { en: 'about', fi: 'tietoa' },
   members: { en: 'members', fi: 'jasenklubi' },
+  events: { en: 'events', fi: 'events' },
   privateEvents: {
     en: 'private-corporate',
     fi: 'yksityiset-ja-yritystapahtumat',
@@ -63,6 +64,7 @@ const shared = {
     nav: {
       about: 'About',
       members: 'Members Club',
+      events: 'Events',
       privateEvents: 'Private & Corporate',
       partnerships: 'Partnerships',
       contact: 'Contact',
@@ -103,6 +105,7 @@ const shared = {
     nav: {
       about: 'ABOUT EDNA',
       members: 'EDNA MEMBERS CLUB',
+      events: 'Tapahtumat',
       privateEvents: 'YKSITYIS- & YRITYSTILAISUUDET',
       partnerships: 'Yhteistyöt',
       contact: 'Yhteystiedot',
@@ -626,6 +629,11 @@ export const metadataCopy = {
       description:
         'Learn about Edna Members Club and apply to join the growing Helsinki community.',
     },
+    events: {
+      title: 'Upcoming Events | Edna Social Club Helsinki',
+      description:
+        'Discover upcoming Edna Social Club events, including Halloween Masquerade and the Edna Winter Ball.',
+    },
     privateEvents: {
       title: 'Private & Corporate Events Helsinki | Edna Social Club',
       description:
@@ -662,6 +670,11 @@ export const metadataCopy = {
       title: 'Edna Members Club | Edna Social Club',
       description:
         'Tutustu Edna Members Clubiin ja hae mukaan kasvavaan helsinkiläiseen yhteisöön.',
+    },
+    events: {
+      title: 'Tulevat tapahtumat | Edna Social Club Helsinki',
+      description:
+        'Tutustu Edna Social Clubin tuleviin tapahtumiin: Halloween Masquerade ja Edna Winter Ball.',
     },
     privateEvents: {
       title: 'Yksityis- ja yritystapahtumat Helsinki | Edna Social Club',

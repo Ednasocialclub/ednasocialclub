@@ -5,7 +5,9 @@ import { MembershipApplicationLink } from '@/components/membership-gate';
 import type { ReactNode } from 'react';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
+import { EventsList } from '@/components/events-list';
 import { SiteShell } from '@/components/site-shell';
+import { eventsPageContent } from '@/lib/events';
 import {
   contentRouteForSlug,
   isLocale,
@@ -199,6 +201,42 @@ function MembersPage({ locale }: { locale: Locale }) {
             {siteCopy[locale].privacyLink}
           </a>
         </section>
+      </div>
+    </section>
+  );
+}
+
+function EventsPage({ locale }: { locale: Locale }) {
+  const copy = eventsPageContent[locale];
+
+  return (
+    <section className="events-page">
+      <div className="events-page__inner">
+        <header className="events-page__header reveal">
+          <h1>{copy.title}</h1>
+        </header>
+        <div className="events-page__layout">
+          <EventsList events={copy.events} compact showDetails />
+          <Image
+            className="events-page__image"
+            src="/edna-upcoming-events-evening-helsinki.jpg"
+            alt={
+              locale === 'fi'
+                ? 'Vieraita tunnelmallisessa Edna Social Clubin illassa Helsingissä'
+                : 'Guests at an atmospheric Edna Social Club evening in Helsinki'
+            }
+            width="2400"
+            height="1600"
+            sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
+          />
+        </div>
+        <p className="events-page__instagram">
+          {copy.instagramNote.before}
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+            @ednasocialclub
+          </a>
+          {copy.instagramNote.after}
+        </p>
       </div>
     </section>
   );
@@ -541,6 +579,8 @@ function renderPage(route: ContentRoute, locale: Locale): ReactNode {
       return <AboutPage locale={locale} />;
     case 'members':
       return <MembersPage locale={locale} />;
+    case 'events':
+      return <EventsPage locale={locale} />;
     case 'privateEvents':
       return <PrivateEventsPage locale={locale} />;
     case 'partnerships':

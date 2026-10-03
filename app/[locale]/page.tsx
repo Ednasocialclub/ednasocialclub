@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
+import { EventsList } from '@/components/events-list';
 import { MembershipApplicationLink } from '@/components/membership-gate';
 import { SiteShell } from '@/components/site-shell';
 import {
@@ -12,6 +13,7 @@ import {
   siteCopy,
   type Locale,
 } from '@/lib/i18n';
+import { eventsPageContent } from '@/lib/events';
 import { siteUrl } from '@/lib/site';
 
 const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
@@ -80,6 +82,7 @@ export default async function HomePage({
 
   const locale: Locale = candidate;
   const copy = siteCopy[locale];
+  const eventsCopy = eventsPageContent[locale];
   const aboutPillars: AboutPillar[] = [
     {
       ...copy.pages.home.aboutPillars.liveMusic,
@@ -222,6 +225,40 @@ export default async function HomePage({
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section
+          className="overview-section overview-section--wine overview-events"
+          id="events"
+        >
+          <div className="overview-section__inner overview-events__inner">
+            <h2>{eventsCopy.title}</h2>
+            <div className="overview-events__layout">
+              <EventsList events={eventsCopy.events} compact />
+              <Image
+                className="overview-events__image"
+                src="/edna-upcoming-events-evening-helsinki.jpg"
+                alt={
+                  locale === 'fi'
+                    ? 'Vieraita tunnelmallisessa Edna Social Clubin illassa Helsingissä'
+                    : 'Guests at an atmospheric Edna Social Club evening in Helsinki'
+                }
+                width="2400"
+                height="1600"
+                sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
+              />
+            </div>
+            <a
+              className="text-link text-link--light overview-events__cta"
+              href={localizedPath(locale, 'events')}
+            >
+              {eventsCopy.exploreLabel}
+              <span
+                className="link-arrow link-arrow--right"
+                aria-hidden="true"
+              />
+            </a>
           </div>
         </section>
 
