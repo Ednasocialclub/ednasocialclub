@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
 import { EventsList } from '@/components/events-list';
-import { MembershipApplicationLink } from '@/components/membership-gate';
 import { SiteShell } from '@/components/site-shell';
 import {
   isLocale,
@@ -16,7 +15,6 @@ import {
 import { eventsPageContent } from '@/lib/events';
 import { siteUrl } from '@/lib/site';
 
-const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const newsletterUrl =
@@ -133,14 +131,12 @@ export default async function HomePage({
             />
             <h1>{copy.pages.home.title}</h1>
             <p>{copy.pages.home.eyebrow}</p>
-            <MembershipApplicationLink
+            <a
               className="button button--wine"
-              href={membershipUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={localizedPath(locale, 'events')}
             >
               {copy.nav.apply}
-            </MembershipApplicationLink>
+            </a>
           </div>
         </section>
 
@@ -204,15 +200,10 @@ export default async function HomePage({
               <h2>{copy.pages.members.title}</h2>
               <p className="overview-lead">{copy.pages.home.membersLead}</p>
               <p>{copy.pages.home.membersBody}</p>
+              <p className="overview-note">
+                {copy.pages.home.membersStatus}
+              </p>
               <div className="overview-actions overview-actions--start">
-                <MembershipApplicationLink
-                  className="button button--ivory"
-                  href={membershipUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {copy.nav.apply}
-                </MembershipApplicationLink>
                 <a
                   className="text-link text-link--light"
                   href={localizedPath(locale, 'members')}

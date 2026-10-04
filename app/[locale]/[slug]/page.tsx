@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { MembershipApplicationLink } from '@/components/membership-gate';
 import type { ReactNode } from 'react';
 import { AboutPillars, type AboutPillar } from '@/components/about-pillars';
 import { CollaborationGallery } from '@/components/collaboration-gallery';
@@ -19,7 +18,6 @@ import {
 } from '@/lib/i18n';
 import { siteUrl } from '@/lib/site';
 
-const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const emailUrl = 'mailto:contact@ednasocialclub.com';
@@ -186,19 +184,11 @@ function MembersPage({ locale }: { locale: Locale }) {
           <p className="membership-editorial-page__cta-line">
             {copy.applicationTagline}
           </p>
-          <MembershipApplicationLink
+          <a
             className="button button--ivory"
-            href={membershipUrl}
-            target="_blank"
-            rel="noreferrer"
+            href={localizedPath(locale, 'events')}
           >
             {copy.apply}
-          </MembershipApplicationLink>
-          <a
-            className="entry-privacy-link"
-            href={localizedPath(locale, 'privacy')}
-          >
-            {siteCopy[locale].privacyLink}
           </a>
         </section>
       </div>

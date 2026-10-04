@@ -68,7 +68,7 @@ const shared = {
       privateEvents: 'Private & Corporate',
       partnerships: 'Partnerships',
       contact: 'Contact',
-      apply: 'Apply for membership',
+      apply: 'UPCOMING EVENTS',
     },
     footer: {
       location: 'Helsinki, Finland',
@@ -82,7 +82,7 @@ const shared = {
       },
       contact: 'Contact',
       social: 'Social',
-      membership: 'Apply for membership',
+      membership: 'Upcoming Events',
       trademark: 'EDNA SOCIAL CLUB® is a registered trademark in Finland.',
       copyright: 'Edna Social Club',
       backToTop: 'Back to top',
@@ -109,7 +109,7 @@ const shared = {
       privateEvents: 'YKSITYIS- & YRITYSTILAISUUDET',
       partnerships: 'Yhteistyöt',
       contact: 'Yhteystiedot',
-      apply: 'HAE JÄSENEKSI',
+      apply: 'TULEVAT TAPAHTUMAT',
     },
     footer: {
       location: 'Helsinki, Suomi',
@@ -123,7 +123,7 @@ const shared = {
       },
       contact: 'Yhteys',
       social: 'Seuraa',
-      membership: 'HAE JÄSENEKSI',
+      membership: 'Tulevat tapahtumat',
       trademark: 'EDNA SOCIAL CLUB® on Suomessa rekisteröity tavaramerkki.',
       copyright: 'Edna Social Club',
       backToTop: 'Sivun alkuun',
@@ -170,6 +170,7 @@ const pages = {
         'Your way into meaningful connections and evenings you will remember',
       membersBody:
         'Meet beyond your usual circles and become part of a social world where friendships, introductions and new possibilities can begin naturally.',
+      membersStatus: 'Membership applications are currently closed.',
       privateCta: 'Learn more about Private & Corporate',
       partnershipsCta: 'Explore partnerships',
     },
@@ -250,9 +251,10 @@ const pages = {
           body: 'For people who enjoy good conversation and want to meet beyond the social and professional circles they already know.',
         },
       ],
-      applicationTitle: 'Become part of Edna',
-      applicationTagline: 'More access. More connection.',
-      apply: 'Apply for membership',
+      applicationTitle: 'Membership applications are now closed',
+      applicationTagline:
+        'The next application period will be announced here.',
+      apply: 'Explore upcoming events →',
     },
     privateEvents: {
       eyebrow: 'Private & Corporate',
@@ -406,6 +408,7 @@ const pages = {
         'Tie merkityksellisiin kohtaamisiin ja iltoihin, jotka jäävät mieleen',
       membersBody:
         'Tapaa ihmisiä oman tuttavapiirisi ulkopuolelta ja tule osaksi Ednan maailmaa, jossa uudet ystävyydet, kohtaamiset ja mahdollisuudet syntyvät luontevasti.',
+      membersStatus: 'Jäsenhaku on tällä hetkellä päättynyt.',
       privateCta: 'Lue lisää yksityisistä ja yritystapahtumista',
       partnershipsCta: 'Tutustu yhteistyömahdollisuuksiin',
     },
@@ -486,9 +489,9 @@ const pages = {
           body: 'Ihmisille, jotka nauttivat hyvistä keskusteluista ja haluavat kohdata toisia nykyisten sosiaalisten ja ammatillisten piiriensä ulkopuolella.',
         },
       ],
-      applicationTitle: 'Tule osaksi Ednaa',
-      applicationTagline: 'Enemmän mahdollisuuksia. Enemmän yhteyttä.',
-      apply: 'HAE JÄSENEKSI',
+      applicationTitle: 'Jäsenhaku on päättynyt',
+      applicationTagline: 'Seuraavasta hakukierroksesta ilmoitetaan täällä.',
+      apply: 'Tutustu tuleviin tapahtumiin →',
     },
     privateEvents: {
       eyebrow: 'Yksityis- & yritystilaisuudet',
@@ -627,7 +630,7 @@ export const metadataCopy = {
     members: {
       title: 'Members Club | Edna Social Club',
       description:
-        'Learn about Edna Members Club and apply to join the growing Helsinki community.',
+        'Learn about Edna Members Club and its community in Helsinki.',
     },
     events: {
       title: 'Upcoming Events | Edna Social Club Helsinki',
@@ -669,7 +672,7 @@ export const metadataCopy = {
     members: {
       title: 'Edna Members Club | Edna Social Club',
       description:
-        'Tutustu Edna Members Clubiin ja hae mukaan kasvavaan helsinkiläiseen yhteisöön.',
+        'Tutustu Edna Members Clubiin ja sen helsinkiläiseen yhteisöön.',
     },
     events: {
       title: 'Tulevat tapahtumat | Edna Social Club Helsinki',

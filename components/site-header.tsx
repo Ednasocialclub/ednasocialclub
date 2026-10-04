@@ -5,7 +5,6 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { createPortal } from 'react-dom';
 import { useEffect, useRef, useState } from 'react';
-import { MembershipApplicationLink } from '@/components/membership-gate';
 import {
   type Locale,
   type ContentRoute,
@@ -33,8 +32,6 @@ const navigation: NavigationRoute[] = [
   'partnerships',
   'contact',
 ];
-
-const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 
 function persistLocale(locale: Locale) {
   document.cookie = `edna-locale=${locale}; path=/; max-age=31536000; SameSite=Lax`;
@@ -181,14 +178,12 @@ export function SiteHeader({
         <div className="mobile-language-switcher">
           <LanguageSwitcher locale={locale} label={languageLabel} />
         </div>
-        <MembershipApplicationLink
+        <a
           className="header-apply"
-          href={membershipUrl}
-          target="_blank"
-          rel="noreferrer"
+          href={localizedPath(locale, 'events')}
         >
           {nav.apply}
-        </MembershipApplicationLink>
+        </a>
         <button
           ref={menuButtonRef}
           className="menu-trigger"
@@ -244,15 +239,13 @@ export function SiteHeader({
                     </a>
                   ))}
                 </nav>
-                <MembershipApplicationLink
+                <a
                   className="mobile-menu__apply"
-                  href={membershipUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={localizedPath(locale, 'events')}
                   onClick={() => closeMenu({ restoreFocus: false })}
                 >
                   {nav.apply}
-                </MembershipApplicationLink>
+                </a>
                 <a
                   className="mobile-menu__enquiry"
                   href="mailto:contact@ednasocialclub.com"

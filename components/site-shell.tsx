@@ -1,8 +1,4 @@
 import type { ReactNode } from 'react';
-import {
-  MembershipApplicationLink,
-  MembershipGateProvider,
-} from '@/components/membership-gate';
 import { SiteHeader } from '@/components/site-header';
 import {
   localizedPath,
@@ -11,7 +7,6 @@ import {
   type Locale,
 } from '@/lib/i18n';
 
-const membershipUrl = 'https://form.typeform.com/to/HGyOvaZW';
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
 const newsletterUrl =
@@ -37,7 +32,7 @@ export function SiteShell({
   const copy = siteCopy[locale];
 
   return (
-    <MembershipGateProvider locale={locale}>
+    <>
       <SiteHeader
         locale={locale}
         nav={copy.nav}
@@ -74,13 +69,9 @@ export function SiteShell({
           <a href="mailto:contact@ednasocialclub.com">
             contact@ednasocialclub.com
           </a>
-          <MembershipApplicationLink
-            href={membershipUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={localizedPath(locale, 'events')}>
             {copy.footer.membership}
-          </MembershipApplicationLink>
+          </a>
           <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">
             {copy.newsletterLabel}
           </a>
@@ -118,6 +109,6 @@ export function SiteShell({
           </a>
         </div>
       </footer>
-    </MembershipGateProvider>
+    </>
   );
 }
