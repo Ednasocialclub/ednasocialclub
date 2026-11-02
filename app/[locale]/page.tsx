@@ -85,34 +85,34 @@ export default async function HomePage({
     {
       ...copy.pages.home.aboutPillars.liveMusic,
       image: {
-        src: '/edna-garden-party-live-music-helsinki.jpg',
+        src: '/edna-about-live-music-piano-gathering.jpg',
         alt:
           locale === 'fi'
-            ? 'Laulaja esiintymässä flyygelin äärellä Edna Social Clubin puutarhajuhlissa Helsingissä'
-            : 'A singer performing beside a grand piano for guests at an Edna Social Club garden party in Helsinki',
-        position: '48% center',
+            ? 'Pianisti ja vieraita flyygelin ympärillä Edna Social Clubin illassa Helsingissä'
+            : 'A pianist and guests gathered around a grand piano at an Edna Social Club evening in Helsinki',
+        position: 'center 60%',
       },
     },
     {
       ...copy.pages.home.aboutPillars.atmosphere,
       image: {
-        src: '/collaborations/edna-champagne-tower-collaboration.jpg',
+        src: '/edna-about-atmosphere-evening-details.jpg',
         alt:
           locale === 'fi'
-            ? 'Samppanjatorni vieraiden ympäröimänä Edna Social Clubin tapahtumassa Helsingissä'
-            : 'A champagne tower surrounded by guests at an Edna Social Club event in Helsinki',
-        position: 'center 48%',
+            ? 'Cocktailit, korut ja illan yksityiskohdat Edna Social Clubin tapahtumassa Helsingissä'
+            : 'Cocktails, jewellery and evening details at an Edna Social Club event in Helsinki',
+        position: 'center center',
       },
     },
     {
       ...copy.pages.home.aboutPillars.community,
       image: {
-        src: '/edna-community-cheers-helsinki.jpg',
+        src: '/edna-about-community-fireplace-gathering.jpg',
         alt:
           locale === 'fi'
-            ? 'Vieraat kohottamassa laseja yhdessä Edna Social Clubin tilaisuudessa Helsingissä'
-            : 'Guests raising glasses together at an Edna Social Club gathering in Helsinki',
-        position: 'center 46%',
+            ? 'Vieraita punaisissa nojatuoleissa puupaneloidussa juhlatilassa Edna Social Clubin tapahtumassa Helsingissä'
+            : 'Guests gathered around red armchairs in a wood-panelled room at an Edna Social Club event in Helsinki',
+        position: 'center 68%',
       },
     },
   ];
