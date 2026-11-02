@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { SiteHeader } from '@/components/site-header';
 import {
   localizedPath,
@@ -6,6 +6,7 @@ import {
   type ContentRoute,
   type Locale,
 } from '@/lib/i18n';
+import { membershipApplicationUrl } from '@/lib/site';
 
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
@@ -58,9 +59,20 @@ export function SiteShell({
         <nav className="site-footer__nav" aria-label={copy.footer.navigation}>
           <p className="footer-label">{copy.footer.navigation}</p>
           {footerRoutes.map((route) => (
-            <a key={route} href={localizedPath(locale, route)}>
-              {copy.footer.links[route]}
-            </a>
+            <Fragment key={route}>
+              <a href={localizedPath(locale, route)}>
+                {copy.footer.links[route]}
+              </a>
+              {route === 'members' && (
+                <a
+                  href={membershipApplicationUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {copy.footer.applyMembership}
+                </a>
+              )}
+            </Fragment>
           ))}
         </nav>
 

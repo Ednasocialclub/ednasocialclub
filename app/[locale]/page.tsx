@@ -13,7 +13,7 @@ import {
   type Locale,
 } from '@/lib/i18n';
 import { eventsPageContent } from '@/lib/events';
-import { siteUrl } from '@/lib/site';
+import { membershipApplicationUrl, siteUrl } from '@/lib/site';
 
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
@@ -200,10 +200,15 @@ export default async function HomePage({
               <h2>{copy.pages.members.title}</h2>
               <p className="overview-lead">{copy.pages.home.membersLead}</p>
               <p>{copy.pages.home.membersBody}</p>
-              <p className="overview-note">
-                {copy.pages.home.membersStatus}
-              </p>
               <div className="overview-actions overview-actions--start">
+                <a
+                  className="button button--ivory"
+                  href={membershipApplicationUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {copy.pages.home.membersApplicationCta}
+                </a>
                 <a
                   className="text-link text-link--light"
                   href={localizedPath(locale, 'members')}

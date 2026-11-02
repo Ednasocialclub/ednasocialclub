@@ -55,14 +55,6 @@ export const eventsPageContent: Record<
     },
     events: [
       {
-        id: 'halloween-masquerade-2026',
-        title: 'Halloween Masquerade',
-        date: { iso: '2026-10-31', label: '31 October 2026' },
-        description: 'A private Edna gathering',
-        detailUrl: null,
-        cta: null,
-      },
-      {
         id: 'edna-winter-ball-2026',
         title: 'Edna Winter Ball',
         date: { iso: '2026-12-31', label: '31 December 2026' },
@@ -84,14 +76,6 @@ export const eventsPageContent: Record<
       after: '-Instagramissa.',
     },
     events: [
-      {
-        id: 'halloween-masquerade-2026',
-        title: 'Halloween Masquerade',
-        date: { iso: '2026-10-31', label: '31.10.2026' },
-        description: 'Yksityinen Edna-tapahtuma',
-        detailUrl: null,
-        cta: null,
-      },
       {
         id: 'edna-winter-ball-2026',
         title: 'Edna Winter Ball',

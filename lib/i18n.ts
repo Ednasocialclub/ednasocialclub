@@ -80,6 +80,7 @@ const shared = {
         partnerships: 'Partnerships',
         contact: 'Contact',
       },
+      applyMembership: 'Apply for Membership',
       contact: 'Contact',
       social: 'Social',
       membership: 'Upcoming Events',
@@ -115,12 +116,13 @@ const shared = {
       location: 'Helsinki, Suomi',
       navigation: 'Tutustu',
       links: {
-        about: 'About Edna',
-        members: 'Edna Members Club',
-        privateEvents: 'Yksityis- & yritystilaisuudet',
+        about: 'Tietoa Ednasta',
+        members: 'Members Club',
+        privateEvents: 'Yksityis- & yritystapahtumat',
         partnerships: 'Yhteistyöt',
         contact: 'Yhteystiedot',
       },
+      applyMembership: 'Hae jäseneksi',
       contact: 'Yhteys',
       social: 'Seuraa',
       membership: 'Tulevat tapahtumat',
@@ -170,7 +172,7 @@ const pages = {
         'Your way into meaningful connections and evenings you will remember',
       membersBody:
         'Meet beyond your usual circles and become part of a social world where friendships, introductions and new possibilities can begin naturally.',
-      membersStatus: 'Membership applications are currently closed.',
+      membersApplicationCta: 'Apply for Membership',
       privateCta: 'Learn more about Private & Corporate',
       partnershipsCta: 'Explore partnerships',
     },
@@ -251,10 +253,9 @@ const pages = {
           body: 'For people who enjoy good conversation and want to meet beyond the social and professional circles they already know.',
         },
       ],
-      applicationTitle: 'Membership applications are now closed',
-      applicationTagline:
-        'The next application period will be announced here.',
-      apply: 'Explore upcoming events →',
+      applicationTitle: 'Become a Member',
+      applicationTagline: 'Apply to become part of Edna Members Club.',
+      apply: 'Apply for Membership →',
     },
     privateEvents: {
       eyebrow: 'Private & Corporate',
@@ -408,7 +409,7 @@ const pages = {
         'Tie merkityksellisiin kohtaamisiin ja iltoihin, jotka jäävät mieleen',
       membersBody:
         'Tapaa ihmisiä oman tuttavapiirisi ulkopuolelta ja tule osaksi Ednan maailmaa, jossa uudet ystävyydet, kohtaamiset ja mahdollisuudet syntyvät luontevasti.',
-      membersStatus: 'Jäsenhaku on tällä hetkellä päättynyt.',
+      membersApplicationCta: 'Hae jäseneksi',
       privateCta: 'Lue lisää yksityisistä ja yritystapahtumista',
       partnershipsCta: 'Tutustu yhteistyömahdollisuuksiin',
     },
@@ -489,9 +490,9 @@ const pages = {
           body: 'Ihmisille, jotka nauttivat hyvistä keskusteluista ja haluavat kohdata toisia nykyisten sosiaalisten ja ammatillisten piiriensä ulkopuolella.',
         },
       ],
-      applicationTitle: 'Jäsenhaku on päättynyt',
-      applicationTagline: 'Seuraavasta hakukierroksesta ilmoitetaan täällä.',
-      apply: 'Tutustu tuleviin tapahtumiin →',
+      applicationTitle: 'Liity jäseneksi',
+      applicationTagline: 'Hae Edna Members Clubin jäseneksi.',
+      apply: 'Hae jäseneksi →',
     },
     privateEvents: {
       eyebrow: 'Yksityis- & yritystilaisuudet',
@@ -635,7 +636,7 @@ export const metadataCopy = {
     events: {
       title: 'Upcoming Events | Edna Social Club Helsinki',
       description:
-        'Discover upcoming Edna Social Club events, including Halloween Masquerade and the Edna Winter Ball.',
+        'Discover upcoming Edna Social Club events, including the Edna Winter Ball in Helsinki.',
     },
     privateEvents: {
       title: 'Private & Corporate Events Helsinki | Edna Social Club',
@@ -677,7 +678,7 @@ export const metadataCopy = {
     events: {
       title: 'Tulevat tapahtumat | Edna Social Club Helsinki',
       description:
-        'Tutustu Edna Social Clubin tuleviin tapahtumiin: Halloween Masquerade ja Edna Winter Ball.',
+        'Tutustu Edna Social Clubin tuleviin tapahtumiin, kuten Edna Winter Balliin Helsingissä.',
     },
     privateEvents: {
       title: 'Yksityis- ja yritystapahtumat Helsinki | Edna Social Club',

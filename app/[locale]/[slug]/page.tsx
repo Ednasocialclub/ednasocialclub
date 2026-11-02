@@ -16,7 +16,7 @@ import {
   type ContentRoute,
   type Locale,
 } from '@/lib/i18n';
-import { siteUrl } from '@/lib/site';
+import { membershipApplicationUrl, siteUrl } from '@/lib/site';
 
 const instagramUrl = 'https://www.instagram.com/ednasocialclub/';
 const tiktokUrl = 'https://www.tiktok.com/@ednasocialclub';
@@ -186,7 +186,9 @@ function MembersPage({ locale }: { locale: Locale }) {
           </p>
           <a
             className="button button--ivory"
-            href={localizedPath(locale, 'events')}
+            href={membershipApplicationUrl}
+            target="_blank"
+            rel="noreferrer"
           >
             {copy.apply}
           </a>
