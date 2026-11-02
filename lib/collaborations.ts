@@ -9,84 +9,57 @@ export type Collaboration = {
 
 export const collaborations: Collaboration[] = [
   {
-    id: 'live-jazz',
-    src: '/collaborations/edna-live-jazz-collaboration-helsinki.jpg',
+    id: 'fireplace-toast',
+    src: '/collaborations/edna-fireplace-toast.jpg',
     alt: {
-      en: 'A pianist and double bassist performing live jazz at an Edna Social Club evening in Helsinki',
-      fi: 'Pianisti ja kontrabasisti esiintymässä Edna Social Clubin jazzillassa Helsingissä',
+      en: 'Guests raising glasses around a round table in front of a dark wood fireplace',
+      fi: 'Vieraat kohottamassa laseja pyöreän pöydän äärellä tumman puutakan edessä',
     },
-    objectPosition: 'center 50%',
+    objectPosition: 'center 52%',
   },
   {
-    id: 'dressed-guests',
-    src: '/collaborations/edna-dressed-guests-by-window.jpg',
+    id: 'tuxedo-martini-detail',
+    src: '/collaborations/edna-tuxedo-martini-detail.jpg',
     alt: {
-      en: 'Elegantly dressed guests at an Edna event by the waterfront in Helsinki',
-      fi: 'Tyylikkäästi pukeutuneet vieraat Ednan tapahtumassa meren äärellä Helsingissä',
+      en: 'A guest in a tuxedo holding a martini while seated in a red armchair',
+      fi: 'Smokkiin pukeutunut vieras martini kädessään punaisessa nojatuolissa',
     },
-    objectPosition: 'center 40%',
+    objectPosition: 'center 58%',
   },
   {
-    id: 'brunch-guests',
-    src: '/collaborations/edna-brunch-guests-collaboration.jpg',
+    id: 'mirror-guests',
+    src: '/collaborations/edna-mirror-guests-black-white.jpg',
     alt: {
-      en: 'Guests raising champagne glasses beside a beautifully prepared brunch table',
-      fi: 'Vieraat kohottamassa samppanjalaseja kauniisti katetun brunssipöydän äärellä',
+      en: 'Two elegantly dressed guests standing before an ornate mirror and chandelier',
+      fi: 'Kaksi tyylikkäästi pukeutunutta vierasta koristeellisen peilin ja kattokruunun edessä',
     },
-    objectPosition: 'center 36%',
+    objectPosition: 'center 46%',
   },
   {
-    id: 'retro-phone-moment',
-    src: '/collaborations/edna-retro-phone-social-moment.jpg',
+    id: 'piano-martini-detail',
+    src: '/collaborations/edna-piano-martini-detail.jpg',
     alt: {
-      en: 'Two guests sharing a playful retro telephone moment at an Edna event',
-      fi: 'Kaksi vierasta retrohenkisessä puhelinhetkessä Ednan tapahtumassa',
+      en: 'A guest holding a martini beside the keys of a grand piano',
+      fi: 'Vieras martini kädessään flyygelin koskettimien äärellä',
+    },
+    objectPosition: 'center 60%',
+  },
+  {
+    id: 'necklace-moment',
+    src: '/collaborations/edna-necklace-moment.jpg',
+    alt: {
+      en: 'A guest adjusting the necklace of a seated woman in a red armchair',
+      fi: 'Vieras asettelemassa kaulakorua punaisessa nojatuolissa istuvalle naiselle',
     },
     objectPosition: 'center 47%',
   },
   {
-    id: 'champagne-tower',
-    src: '/collaborations/edna-champagne-tower-collaboration.jpg',
+    id: 'dark-wood-evening-group',
+    src: '/collaborations/edna-dark-wood-evening-group.jpg',
     alt: {
-      en: 'A champagne tower surrounded by guests at an Edna collaboration evening',
-      fi: 'Samppanjatorni vieraiden ympäröimänä Ednan yhteistyöillassa',
+      en: 'Elegantly dressed guests gathered with drinks in a dark wood-panelled room',
+      fi: 'Tyylikkäästi pukeutuneet vieraat juomineen tummassa puupaneloidussa huoneessa',
     },
-    objectPosition: 'center 45%',
-  },
-  {
-    id: 'guest-welcome',
-    src: '/collaborations/edna-partner-welcome-moment.jpg',
-    alt: {
-      en: 'Two guests greeting each other warmly at an Edna partner event',
-      fi: 'Kaksi vierasta tervehtimässä lämpimästi Ednan kumppanitapahtumassa',
-    },
-    objectPosition: 'center 12%',
-  },
-  {
-    id: 'brunch-table',
-    src: '/collaborations/edna-brunch-table-collaboration.jpg',
-    alt: {
-      en: 'A carefully styled brunch table prepared for an Edna collaboration',
-      fi: 'Huolellisesti katettu brunssipöytä Ednan yhteistyötä varten',
-    },
-    objectPosition: 'center 62%',
-  },
-  {
-    id: 'piano-reflection',
-    src: '/collaborations/edna-guests-reflected-at-piano.jpg',
-    alt: {
-      en: 'Two smiling guests reflected in a grand piano at an Edna social event',
-      fi: 'Kaksi hymyilevää vierasta flyygelin heijastuksessa Ednan tapahtumassa',
-    },
-    objectPosition: 'center 56%',
-  },
-  {
-    id: 'pilates-community-session',
-    src: '/collaborations/edna-pilates-community-session.jpg',
-    alt: {
-      en: 'Guests taking part in a Pilates gathering in a warmly lit Helsinki studio',
-      fi: 'Vieraat osallistumassa pilatestapahtumaan lämpimästi valaistussa studiossa Helsingissä',
-    },
-    objectPosition: 'center 54%',
+    objectPosition: 'center center',
   },
 ];
