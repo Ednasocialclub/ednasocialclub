@@ -12,7 +12,6 @@ export type EdnaEvent = {
   };
   description: string;
   summary: string;
-  detailSummary?: string;
   detail?: string;
   dressCode?: {
     label: string;
@@ -108,8 +107,6 @@ export const eventsPageContent: Record<
         date: { iso: '2026-12-31', label: '31.12.2026' },
         description: 'Svenska Klubben, Helsinki',
         summary:
-          'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
-        detailSummary:
           'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
         detail:
           'Ilta alkaa tervetuliaisjuomilla, jonka jälkeen nautitaan kolmen ruokalajin illallinen pitkissä pöydissä livemusiikin säestyksellä. Illallisen jälkeen tanssiaiset alkavat orkesterin johdolla ja jatkuvat kohti keskiyötä. Uusi vuosi otetaan vastaan yhteisellä lähtölaskennalla, ja juhlat jatkuvat klo 02.00 saakka.',

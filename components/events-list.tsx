@@ -69,11 +69,9 @@ export function EventsList({
             </>
           )}
           <p>{event.description}</p>
-          <p className="event-entry__summary">
-            {showDetails && event.detailSummary
-              ? event.detailSummary
-              : event.summary}
-          </p>
+          {!showDetails ? (
+            <p className="event-entry__summary">{event.summary}</p>
+          ) : null}
           {showDetails && event.detail ? (
             <p className="event-entry__detail">{event.detail}</p>
           ) : null}
