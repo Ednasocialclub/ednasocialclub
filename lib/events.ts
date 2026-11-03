@@ -108,7 +108,7 @@ export const eventsPageContent: Record<
         date: { iso: '2026-12-31', label: '31.12.2026' },
         description: 'Svenska Klubben, Helsinki',
         summary:
-          'Illallinen, elävää musiikkia ja tanssia uuden vuoden vastaanottamiseksi.',
+          'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
         detailSummary:
           'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
         detail:
