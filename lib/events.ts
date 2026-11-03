@@ -11,7 +11,19 @@ export type EdnaEvent = {
     label: string;
   };
   description: string;
+  summary: string;
+  detailSummary?: string;
   detail?: string;
+  dressCode?: {
+    label: string;
+    title: string;
+    description: string;
+  };
+  memberBenefit?: {
+    label: string;
+    description: string;
+  };
+  status?: string;
   detailUrl: string | null;
   cta: {
     label: string;
@@ -59,7 +71,21 @@ export const eventsPageContent: Record<
         title: 'Edna Winter Ball',
         date: { iso: '2026-12-31', label: '31 December 2026' },
         description: 'Svenska Klubben, Helsinki',
-        detail: 'Dinner, live jazz and a New Year’s Eve ball.',
+        summary: 'Dinner, live music and dancing to welcome the New Year.',
+        detail:
+          'The evening begins with welcome drinks, followed by a three-course dinner served at long tables with live music. After dinner, a live orchestra leads the dancing into midnight, followed by the New Year countdown and celebrations until 02:00.',
+        dressCode: {
+          label: 'Dress Code',
+          title: 'Black Tie',
+          description:
+            'Tuxedo for men and floor-length evening gown for women.',
+        },
+        memberBenefit: {
+          label: 'For Edna Members',
+          description:
+            'Early access and a private Members’ Room with refreshments throughout the evening.',
+        },
+        status: 'Tickets coming soon',
         detailUrl: null,
         cta: priorityListCta(
           'Join the priority list',
@@ -72,8 +98,8 @@ export const eventsPageContent: Record<
     title: 'Tulevat tapahtumat',
     exploreLabel: 'Tutustu tapahtumiin',
     instagramNote: {
-      before: 'Lisätiedot ja tapahtumapäivitykset jaetaan ',
-      after: '-Instagramissa.',
+      before: 'Lisätiedot ja tapahtumapäivitykset jaetaan Instagramissa ',
+      after: '.',
     },
     events: [
       {
@@ -81,7 +107,23 @@ export const eventsPageContent: Record<
         title: 'Edna Winter Ball',
         date: { iso: '2026-12-31', label: '31.12.2026' },
         description: 'Svenska Klubben, Helsinki',
-        detail: 'Illallinen, livejazzia ja uudenvuodenaaton tanssiaiset.',
+        summary:
+          'Illallinen, elävää musiikkia ja tanssia uuden vuoden vastaanottamiseksi.',
+        detailSummary:
+          'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
+        detail:
+          'Ilta alkaa tervetuliaisjuomilla, jonka jälkeen nautitaan kolmen ruokalajin illallinen pitkissä pöydissä livemusiikin säestyksellä. Illallisen jälkeen tanssiaiset alkavat orkesterin johdolla ja jatkuvat kohti keskiyötä. Uusi vuosi otetaan vastaan yhteisellä lähtölaskennalla, ja juhlat jatkuvat klo 02.00 saakka.',
+        dressCode: {
+          label: 'Pukukoodi',
+          title: 'Black Tie',
+          description: 'Miehille smokki ja naisille täyspitkä iltapuku.',
+        },
+        memberBenefit: {
+          label: 'Edna Members Clubin jäsenille',
+          description:
+            'Aikaisempi sisäänpääsy sekä yksityinen Members’ Room virvokkeineen illan ajan.',
+        },
+        status: 'Liput tulevat myyntiin pian',
         detailUrl: null,
         cta: priorityListCta(
           'Liity ennakkolistalle',

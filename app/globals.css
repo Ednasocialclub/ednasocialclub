@@ -1023,7 +1023,7 @@ button {
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
   gap: clamp(3rem, 8vw, 7.5rem);
   align-items: start;
-  margin-top: clamp(1.5rem, 3vh, 2rem);
+  margin-top: calc(clamp(3rem, 5vh, 4rem) + 2.25rem);
 }
 
 .events-page__layout .events-list--compact {
@@ -1034,6 +1034,9 @@ button {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 68%;
 }
 
 .events-page__instagram {
@@ -1090,9 +1093,58 @@ button {
 
 .event-entry .event-entry__detail {
   max-width: 31rem;
-  margin-top: 0.85rem;
-  font-style: italic;
+  margin-top: 1.5rem;
   opacity: 0.78;
+}
+
+.event-entry .event-entry__summary {
+  max-width: 31rem;
+  margin-top: 0.85rem;
+  opacity: 0.9;
+}
+
+.event-entry__dress-code {
+  margin-top: 1.75rem;
+}
+
+.event-entry__dress-code h3 {
+  margin: 0 0 0.55rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.event-entry__dress-code .event-entry__dress-code-title {
+  margin-bottom: 0.25rem;
+  color: inherit;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  opacity: 1;
+}
+
+.event-entry__member-benefit {
+  max-width: 31rem;
+  margin-top: 1.75rem;
+}
+
+.event-entry__member-benefit h3 {
+  margin: 0 0 0.55rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.event-entry .event-entry__status {
+  margin-top: 1.75rem;
+  color: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  opacity: 0.82;
 }
 
 .event-entry__cta {
@@ -1149,7 +1201,10 @@ a.event-entry__cta:hover .event-entry__arrow {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2;
   margin: 0;
+  object-fit: cover;
+  object-position: center 61%;
 }
 
 .events-list--compact {
@@ -2311,8 +2366,8 @@ a.event-entry__cta:hover .event-entry__arrow {
 
   .events-page__layout {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 3.5rem;
+    gap: 3.5rem;
+    margin-top: 5.75rem;
   }
 
   .events-page__instagram {

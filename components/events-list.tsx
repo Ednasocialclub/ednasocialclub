@@ -57,13 +57,45 @@ export function EventsList({
     <div className={compact ? 'events-list events-list--compact' : 'events-list'}>
       {events.map((event) => (
         <article className="event-entry" key={event.id}>
-          <time dateTime={event.date.iso}>{event.date.label}</time>
-          <EventTitle event={event} />
+          {showDetails ? (
+            <>
+              <EventTitle event={event} />
+              <time dateTime={event.date.iso}>{event.date.label}</time>
+            </>
+          ) : (
+            <>
+              <time dateTime={event.date.iso}>{event.date.label}</time>
+              <EventTitle event={event} />
+            </>
+          )}
           <p>{event.description}</p>
+          <p className="event-entry__summary">
+            {showDetails && event.detailSummary
+              ? event.detailSummary
+              : event.summary}
+          </p>
           {showDetails && event.detail ? (
             <p className="event-entry__detail">{event.detail}</p>
           ) : null}
-          <EventAction event={event} />
+          {showDetails && event.dressCode ? (
+            <div className="event-entry__dress-code">
+              <h3>{event.dressCode.label}</h3>
+              <p className="event-entry__dress-code-title">
+                {event.dressCode.title}
+              </p>
+              <p>{event.dressCode.description}</p>
+            </div>
+          ) : null}
+          {showDetails && event.memberBenefit ? (
+            <div className="event-entry__member-benefit">
+              <h3>{event.memberBenefit.label}</h3>
+              <p>{event.memberBenefit.description}</p>
+            </div>
+          ) : null}
+          {showDetails && event.status ? (
+            <p className="event-entry__status">{event.status}</p>
+          ) : null}
+          {!showDetails ? <EventAction event={event} /> : null}
         </article>
       ))}
     </div>

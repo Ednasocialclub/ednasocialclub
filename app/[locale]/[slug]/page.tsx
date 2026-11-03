@@ -211,14 +211,14 @@ function EventsPage({ locale }: { locale: Locale }) {
           <EventsList events={copy.events} compact showDetails />
           <Image
             className="events-page__image"
-            src="/edna-upcoming-events-evening-helsinki.jpg"
+            src="/edna-winter-ball-guests-helsinki.jpg"
             alt={
               locale === 'fi'
-                ? 'Vieraita tunnelmallisessa Edna Social Clubin illassa Helsingissä'
-                : 'Guests at an atmospheric Edna Social Club evening in Helsinki'
+                ? 'Viisi iltapukuun pukeutunutta vierasta ruskeiden nahkaistuinten ja lasimaalausikkunoiden äärellä'
+                : 'Five guests in evening dress gathered around brown leather seating beneath stained-glass windows'
             }
-            width="2400"
-            height="1600"
+            width="2000"
+            height="3000"
             sizes="(max-width: 48rem) calc(100vw - 2.5rem), 43vw"
           />
         </div>
