@@ -1036,7 +1036,7 @@ button {
   height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: center 68%;
+  object-position: center 52%;
 }
 
 .events-page__instagram {
@@ -1204,7 +1204,7 @@ a.event-entry__cta:hover .event-entry__arrow {
   aspect-ratio: 3 / 2;
   margin: 0;
   object-fit: cover;
-  object-position: center 68%;
+  object-position: center 52%;
 }
 
 .events-list--compact {

@@ -211,11 +211,11 @@ function EventsPage({ locale }: { locale: Locale }) {
           <EventsList events={copy.events} compact showDetails />
           <Image
             className="events-page__image"
-            src="/edna-winter-ball-guests-helsinki.jpg"
+            src="/edna-winter-ball-fireplace-guests-helsinki.jpg"
             alt={
               locale === 'fi'
-                ? 'Viisi iltapukuun pukeutunutta vierasta ruskeiden nahkaistuinten ja lasimaalausikkunoiden äärellä'
-                : 'Five guests in evening dress gathered around brown leather seating beneath stained-glass windows'
+                ? 'Viisi juhlapukuista vierasta kohottamassa laseja punaisten nojatuolien ympärillä koristeellisen tumman puutakan edessä'
+                : 'Five elegantly dressed guests raising glasses around red armchairs in front of an ornate dark wood fireplace'
             }
             width="2000"
             height="3000"
