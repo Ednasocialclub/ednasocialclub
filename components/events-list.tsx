@@ -1,4 +1,6 @@
 import type { EdnaEvent } from '@/lib/events';
+import type { Locale } from '@/lib/i18n';
+import { BookingInformationModal } from '@/components/booking-information-modal';
 
 function EventTitle({ event }: { event: EdnaEvent }) {
   if (!event.detailUrl) return <h2>{event.title}</h2>;
@@ -13,10 +15,15 @@ function EventTitle({ event }: { event: EdnaEvent }) {
 function EventAction({ event }: { event: EdnaEvent }) {
   if (!event.cta) return null;
 
+  const className =
+    event.cta.type === 'tickets'
+      ? 'button button--ivory event-entry__ticket-button'
+      : 'event-entry__cta';
+
   if (event.cta.state === 'active' && event.cta.url) {
     return (
       <a
-        className="event-entry__cta"
+        className={className}
         href={event.cta.url}
         target="_blank"
         rel="noopener noreferrer"
@@ -48,13 +55,19 @@ export function EventsList({
   events,
   compact = false,
   showDetails = false,
+  bookingInformationLocale,
+  secondaryAction,
 }: {
   events: EdnaEvent[];
   compact?: boolean;
   showDetails?: boolean;
+  bookingInformationLocale?: Locale;
+  secondaryAction?: { label: string; href: string };
 }) {
   return (
-    <div className={compact ? 'events-list events-list--compact' : 'events-list'}>
+    <div
+      className={compact ? 'events-list events-list--compact' : 'events-list'}
+    >
       {events.map((event) => (
         <article className="event-entry" key={event.id}>
           {showDetails ? (
@@ -93,7 +106,22 @@ export function EventsList({
           {showDetails && event.status ? (
             <p className="event-entry__status">{event.status}</p>
           ) : null}
-          {!showDetails ? <EventAction event={event} /> : null}
+          <EventAction event={event} />
+          {!showDetails && secondaryAction ? (
+            <a
+              className="text-link text-link--light event-entry__details-link"
+              href={secondaryAction.href}
+            >
+              {secondaryAction.label}
+              <span
+                className="link-arrow link-arrow--right"
+                aria-hidden="true"
+              />
+            </a>
+          ) : null}
+          {showDetails && bookingInformationLocale ? (
+            <BookingInformationModal locale={bookingInformationLocale} />
+          ) : null}
         </article>
       ))}
     </div>

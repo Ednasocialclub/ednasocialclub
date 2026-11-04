@@ -34,16 +34,16 @@ export type EdnaEvent = {
 
 type EventKey = 'winterBall';
 
-// Event CTA destinations live here so a priority-list link can later become a ticket link.
-export const eventPriorityListUrls: Record<EventKey, string | null> = {
-  winterBall: 'https://ednasocialclub.myflodesk.com/privateclub',
+// Event CTA destinations live here so ticket links stay consistent across the site.
+export const eventTicketUrls: Record<EventKey, string | null> = {
+  winterBall: 'https://buy.stripe.com/bJe4gzels62G99faBZ0Ba08',
 };
 
-function priorityListCta(label: string, url: string | null): EdnaEvent['cta'] {
+function ticketCta(label: string, url: string | null): EdnaEvent['cta'] {
   return {
     label,
     url,
-    type: 'priority-list',
+    type: 'tickets',
     state: url ? 'active' : 'awaiting-url',
   };
 }
@@ -53,6 +53,7 @@ export const eventsPageContent: Record<
   {
     title: string;
     exploreLabel: string;
+    detailsLabel: string;
     instagramNote: { before: string; after: string };
     events: EdnaEvent[];
   }
@@ -60,6 +61,7 @@ export const eventsPageContent: Record<
   en: {
     title: 'Upcoming Events',
     exploreLabel: 'Explore upcoming events',
+    detailsLabel: 'View full event details',
     instagramNote: {
       before: 'Further event details and updates will be shared via ',
       after: '.',
@@ -72,7 +74,7 @@ export const eventsPageContent: Record<
         description: 'Svenska Klubben, Helsinki',
         summary: 'Dinner, live music and dancing to welcome the New Year.',
         detail:
-          'The evening begins with welcome drinks, followed by a three-course dinner served at long tables with live music. After dinner, a live orchestra leads the dancing into midnight, followed by the New Year countdown and celebrations until 02:00.',
+          'The evening begins with welcome drinks, followed by a three-course dinner served at long tables with live music. After dinner, live music accompanies the dancing into midnight, followed by the New Year countdown and celebrations until 02:00.',
         dressCode: {
           label: 'Dress Code',
           title: 'Black Tie',
@@ -84,18 +86,15 @@ export const eventsPageContent: Record<
           description:
             'Early access and a private Members’ Room with refreshments throughout the evening.',
         },
-        status: 'Tickets coming soon',
         detailUrl: null,
-        cta: priorityListCta(
-          'Join the priority list',
-          eventPriorityListUrls.winterBall,
-        ),
+        cta: ticketCta('Buy Tickets', eventTicketUrls.winterBall),
       },
     ],
   },
   fi: {
     title: 'Tulevat tapahtumat',
     exploreLabel: 'Tutustu tapahtumiin',
+    detailsLabel: 'Katso tapahtuman tiedot',
     instagramNote: {
       before: 'Lisätiedot ja tapahtumapäivitykset jaetaan Instagramissa ',
       after: '.',
@@ -109,7 +108,7 @@ export const eventsPageContent: Record<
         summary:
           'Kolmen ruokalajin illallinen, livemusiikkia ja uudenvuodenaaton tanssiaiset.',
         detail:
-          'Ilta alkaa tervetuliaisjuomilla, jonka jälkeen nautitaan kolmen ruokalajin illallinen pitkissä pöydissä livemusiikin säestyksellä. Illallisen jälkeen tanssiaiset alkavat orkesterin johdolla ja jatkuvat kohti keskiyötä. Uusi vuosi otetaan vastaan yhteisellä lähtölaskennalla, ja juhlat jatkuvat klo 02.00 saakka.',
+          'Ilta alkaa tervetuliaisjuomilla, jonka jälkeen nautitaan kolmen ruokalajin illallinen pitkissä pöydissä livemusiikin säestyksellä. Illallisen jälkeen tanssiaiset jatkuvat livemusiikin säestyksellä kohti keskiyötä. Uusi vuosi otetaan vastaan yhteisellä lähtölaskennalla, ja juhlat jatkuvat klo 02.00 saakka.',
         dressCode: {
           label: 'Pukukoodi',
           title: 'Black Tie',
@@ -120,12 +119,8 @@ export const eventsPageContent: Record<
           description:
             'Aikaisempi sisäänpääsy sekä yksityinen Members’ Room virvokkeineen illan ajan.',
         },
-        status: 'Liput tulevat myyntiin pian',
         detailUrl: null,
-        cta: priorityListCta(
-          'Liity ennakkolistalle',
-          eventPriorityListUrls.winterBall,
-        ),
+        cta: ticketCta('Osta liput', eventTicketUrls.winterBall),
       },
     ],
   },

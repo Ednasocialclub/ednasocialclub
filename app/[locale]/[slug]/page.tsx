@@ -208,7 +208,12 @@ function EventsPage({ locale }: { locale: Locale }) {
           <h1>{copy.title}</h1>
         </header>
         <div className="events-page__layout">
-          <EventsList events={copy.events} compact showDetails />
+          <EventsList
+            events={copy.events}
+            compact
+            showDetails
+            bookingInformationLocale={locale}
+          />
           <Image
             className="events-page__image"
             src="/edna-winter-ball-fireplace-guests-helsinki.jpg"

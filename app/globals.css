@@ -1147,6 +1147,143 @@ button {
   opacity: 0.82;
 }
 
+.booking-information__trigger {
+  display: block;
+  width: fit-content;
+  margin-top: 0.85rem;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+body.booking-modal-open {
+  overflow: hidden;
+}
+
+.booking-information {
+  position: fixed;
+  width: min(calc(100% - 2rem), 42rem);
+  max-width: none;
+  max-height: min(calc(100svh - 2rem), 48rem);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: var(--wine);
+  opacity: 0;
+  transform: translateY(0.75rem) scale(0.995);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.booking-information::backdrop {
+  background: rgba(12, 0, 2, 0.58);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.booking-information--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.booking-information--visible::backdrop {
+  opacity: 1;
+}
+
+.booking-information__panel {
+  position: relative;
+  max-height: min(calc(100svh - 2rem), 48rem);
+  padding: clamp(3rem, 6vw, 4.75rem) clamp(2rem, 6vw, 4.5rem)
+    clamp(2.75rem, 5vw, 4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--ivory);
+}
+
+.booking-information__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.35rem;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.45rem;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.booking-information__content {
+  width: min(100%, 33rem);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.booking-information .booking-information__content h2.booking-information__title {
+  margin: 0 0 clamp(2.25rem, 5vw, 3.25rem);
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.booking-information__content section + section {
+  margin-top: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+.booking-information__content h3 {
+  margin: 0 0 1.1rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.booking-information__content p {
+  max-width: none;
+  margin: 0;
+  color: inherit;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.booking-information__content p + p {
+  margin-top: 0.85rem;
+}
+
+.booking-information__content a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-information,
+  .booking-information::backdrop {
+    transition-duration: 0.01ms;
+  }
+}
+
 .event-entry__cta {
   display: inline-flex;
   align-items: center;
@@ -1170,6 +1307,22 @@ a.event-entry__cta:hover .event-entry__arrow {
 .event-entry__cta--disabled {
   cursor: default;
   opacity: 0.66;
+}
+
+.event-entry__ticket-button {
+  gap: 0.55rem;
+  width: fit-content;
+  margin-top: 1.65rem;
+}
+
+.event-entry__ticket-button:hover .event-entry__arrow {
+  transform: translateX(0.2rem);
+}
+
+.event-entry__details-link {
+  display: flex;
+  width: fit-content;
+  margin-top: 0.65rem;
 }
 
 .overview-events {
@@ -2394,6 +2547,10 @@ a.event-entry__cta:hover .event-entry__arrow {
     font-size: clamp(1.75rem, 7.5vw, 2.4rem);
   }
 
+  .events-page .booking-information__trigger {
+    margin: 0.75rem auto 0;
+  }
+
   .event-entry__cta {
     margin-top: 1.4rem;
   }
@@ -2462,6 +2619,11 @@ a.event-entry__cta:hover .event-entry__arrow {
 
   .overview-events .events-list--compact .event-entry__cta {
     margin-top: 1rem;
+  }
+
+  .overview-events .event-entry__details-link {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .overview-events .events-list--compact .event-entry + .event-entry {

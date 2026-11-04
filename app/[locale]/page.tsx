@@ -231,7 +231,14 @@ export default async function HomePage({
           <div className="overview-section__inner overview-events__inner">
             <h2>{eventsCopy.title}</h2>
             <div className="overview-events__layout">
-              <EventsList events={eventsCopy.events} compact />
+              <EventsList
+                events={eventsCopy.events}
+                compact
+                secondaryAction={{
+                  label: eventsCopy.detailsLabel,
+                  href: localizedPath(locale, 'events'),
+                }}
+              />
               <Image
                 className="overview-events__image"
                 src="/edna-winter-ball-fireplace-guests-helsinki.jpg"
